@@ -157,17 +157,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your teaser here -->
-        <source src="/images/halc/halc.png"
-        type="image/png">
-      </img>
+      <img id="tree" src="/images/halc/halc.png" alt="HALC Overview" style="height: 100%;">
       <h2 class="subtitle has-text-centered">
-        As LVLM autoregressively generates texts w.r.t. an image input (e.g., a man holding a clock on the beach), the conventional decoding method may hallucinate the clock as surfboard. However, HALC corrects this potential hallucination by first locating its visual grounding vd, then sample n distinctive yet overlapping FOVs (e.g., ṽs, ṽd, ṽl). Next, all FOVs are fed back into the LVLM, along with the current ongoing response, obtaining n logits distributions. Then we compute Jensen-Shannon Divergence (JSD) between each pair of the n distributions, and select the top m pairs, providing 2m next-token candidates by bi-directional contrasted logits distributions. Each of the 2m candidates are then appended to the k ongoing beams (beam search omitted in the figure for simplicity), resulting in 2mk response candidates. Finally, k best responses are selected according to the global visual matching score between current text and original image, completing the current decoding round with the hallucinating token surfboard successfully corrected to clock. 
+        Overview of HALC. The regular decoding will produce "The man is holding a surfboard on the beach." while HALC can correct the hallucinated token "surfboard" to "clock" based on the optimal visual context.  
       </h2>
     </div>
   </div>
 </section>
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
