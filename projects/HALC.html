@@ -178,10 +178,10 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-4">Overview</h2>
-      <img id="tree" src="/images/halc/halc.png" alt="HALC Overview" style="width: 90%; height: auto;">
+      <img id="tree" src="/images/halc/halc.png" alt="HALC Overview" style="width: 90%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified">
         <p>
-          An overview of HALC. As LVLM autoregressively generates texts w.r.t. an image input (e.g., a man holding a clock on the beach), the conventional decoding method may hallucinate the clock as surfboard. However, HALC corrects this potential hallucination by first locating its visual grounding $v_d$, then sample $n$ distinctive yet overlapping FOVs (e.g., $\tilde{v}_s$, $\tilde{v}_d$, $\tilde{v}_l$).
+          An overview of HALC. As LVLM autoregressively generates texts w.r.t. an image input (e.g., a man holding a clock on the beach), the conventional decoding method may hallucinate the clock as surfboard. However, HALC corrects this potential hallucination by first locating its visual grounding \( v_d \), then sample \( n \) distinctive yet overlapping FOVs (e.g., \( \tilde{v}_s \), \( \tilde{v}_d \), \( \tilde{v}_l \)).
         </p>
       </div>
     </div>
@@ -192,19 +192,19 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-4">Result</h2>
-      <img id="tree" src="/images/halc/chair_result.png" alt="CHAIR result" style="width: 90%; height: auto;">
+      <img id="tree" src="/images/halc/chair_result.png" alt="CHAIR result" style="width: 90%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified">
         <p>
-          CHAIR evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Lower $\text{CHAIR}_S$ and $\text{CHAIR}_I$ indicates less OH. Higher BLEU generally represent higher captioning quality, although existing work has reported weak correlation between CHAIR and text overlapping quality metrics. Bold indicates the best results of all methods.
+          CHAIR evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Lower \( \text{CHAIR}_S \) and \( \text{CHAIR}_I \) indicates less OH. Higher BLEU generally represent higher captioning quality, although existing work has reported weak correlation between CHAIR and text overlapping quality metrics. Bold indicates the best results of all methods.
         </p>
       </div>
-      <img id="tree" src="/images/halc/opope_result.png" alt="OPOPE result" style="width: 90%; height: auto;">
+      <img id="tree" src="/images/halc/opope_result.png" alt="OPOPE result" style="width: 90%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified">
         <p>
           Proposed OPOPE evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Higher accuracy, precision, and F score indicate better performance. Bold indicates the best results of all methods.
         </p>
       </div>
-      <img id="tree" src="/images/halc/mme_result.png" alt="MME result" style="width: 50%; height: auto;">
+      <img id="tree" src="/images/halc/mme_result.png" alt="MME result" style="width: 50%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified">
         <p>
           Comparison across OH baselines and SOTAs on four OH-critical MME subsets. All methods adopt MiniGPT-4 as LVLM backbone. HALC outperforms all other methods with a large margin: existence: +10.7%; position: +18.3%; color: +19.4% and count: +20.2% in average.
