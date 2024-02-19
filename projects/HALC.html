@@ -43,6 +43,8 @@
   <script src="/static/js/bulma-carousel.min.js"></script>
   <script src="/static/js/bulma-slider.min.js"></script>
   <script src="/static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -179,7 +181,7 @@
       <img id="tree" src="/images/halc/halc.png" alt="HALC Overview" style="width: 90%; height: auto;">
       <div class="content has-text-justified">
         <p>
-          An overview of HALC. As LVLM autoregressively generates texts w.r.t. an image input (e.g., a man holding a clock on the beach), the conventional decoding method may hallucinate the clock as surfboard. However, HALC corrects this potential hallucination by first locating its visual grounding vd, then sample n distinctive yet overlapping FOVs (e.g., ṽs, ṽd, ṽl).
+          An overview of HALC. As LVLM autoregressively generates texts w.r.t. an image input (e.g., a man holding a clock on the beach), the conventional decoding method may hallucinate the clock as surfboard. However, HALC corrects this potential hallucination by first locating its visual grounding $v_d$, then sample $n$ distinctive yet overlapping FOVs (e.g., $\tilde{v}_s$, $\tilde{v}_d$, $\tilde{v}_l$).
         </p>
       </div>
     </div>
@@ -193,7 +195,7 @@
       <img id="tree" src="/images/halc/chair_result.png" alt="CHAIR result" style="width: 90%; height: auto;">
       <div class="content has-text-justified">
         <p>
-          CHAIR evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Lower CHAIR_S and CHAIR_I indicates less OH. Higher BLEU generally represent higher captioning quality, although existing work has reported weak correlation between CHAIR and text overlapping quality metrics. Bold indicates the best results of all methods.
+          CHAIR evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Lower $\text{CHAIR}_S$ and $\text{CHAIR}_I$ indicates less OH. Higher BLEU generally represent higher captioning quality, although existing work has reported weak correlation between CHAIR and text overlapping quality metrics. Bold indicates the best results of all methods.
         </p>
       </div>
       <img id="tree" src="/images/halc/opope_result.png" alt="OPOPE result" style="width: 90%; height: auto;">
