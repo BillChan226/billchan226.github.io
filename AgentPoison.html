@@ -25,7 +25,7 @@
 
 
   <title>HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</title>
-  <link rel="icon" type="image/x-icon" href="/images/halc_favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/images/agentpoison/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -56,37 +56,32 @@
           <div class="column has-text-centered">
             <div style="display: flex; align-items: center; justify-content: center;">
               <!-- Logo image -->
-              <img src="/images/halc/HALC_logo.png" alt="Logo" style="margin-right: -60px; width: auto; height: 78px;"> <!-- Adjust the src, height, and margin-right as needed -->
+              <img src="/images/agentpoison/agentpoison_logo.jpg" alt="Logo" style="margin-right: -60px; width: auto; height: 78px;"> <!-- Adjust the src, height, and margin-right as needed -->
               <!-- Title -->
-              <h1 class="title is-1 publication-title" style="font-size: 42px;">HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</h1>
+              <h1 class="title is-1 publication-title" style="font-size: 42px;"><b>AgentPoison</b>: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning</h1>
             </div>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://billchan226.github.io/" target="_blank">Zhaorun Chen</a><sup>1,*</sup>,</span>
+                <a href="https://billchan226.github.io/" target="_blank">Zhaorun Chen</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://zhuokai-zhao.com/" target="_blank">Zhuokai Zhao</a><sup>1,*</sup>,</span>
+                  <a href="https://zhenxianglance.github.io/" target="_blank">Zhen Xiang</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="https://luohongyin.github.io/" target="_blank">Hongyin Luo</a><sup>2</sup>,</span>
+                    <a href="https://xiaocw11.github.io/" target="_blank">Chaowei Xiao</a><sup>3</sup>,</span>
                   <span class="author-block">
-                    <a href="https://www.huaxiuyao.io/" target="_blank">Huaxiu Yao</a><sup>3</sup>,</span>
+                    <a href="https://dawnsong.io/" target="_blank">Dawn Song</a><sup>4</sup>,</span>
                   <span class="author-block">
-                    <a href="https://aisecure.github.io/" target="_blank">Bo Li</a><sup>1,4</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://sites.harvard.edu/jzhou/" target="_blank">Jiawei Zhou</a><sup>5</sup>,
-                  </span>
+                    <a href="https://aisecure.github.io/" target="_blank">Bo Li</a><sup>1,2</sup>,</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>University of Chicago,</span>
-                    <span class="author-block"><sup>2</sup>Massachusetts Institute of Technology,</span>
-                    <span class="author-block"><sup>3</sup>UNC Chapel-Hill</span>
-                    <span class="author-block"><sup>4</sup>University of Illinois at Urbana-Champaign,</span>
-                    <span class="author-block"><sup>5</sup>Toyota Technological Institute at Chicago</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+                    <span class="author-block"><sup>2</sup>University of Illinois, Urbana-Champaign,</span>
+                    <span class="author-block"><sup>3</sup>University of Wisconsin, Madison</span>
+                    <span class="author-block"><sup>4</sup>University of California, Berkeley,</span>
                     <span class="eql-cntrb"><small><br><a
-                                href="mailto:billchandler0226@gmail.com">billchandler0226@gmail.com</a>, <a
-                                href="mailto:zhuokai@uchicago.edu">zhuokai@uchicago.edu</a></small></span>
+                                href="mailto:billchandler0226@gmail.com">zhaorun@uchicago.edu</a>, <a
+                                href="mailto:zhuokai@uchicago.edu">bol@uchicago.edu</a></small></span>
                   </div>
 
 
@@ -116,7 +111,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/BillChan226/HALC" target="_blank"
+                    <a href="https://github.com/BillChan226/AgentPoison" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -182,7 +177,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC’s effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC">here</a>.
+            LLM agents have demonstrated remarkable performance across various applications, primarily due to their advanced capabilities in reasoning, utilizing external knowledge and tools, calling APIs, and executing actions to interact with environments. Current agents typically utilize a memory module or a retrieval-augmented generation (RAG) mechanism, retrieving past knowledge and instances with similar embeddings from knowledge bases to inform task planning and execution. However, the reliance on unverified knowledge bases raises significant concerns about their safety and trustworthiness. To uncover such vulnerabilities, we propose a novel red teaming approach AGENTPOISON, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance. Unlike conventional backdoor attacks, AGENTPOISON requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate AgentPoison effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. We inject the poisoning instances into the RAG knowledge base and long-term memories of these agents, respectively, demonstrating the generalization of AgentPoison. On each agent, AgentPoison achieves an average attack success rate of ≥ 80% with minimal impact on benign performance (≤ 1%) with a poison rate < 0.1%. Code is released <a href="https://github.com/BillChan226/AgentPoison">here</a>.
           </p>
         </div>
       </div>
@@ -196,11 +191,10 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-4" style="margin-top: 20px;">Overview</h2>
-      <img id="tree" src="/images/halc/halc.png" alt="HALC Overview" style="width: 100%; height: auto; display: block; margin: auto;">
+      <img id="tree" src="/images/agentpoison/method.png" alt="AgentPoison Overview" style="width: 100%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
-          An overview of HALC. As LVLM autoregressively generates texts w.r.t. an image input (e.g., a man holding a clock on the beach), the conventional decoding method may hallucinate the clock as surfboard. However, HALC corrects this potential hallucination by first locating its visual grounding \( v_d \), then sample \( n \) distinctive yet overlapping FOVs (e.g., \( \tilde{v}_s \), \( \tilde{v}_d \), \( \tilde{v}_l \)).
-        </p>
+          An overview of the proposed AGENTPOISON framework. (Top) During the inference, the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains an optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. (Bottom) Such a trigger is obtained by an iterative gradient-guided discrete optimization. Intuitively, the algorithm aims to gather queries with the trigger into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.        </p>
       </div>
     </div>
   </div>
@@ -210,8 +204,8 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-4">Result</h2>
-      <h3 class="title is-4" style="font-size: 18px;">CHAIR Result</h3>
-      <img id="tree" src="/images/halc/chair_result.png" alt="CHAIR result" style="width: 100%; height: auto; display: block; margin: auto;">
+      <h3 class="title is-4" style="font-size: 18px;">Main Result</h3>
+      <img id="tree" src="/images/agentpoison/main_result.png" alt="Main result" style="width: 100%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
           \( \text{CHAIR} \) evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Lower \( \text{CHAIR}_S \) and \( \text{CHAIR}_I \) indicates less OH. Higher \( \text{BLEU} \) generally represent higher captioning quality, although existing work has reported weak correlation between \( \text{CHAIR} \) and text overlapping quality metrics. Bold indicates the best results of all methods.
