@@ -257,7 +257,7 @@
       <a shape="rect" href="javascript:togglebib('acs')" class="togglebib">bibtex</a> |
       <a href="https://arxiv.org/abs/2310.03379">arXiv</a> 
 
-      <p align="justify"> <i id="acs_abs">An attached arm can significantly increase the applicability of legged robots to several mobile manipulation tasks that are not possible for the wheeled or tracked counterparts. The standard control pipeline for such legged manipulators is to decouple the controller into that of manipulation and locomotion. However, this is ineffective and requires immense engineering to support coordination between the arm and legs, error can propagate across modules causing non-smooth unnatural motions. It is also biological implausible where there is evidence for strong motor synergies across limbs. In this work, we propose to learn a unified policy for whole-body control of a legged manipulator using reinforcement learning. We propose Regularized Online Adaptation to bridge the Sim2Real gap for high-DoF control, and Advantage Mixing exploiting the causal dependency in the action space to overcome local minima during training the whole-body system. We also present a simple design for a low-cost legged manipulator, and find that our unified policy can demonstrate dynamic and agile behaviors across several task setups.</i></p>
+      <p align="justify"> <i id="acs_abs">Ensuring safety in Reinforcement Learning (RL), typically framed as a Constrained Markov Decision Process (CMDP), is crucial for real-world exploration applications. Current approaches in handling CMDP struggle to balance optimality and feasibility, as direct optimization methods cannot ensure state-wise in-training safety, and projection-based methods correct actions inefficiently through lengthy iterations. To address these challenges, we propose Adaptive Chance-constrained Safeguards (ACS), an adaptive, model-free safe RL algorithm using the safety recovery rate as a surrogate chance constraint to iteratively ensure safety during exploration and after achieving convergence. Theoretical analysis indicates that the relaxed probabilistic constraint sufficiently guarantees forward invariance to the safe set. And extensive experiments conducted on both simulated and real-world safety-critical tasks demonstrate its effectiveness in enforcing safety (nearly zero-violation) while preserving optimality (+23.8%), robustness, and fast response in stochastic real-world settings.</i></p>
 
 <pre xml:space="preserve">
   @article{chen2023progressive,
@@ -332,10 +332,7 @@ hideallbibs();
   hideblock('ieee_iot_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
-  hideblock('acm_turc_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('rma_abs');
+  hideblock('agentpoison_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('halc_abs');
@@ -345,15 +342,6 @@ hideallbibs();
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('acs_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('maniploco_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('parkour_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('mobile_aloha_abs');
 </script>
 </body>
 
