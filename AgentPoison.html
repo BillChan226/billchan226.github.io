@@ -212,29 +212,16 @@
           We consider three evaluation metrics: 1) attack success rate for retrieval (<b>ASR-r</b>) -- the percentage of test instances where all the retrieved demonstrations from the database are poisoned,
           2) attack success rate for the target action (<b>ASR-a</b>) -- the percentage of test instances where the agent generates the target action (e.g., "sudden stop") conditioned on successful retrieval of poisoned instances
           3) nd-to-end target attack success rate (<b>ASR-t</b>) -- the percentage of test instances where the agent achieves the final adversarial impact on the environment (e.g. collision), which also depends on the agent itself.
+          4) benign accuracy (<b>ACC</b>) -- the percentage of test instances with correct action output without the trigger.
         </p>
       </div>
       <h3 class="title is-4" style="font-size: 18px;">Main Result</h3>
       <img id="tree" src="/images/agentpoison/main_result.png" alt="Main result" style="width: 80%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
-          We compare AgentPoison with four baselines over ASR-r, ASR-b, ASR-t, ACC on four combinations of LLM agent backbones: GPT3.5 and LLaMA3-70b (Agent-Driver uses a fine-tuned LLaMA3-8b) and retrievers: end-to-end and contrastive-based. Specifically, we inject 20 poisoned instances for Agent-Driver, 4 for ReAct, and 2 for EHRAgent. For ASR, the maximum number in each column is in bold; and for ACC, the number within 1% to the non-attack case is in bold.
+          Performance of AgentPoison compared with four baselines over ASR-r, ASR-b, ASR-t, ACC on four combinations of LLM agent backbones: GPT3.5 and LLaMA3-70b (Agent-Driver uses a fine-tuned LLaMA3-8b) and retrievers: end-to-end and contrastive-based. Specifically, we inject 20 poisoned instances for Agent-Driver, 4 for ReAct, and 2 for EHRAgent. For ASR, the maximum number in each column is in bold; and for ACC, the number within 1% to the non-attack case is in bold.
         </p>
       </div>
-      <!-- <h3 class="title is-4" style="font-size: 18px;">POPE Result</h3>
-      <img id="tree" src="/images/halc/opope_result.png" alt="OPOPE result" style="width: 100%; height: auto; display: block; margin: auto;">
-      <div class="content has-text-justified" style="font-size: 16px;">
-        <p>
-          Proposed \( \text{OPOPE} \) evaluation results on MSCOCO dataset of LVLMs with different decoding baselines and SOTAs designed for mitigating OH. Higher accuracy, precision, and \(\text{F score} \) indicates better performance. Bold indicates the best results of all methods.
-        </p>
-      </div>
-      <h3 class="title is-4" style="font-size: 18px;">MME Benchmarks</h3>
-      <img id="tree" src="/images/halc/mme_result.png" alt="MME result" style="width: 60%; height: auto; display: block; margin: auto;">
-      <div class="content has-text-justified" style="font-size: 16px;">
-        <p>
-          Comparison across OH baselines and SOTAs on four OH-critical MME subsets. All methods adopt MiniGPT-4 as LVLM backbone. HALC outperforms all other methods with a large margin: existence: \( +10.7\% \); position: \( +18.3\% \); color: \( +19.4\% \) and count: \(+20.2\% \) in average.
-        </p>
-      </div> -->
     </div>
   </div>
 </section>
