@@ -207,7 +207,11 @@
       <h3 class="title is-4" style="font-size: 18px;">Setup</h3>
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
-          We compare agent poison with four baselines, <a href="https://arxiv.org/abs/2307.15043">GCG</a>, AutoDAN, CPA, and BadChain, on 
+          We compare agent poison with four baselines, <a href="https://arxiv.org/abs/2307.15043">GCG</a>, <a href="https://arxiv.org/abs/2310.04451">AutoDAN</a>, <a href="https://arxiv.org/abs/2310.19156">CPA</a>, and <a href="https://arxiv.org/abs/2401.12242">BadChain</a>, for three agents, <a href="https://arxiv.org/abs/2311.10813">Agent-Driver</a> for autonomous driving, <a href="https://arxiv.org/abs/2210.03629">ReAct</a> for knowledge-intensive QA, and <a href="https://arxiv.org/html/2401.07128v1">EHRAgent</a> for healthcare record management.
+          We use the dataset published in the original paper for Agent-Driver, <a href="https://allenai.org/data/strategyqa">StrategyQA</a> for ReAct, and XXX for EHRAgent.
+          We consider three evaluation metrics: 1) attack success rate for retrieval (<b>ASR-r</b>) -- the percentage of test instances where all the retrieved demonstrations from the database are poisoned,
+          2) attack success rate for the target action (<b>ASR-a</b>) -- the percentage of test instances where the agent generates the target action (e.g., "sudden stop") conditioned on successful retrieval of poisoned instances
+          3) nd-to-end target attack success rate (<b>ASR-t</b>) -- the percentage of test instances where the agent achieves the final adversarial impact on the environment (e.g. collision), which also depends on the agent itself.
         </p>
       </div>
       <h3 class="title is-4" style="font-size: 18px;">Main Result</h3>
