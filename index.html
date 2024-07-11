@@ -224,12 +224,15 @@
       <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
 
 <pre xml:space="preserve">
-  @article{chen2024halc,
-    title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
-    author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
-    journal={arXiv preprint arXiv:2403.00425},
-    year={2024}
-  }
+  @misc{chen2024mjbenchmultimodalrewardmodel,
+    title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
+    author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+    year={2024},
+    eprint={2407.04842},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2407.04842}, 
+}
 </pre>
       </div>
     </td>
