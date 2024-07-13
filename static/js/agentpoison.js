@@ -103,10 +103,10 @@ var barColorFn = function (value, formatterParams) {
 
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        fetch('/data/agentpoison/main_result.json').then(response => response.json()),
-        fetch('/data/agentpoison/human_eval.json').then(response => response.json()),
-        fetch('/data/agentpoison/alignment.json').then(response => response.json()),
-        fetch('/data/agentpoison/safety.json').then(response => response.json()),
+        fetch('data/agentpoison/main_result.json').then(response => response.json()),
+        fetch('data/agentpoison/human_eval.json').then(response => response.json()),
+        fetch('data/agentpoison/alignment.json').then(response => response.json()),
+        fetch('data/agentpoison/safety.json').then(response => response.json()),
     ])
         .then(([
             main_tabledata,
