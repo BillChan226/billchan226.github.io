@@ -208,9 +208,9 @@
       <div class="content has-text-justified" style="font-size: 16px;">
         <br/>
         <p>
-          The key idea of <b>AgentPoison</b> is to inject a small portion of <b>deliberately optimized poison data</b> into the LLM agent's memory or knowledge base such that they can be effectively retrieved to achieve adversarial target. <br/>
-          <b>Inputs to AgentPoison</b>: (1) a set of input querries to the LLM agent; (2) a sample dataset of the memory or knowledge base;
-          <b>Iterative Trigger Optimization (Bottom)</b>: We first obtain an effective trigger via an iterative gradient-guided discrete optimization algorithm. Intuitively, the algorithm aims to map triggered querries into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.
+          The key idea of <b>AgentPoison</b> is to inject a small portion of <b>deliberately optimized poison data</b> into the LLM agent's memory or knowledge base such that they can be effectively retrieved to achieve adversarial target. <br/><br/>
+          <b>Inputs to AgentPoison</b>: (1) a set of input querries to the LLM agent; (2) a sample dataset of the memory or knowledge base.<br/><br/>
+          <b>Iterative Trigger Optimization (Bottom)</b>: We first obtain an effective trigger via an iterative gradient-guided discrete optimization algorithm. Intuitively, the algorithm aims to map triggered querries into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.<br/><br/>
           <b>LLM Agent Inference (Top)</b>: After obtaining the trigger, the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains the optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. <br/><br/>
         </p>
       </div>
