@@ -112,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             main_tabledata,
             human_tabledata,
             alignment_tabledata,
-            safety_tabledata,
-            quality_tabledata,
-            bias_tabledata]) => {
+            safety_tabledata]) => {
 
 
             // Initialize Tabulator
