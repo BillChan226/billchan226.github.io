@@ -208,8 +208,8 @@
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
           An overview of the proposed AgentPoison framework. <br/>
-          <b>Agent Inference (Top)</b>: the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains an optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. <br/>
-          <b>Trigger Optimization (Bottom)</b>: Such a trigger is obtained by an iterative gradient-guided discrete optimization. Intuitively, the algorithm aims to gather queries with the trigger into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.</p>
+          <b>LLM Agent Inference (Top)</b>: the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains an optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. <br/>
+          <b>Iterative Trigger Optimization (Bottom)</b>: Such a trigger is obtained by an iterative gradient-guided discrete optimization. Intuitively, the algorithm aims to gather queries with the trigger into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.</p>
       </div>
     </div>
   </div>
@@ -220,10 +220,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-4" style="margin-top: 20px;">Method</h2>
-      <img id="tree" src="/images/agentpoison/method_comparison.png" alt="Method Comparison" style="width: 100%; height: auto; display: block; margin: auto;">
+      <img id="tree" src="/images/agentpoison/method_comparison.png" alt="Method Comparison" style="width: 90%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
-          An overview of the proposed AgentPoison framework. (Top) During the inference, the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains an optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. (Bottom) Such a trigger is obtained by an iterative gradient-guided discrete optimization. Intuitively, the algorithm aims to gather queries with the trigger into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.</p>
+          Comparing the optimized poisoning embeddings of <b>AgentPoison</b> with baseline corpus poisoning attack (CPA). The poisoning instances of CPA are shown as <a style="color:#079af5;">blue</a> dots in (a), and the poisoning embeddings of <b>AgentPoison</b> during iteration 0/10/15 are shown in <a style="color:#f10b0b;">red</a> dots in b-d, while the final sampled poisoning instances are shown in <a style="color:#079af5;">blue</a> (<b>AgentPoison</b> only requires a small poisoning ratio).  
+        </p>
       </div>
     </div>
   </div>
