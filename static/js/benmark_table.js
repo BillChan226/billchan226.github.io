@@ -103,12 +103,12 @@ var barColorFn = function (value, formatterParams) {
 
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        fetch('data/agentpoison/alignment.json').then(response => response.json()),
-        fetch('data/agentpoison/human_eval.json').then(response => response.json()),
-        fetch('data/agentpoison/alignment.json').then(response => response.json()),
-        fetch('data/agentpoison/safety.json').then(response => response.json()),
-        fetch('data/agentpoison/quality.json').then(response => response.json()),
-        fetch('data/agentpoison/bias.json').then(response => response.json()),
+        fetch('/data/agentpoison/alignment.json').then(response => response.json()),
+        fetch('/data/agentpoison/human_eval.json').then(response => response.json()),
+        fetch('/data/agentpoison/alignment.json').then(response => response.json()),
+        fetch('/data/agentpoison/safety.json').then(response => response.json()),
+        fetch('/data/agentpoison/quality.json').then(response => response.json()),
+        fetch('/data/agentpoison/bias.json').then(response => response.json()),
     ])
         .then(([
             benchmark_tabledata,
