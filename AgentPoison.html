@@ -259,17 +259,45 @@
         <p>
           We compare agent poison with four baselines, <a href="https://arxiv.org/abs/2307.15043">GCG</a>, <a href="https://arxiv.org/abs/2310.04451">AutoDAN</a>, <a href="https://arxiv.org/abs/2310.19156">CPA</a>, and <a href="https://arxiv.org/abs/2401.12242">BadChain</a>, for three agents, <a href="https://arxiv.org/abs/2311.10813">Agent-Driver</a> for autonomous driving, <a href="https://arxiv.org/abs/2210.03629">ReAct</a> for knowledge-intensive QA, and <a href="https://arxiv.org/html/2401.07128v1">EHRAgent</a> for healthcare record management.
           We use the dataset published in the original paper for <a href="https://drive.google.com/drive/folders/1BjCYr0xLTkLDN9DrloGYlerZQC1EiPie">Agent-Driver</a>, <a href="https://allenai.org/data/strategyqa">StrategyQA</a> for ReAct, and <a href="https://github.com/BillChan226/AgentPoison/tree/master/EhrAgent/database">successful trials</a> that we collected ourselves for EHRAgent.
-          We consider three evaluation metrics: 1) attack success rate for retrieval (<b>ASR-r</b>) -- the percentage of test instances where all the retrieved demonstrations from the database are poisoned,
+          We consider three evaluation metrics: <br/>
+          1) attack success rate for retrieval (<b>ASR-r</b>) -- the percentage of test instances where all the retrieved demonstrations from the database are poisoned,
           2) attack success rate for the target action (<b>ASR-a</b>) -- the percentage of test instances where the agent generates the target action (e.g., "sudden stop") conditioned on successful retrieval of poisoned instances
           3) End-to-end target attack success rate (<b>ASR-t</b>) -- the percentage of test instances where the agent achieves the final adversarial impact on the environment (e.g. collision), which also depends on the agent itself.
           4) benign accuracy (<b>ACC</b>) -- the percentage of test instances with correct action output without the trigger.
         </p>
       </div>
       <h3 class="title is-4" style="font-size: 18px;">Main Result</h3>
-      <img id="tree" src="/images/agentpoison/main_result.png" alt="Main result" style="width: 80%; height: auto; display: block; margin: auto;">
+      <img id="tree1" src="/images/agentpoison/main_result.png" alt="Main result" style="width: 80%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
           Performance of AgentPoison compared with four baselines over ASR-r, ASR-b, ASR-t, ACC on four combinations of LLM agent backbones: GPT3.5 and LLaMA3-70b (Agent-Driver uses a fine-tuned LLaMA3-8b) and retrievers: end-to-end and contrastive-based. Specifically, we inject 20 poisoned instances for Agent-Driver, 4 for ReAct, and 2 for EHRAgent. For ASR, the maximum number in each column is in bold; and for ACC, the number within 1% to the non-attack case is in bold.
+        </p>
+      </div>
+    </div>
+    <ol style="PADDING-LEFT: 50px; text-align: justify">
+      <li>AgentPoison demonstrates superior attack success rate and benign utility.
+      <br/>
+      <li>AgentPoison has high transferability across embedders.
+      <br/>
+      <li>AgentPoison performs well even when we inject only one instance in the knowledge base with one token in the trigger.
+      <br/>
+      <li>XXX One sentence about loss
+      <br/>
+      <li>AgentPoison is robust to perturbations in the trigger sequence.
+      <br/>
+      <li>AgentPoison is highly evasive against potential defenses.
+    </ol>
+    </div>
+      <img id="tree2" src="/images/agentpoison/transferability.png" alt="Main result" style="width: 80%; height: auto; display: block; margin: auto;">
+      <div class="content has-text-justified" style="font-size: 16px;">
+        <p>
+          Transferability confusion matrix showcasing the performance of the triggers optimized on the source embedder (y-axis) transferring to the target embedder (x-axis) w.r.t. ASR-r (a), ASR-a (b), and ACC (c) on Agent-Driver. We can denote that (1) trigger optimized with <b>AgentPoison</b> generally transfer well across dense retrievers; (2) triggers transfer better among embedders with similar training strategy (i.e. end-to-end (REALM, ORQA); contrastive (DPR, ANCE, BGE)).
+        </p>
+      </div>
+      <img id="tree3" src="/images/agentpoison/number_study.png" alt="Main result" style="width: 80%; height: auto; display: block; margin: auto;">
+      <div class="content has-text-justified" style="font-size: 16px;">
+        <p>
+          Comparing the performance of <b>AgentPoison</b> with random trigger and CPA w.r.t. the number of poisoned instances in the database (left) and the number of tokens in the trigger (right). We fix the number of tokens to 4 for the former case and the number of poisoned instances to 32 for the latter case. Two metrics ASR-r (retrieval success rate) and ACC (benign utility) are studied.
         </p>
       </div>
       <ol style="PADDING-LEFT: 50px; text-align: justify">
