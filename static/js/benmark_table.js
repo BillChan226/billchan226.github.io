@@ -103,7 +103,7 @@ var barColorFn = function (value, formatterParams) {
 
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        fetch('data/ap/main_result.json').then(response => response.json()),
+        fetch('data/ap/benchmark.json').then(response => response.json()),
         fetch('data/ap/human_eval.json').then(response => response.json()),
         fetch('data/ap/alignment.json').then(response => response.json()),
         fetch('data/ap/safety.json').then(response => response.json()),
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('data/ap/bias.json').then(response => response.json()),
     ])
         .then(([
-            main_tabledata,
+            benchmark_tabledata,
             human_tabledata,
             alignment_tabledata,
             safety_tabledata,
@@ -123,9 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 row.line = [row['1'], row['2'], row['3'], row['4'], row['5'], row['6']]
             })
 
-            // Initialize Tabulator
-            var main_table = new Tabulator("#main-table", {
-                data: main_tabledata,
+            var table = new Tabulator("#benchmark-table", {
+                data: benchmark_tabledata,
                 layout: "fitColumns",
                 responsiveLayout: "collapse",
                 movableColumns: false,
@@ -133,41 +132,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     tooltip: true,
                 },
                 columns: [
-                    { title: "Agent Backbone", field: "Agent_Backbone", headerHozAlign: "center", headerVAlign: "middle", widthGrow: 2.0, minWidth: 135 },
-                    { title: "Method", field: "Method", headerHozAlign: "center", headerVAlign: "middle", widthGrow: 1.5, minWidth: 100 },
+                    { title: "Model", field: "Model", headerHozAlign: "center", headerVAlign: "middle", widthGrow: 2.0, minWidth: 135 },
                     {
-                        title: "Agent-Driver",
+                        title: "Alignment",
                         headerHozAlign: "center",
                         headerVAlign: "middle",
                         columns: [
-                            { title: "ASR-r", field: "Agent_Driver_ASR_r", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ASR-a", field: "Agent_Driver_ASR_a", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ASR-t", field: "Agent_Driver_ASR_t", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ACC", field: "Agent_Driver_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
+                            { title: "Avg w/ tie", field: "Alignment_Avg_w_tie", headerHozAlign: "center", hozAlign: "center", minWidth: 118, formatter: colorFormatter },
+                            { title: "Avg w/o tie", field: "Alignment_Avg_w_o_tie", headerHozAlign: "center", hozAlign: "center", minWidth: 130, formatter: colorFormatter },
                         ],
                     },
                     {
-                        title: "ReAct-StrategyQA",
+                        title: "Safety",
                         headerHozAlign: "center",
                         headerVAlign: "middle",
                         columns: [
-                            { title: "ASR-r", field: "ReAct_StrategyQA_ASR_r", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ASR-a", field: "ReAct_StrategyQA_ASR_a", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ASR-t", field: "ReAct_StrategyQA_ASR_t", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ACC", field: "ReAct_StrategyQA_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
+                            { title: "Avg w/ tie", field: "Safety_Avg_w_tie", headerHozAlign: "center", hozAlign: "center", minWidth: 118, formatter: colorFormatter },
+                            { title: "Avg w/o tie", field: "Safety_Avg_w_o_tie", headerHozAlign: "center", hozAlign: "center", minWidth: 130, formatter: colorFormatter },
                         ],
                     },
                     {
-                        title: "EHRAgent",
+                        title: "Quality",
                         headerHozAlign: "center",
                         headerVAlign: "middle",
                         columns: [
-                            { title: "ASR-r", field: "EHRAgent_ASR_r", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ASR-a", field: "EHRAgent_ASR_a", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ASR-t", field: "EHRAgent_ASR_t", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
-                            { title: "ACC", field: "EHRAgent_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 75, formatter: colorFormatter },
+                            { title: "Avg w/ tie", field: "Artifact_Avg_w_tie", headerHozAlign: "center", hozAlign: "center", minWidth: 118, formatter: colorFormatter },
+                            { title: "Avg w/o tie", field: "Artifact_Avg_w_o_tie", headerHozAlign: "center", hozAlign: "center", minWidth: 130, formatter: colorFormatter },
                         ],
                     },
+                    {
+                        title: "Bias",
+                        headerHozAlign: "center",
+                        headerVAlign: "middle",
+                        columns: [
+                            { title: "ACC", field: "Bias_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 82, formatter: colorFormatter },
+                            { title: "NDS", field: "Bias_NDS", headerHozAlign: "center", hozAlign: "center", minWidth: 82, formatter: colorFormatter },
+                            { title: "GES", field: "Bias_GES", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
+                        ],
+                    },
+                    { title: "Overall", field: "Overall_Score", sorter: "number", headerHozAlign: "center", hozAlign: "center", minWidth: 114, formatter: colorFormatter },
+                ],
+                initialSort: [
+                    { column: "Overall_Score", dir: "desc" },
                 ],
             });
 
