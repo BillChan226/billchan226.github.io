@@ -111,16 +111,16 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="/static/pdfs/supplementary_material.pdf" target="_blank"
+                    <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/2403.00425" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="ai ai-arxiv"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>arXiv</span>
                     </a>
-                  </span> -->
+                  </span>
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -133,16 +133,16 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2403.00425" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <!-- Dataset Link -->
+                  <span class="link-block">
+                    <a href="https://github.com/BillChan226/AgentPoison/dataset" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
             LLM agents have demonstrated remarkable performance across various applications, primarily due to their advanced capabilities in reasoning, utilizing external knowledge and tools, calling APIs, and executing actions to interact with environments. Current agents typically utilize a memory module or a retrieval-augmented generation (RAG) mechanism, retrieving past knowledge and instances with similar embeddings from knowledge bases to inform task planning and execution. However, the reliance on unverified knowledge bases raises significant concerns about their safety and trustworthiness. To uncover such vulnerabilities, we propose a novel red teaming approach AgentPoison, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance. Unlike conventional backdoor attacks, AgentPoison requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate AgentPoison effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. We inject the poisoning instances into the RAG knowledge base and long-term memories of these agents, respectively, demonstrating the generalization of AgentPoison. On each agent, AgentPoison achieves an average attack success rate of ≥ 80% with minimal impact on benign performance (≤ 1%) with a poison rate < 0.1%. Code is released <a href="https://github.com/BillChan226/AgentPoison" style="color:#36AE7C;">here</a>.
@@ -203,8 +203,24 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title is-4" style="margin-top: 20px;">Overview</h2>
-      <img id="tree" src="/images/agentpoison/method.png" alt="AgentPoison Overview" style="width: 100%; height: auto; display: block; margin: auto;">
+      <h2 class="title is-4" style="margin-top: 20px;">Method</h2>
+      <img id="tree" src="/images/agentpoison/method.png" alt="AgentPoison Overview" style="width: 90%; height: auto; display: block; margin: auto;">
+      <div class="content has-text-justified" style="font-size: 16px;">
+        <p>
+          An overview of the proposed AgentPoison framework. <br/>
+          <b>Agent Inference (Top)</b>: the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains an optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. <br/>
+          <b>Trigger Optimization (Bottom)</b>: Such a trigger is obtained by an iterative gradient-guided discrete optimization. Intuitively, the algorithm aims to gather queries with the trigger into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-4" style="margin-top: 20px;">Method</h2>
+      <img id="tree" src="/images/agentpoison/method_comparison.png" alt="Method Comparison" style="width: 100%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
           An overview of the proposed AgentPoison framework. (Top) During the inference, the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains an optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. (Bottom) Such a trigger is obtained by an iterative gradient-guided discrete optimization. Intuitively, the algorithm aims to gather queries with the trigger into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.</p>
