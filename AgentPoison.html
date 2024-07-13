@@ -285,7 +285,7 @@
           <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="benchmark-table-content" role="tabpanel" aria-labelledby="main-results-tab">
                   <p class="mt-2 px-2">
-                      Evaluation of three types of multimodal judges across four perspectives on <b>MJ-Bench</b> dataset. The average accuracy (%) with and without ties is provided for alignment, safety, and artifact. We evaluate preference biases over three metrics, i.e. accuracy (ACC), normalized dispersion score (NDS), Gini-based equality score (GES).
+                    Performance of <b>AgentPoison</b> compared with four baselines over ASR-r, ASR-b, ASR-t, ACC on four combinations of LLM agent backbones: GPT3.5 and LLaMA3-70b (Agent-Driver uses a fine-tuned LLaMA3-8b) and retrievers: end-to-end and contrastive-based. Specifically, we inject 20 poisoned instances for Agent-Driver, 4 for ReAct, and 2 for EHRAgent.
                   </p>
                   <div id="benchmark-table"></div>
               </div>

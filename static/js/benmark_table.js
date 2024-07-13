@@ -47,7 +47,7 @@ var colorFormatter = function (cell, formatterParams) {
         min: 0.0,
         max: 100.0,
         startColor: { r: 255, g: 255, b: 255 },
-        endColor: { r: 215, g: 98, b: 204 }
+        endColor: { r: 215, g: 98, b: 191 }
     };
 
     // Override defaults with provided formatterParams values
