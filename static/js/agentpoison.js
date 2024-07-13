@@ -11,7 +11,7 @@ var chartFormatter = function (cell, formatterParams, onRendered) {
 
     //add values to chart and style
     content.classList.add(formatterParams.type);
-    content.inneHrTML = values.join(",");
+    content.innerHTML = values.join(",");
 
     //setup chart options
     var options = {
@@ -103,10 +103,15 @@ var barColorFn = function (value, formatterParams) {
 
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        fetch('data/agentpoison/main_result.json').then(response => response.json()),
-        fetch('data/agentpoison/human_eval.json').then(response => response.json()),
-        fetch('data/agentpoison/alignment.json').then(response => response.json()),
-        fetch('data/agentpoison/safety.json').then(response => response.json()),
+        fetch('/data/agentpoison/main_result.json').then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }),
+        fetch('/data/agentpoison/human_eval.json').then(response => response.json()),
+        fetch('/data/agentpoison/alignment.json').then(response => response.json()),
+        fetch('/data/agentpoison/safety.json').then(response => response.json()),
     ])
         .then(([
             main_tabledata,
