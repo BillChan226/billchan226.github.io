@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     { column: "Avg", dir: "desc" },
                 ],
             });
-
+            
         });
 
 })
