@@ -285,6 +285,12 @@
           Comparing the performance of <b>AgentPoison</b> with random trigger and CPA w.r.t. the number of poisoned instances in the database (left) and the number of tokens in the trigger (right). We fix the number of tokens to 4 for the former case and the number of poisoned instances to 32 for the latter case. Two metrics ASR-r (retrieval success rate) and ACC (benign utility) are studied.
         </p>
       </div>
+      <img id="tree3" src="/images/agentpoison/robustness.png" alt="Main result" style="width: 80%; height: auto; display: block; margin: auto;">
+      <div class="content has-text-justified" style="font-size: 16px;">
+        <p>
+          <b>Left</b>: We assess the resilience of the optimized trigger by studying three types of perturbations on the trigger in the input query while keeping the poisoned instances fixed. Specifically, we consider injecting three random letters, injecting one word in the sequence, and rephrasing the trigger while maintaining its semantic meaning. <b>Right</b>: We evaluate the performance of <b>AgentPoison</b> against two types of SOTA defenses, including perplexity filter and query rephrasing.
+        </p>
+      </div>
       <ol style="PADDING-LEFT: 50px; text-align: justify">
         <li>AgentPoison demonstrates superior attack success rate and benign utility.
         <br/>
