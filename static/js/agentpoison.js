@@ -103,15 +103,15 @@ var barColorFn = function (value, formatterParams) {
 
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        fetch('/data/agentpoison/main_result.json').then(response => {
+        fetch('data/agentpoison/main_result.json').then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
         }),
-        fetch('/data/agentpoison/human_eval.json').then(response => response.json()),
-        fetch('/data/agentpoison/alignment.json').then(response => response.json()),
-        fetch('/data/agentpoison/safety.json').then(response => response.json()),
+        fetch('data/agentpoison/human_eval.json').then(response => response.json()),
+        fetch('data/agentpoison/alignment.json').then(response => response.json()),
+        fetch('data/agentpoison/safety.json').then(response => response.json()),
     ])
         .then(([
             main_tabledata,
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             // Initialize Tabulator
-            var table = new Tabulator("#main-table", {
+            var main_table = new Tabulator("#main-table", {
                 data: main_tabledata,
                 layout: "fitColumns",
                 responsiveLayout: "collapse",
