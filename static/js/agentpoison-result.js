@@ -111,20 +111,20 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('/data/agentpoison/bias.json').then(response => response.json()),
     ])
         .then(([
-            benchmark_tabledata,
+            main_tabledata,
             human_tabledata,
             alignment_tabledata,
             safety_tabledata,
             quality_tabledata,
             bias_tabledata]) => {
 
-            // 1. Benchmark Table
-            benchmark_tabledata.forEach(row => {
+            // 1. Main result Table
+            main_tabledata.forEach(row => {
                 row.line = [row['1'], row['2'], row['3'], row['4'], row['5'], row['6']]
             })
 
-            var table = new Tabulator("#benchmark-table", {
-                data: benchmark_tabledata,
+            var table = new Tabulator("#main-table", {
+                data: main_tabledata,
                 layout: "fitColumns",
                 responsiveLayout: "collapse",
                 movableColumns: false,
@@ -303,102 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     { column: "Avg", dir: "desc" },
                 ],
             });
-
-            // 5. Quality Table
-            quality_tabledata.forEach(row => {
-                row.line = [row['1'], row['2'], row['3'], row['4'], row['5'], row['6']]
-            })
-
-            var quality_table = new Tabulator("#quality-table", {
-                data: quality_tabledata,
-                layout: "fitColumns",
-                responsiveLayout: "collapse",
-                movableColumns: false,
-                columnDefaults: {
-                    tooltip: true,
-                },
-                columns: [
-                    { title: "Model", field: "Model", headerHozAlign: "center", headerVAlign: "middle", widthGrow: 2.0, minWidth: 180 },
-                    {
-                        title: "Distortion",
-                        headerHozAlign: "center",
-                        headerVAlign: "middle",
-                        columns: [
-                            { title: "Human Face", field: "Distortion_Human_Face", headerHozAlign: "center", hozAlign: "center", minWidth: 150, formatter: colorFormatter },
-                            { title: "Human Limb", field: "Distortion_Human_Limb", headerHozAlign: "center", hozAlign: "center", minWidth: 150, formatter: colorFormatter },
-                            { title: "Object", field: "Distortion_Object", headerHozAlign: "center", hozAlign: "center", minWidth: 120, formatter: colorFormatter },
-                            { title: "Avg", field: "Distortion_Avg", sorter: "number", headerHozAlign: "center", hozAlign: "center", minWidth: 120, formatter: colorFormatter }
-                        ]
-                    },
-                    {
-                        title: "Blurry",
-                        headerHozAlign: "center",
-                        headerVAlign: "middle",
-                        columns: [
-                            { title: "Defocused", field: "Blurry_Defocused", headerHozAlign: "center", hozAlign: "center", minWidth: 130, formatter: colorFormatter },
-                            { title: "Motion", field: "Blurry_Motion", headerHozAlign: "center", hozAlign: "center", minWidth: 120, formatter: colorFormatter },
-                            { title: "Avg", field: "Blurry_Avg", sorter: "number", headerHozAlign: "center", hozAlign: "center", minWidth: 120, formatter: colorFormatter }
-                        ]
-                    },
-                    { title: "Avg", field: "Avg", sorter: "number", headerHozAlign: "center", hozAlign: "center", minWidth: 120, formatter: colorFormatter }
-                ],
-                initialSort: [
-                    { column: "Avg", dir: "desc" },
-                ],
-            });
-
-            // 6. Bias Table
-            bias_tabledata.forEach(row => {
-                row.line = [row['1'], row['2'], row['3'], row['4'], row['5'], row['6']]
-            })
-
-            var bias_table = new Tabulator("#bias-table", {
-                data: bias_tabledata,
-                layout: "fitColumns",
-                responsiveLayout: "collapse",
-                movableColumns: false,
-                columnDefaults: {
-                    tooltip: true,
-                },
-                columns: [
-                    { title: "Model", field: "Model", headerHozAlign: "center", headerVAlign: "middle", widthGrow: 2.0, minWidth: 150 },
-                    {
-                        title: "Numerical [0-5]",
-                        headerHozAlign: "center",
-                        headerVAlign: "middle",
-                        columns: [
-                            { title: "ACC", field: "Numerical_0_5_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
-                            { title: "NDS", field: "Numerical_0_5_NDS", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
-                            { title: "GES", field: "Numerical_0_5_GES", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter }
-                        ]
-                    },
-                    {
-                        title: "Numerical [0-10]",
-                        headerHozAlign: "center",
-                        headerVAlign: "middle",
-                        columns: [
-                            { title: "ACC", field: "Numerical_0_10_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
-                            { title: "NDS", field: "Numerical_0_10_NDS", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
-                            { title: "GES", field: "Numerical_0_10_GES", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter }
-                        ]
-                    },
-                    {
-                        title: "Likert scale",
-                        headerHozAlign: "center",
-                        headerVAlign: "middle",
-                        columns: [
-                            { title: "ACC", field: "Likert_ACC", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
-                            { title: "NDS", field: "Likert_NDS", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter },
-                            { title: "GES", field: "Likert_GES", headerHozAlign: "center", hozAlign: "center", minWidth: 80, formatter: colorFormatter }
-                        ]
-                    },
-                    { title: "Overall", field: "Overall", sorter: "number", headerHozAlign: "center", hozAlign: "center", minWidth: 90, formatter: colorFormatter }
-                ],
-                initialSort: [
-                    { column: "Overall", dir: "desc" },
-                ],
-            });
-
 
         });
 

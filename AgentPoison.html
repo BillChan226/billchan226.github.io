@@ -41,14 +41,14 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script> -->
+    crossorigin="anonymous"></script>
 
   <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bootstrap4.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
 
-  <script src="/static/js/benmark_table.js" type="module"></script>
+  <script src="/static/js/agentpoison_result.js" type="module"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -256,14 +256,14 @@
 <section class="hero teaser" id="leaderboard">
   <div class="container is-max-desktop">
       <div class="hero-body">
-          <h2 class="title is-3">AgentPoison</h2>
+          <h2 class="title is-3">Main results</h2>
           <p>
               Result of AgentPoison.
           </p>
           <br>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="main-results-tab" data-bs-toggle="tab" data-bs-target="#benchmark-table-content" type="button" role="tab" aria-controls="benchmark-table-content" aria-selected="true">Main Result</button>
+                  <button class="nav-link active" id="main-results-tab" data-bs-toggle="tab" data-bs-target="#main-table-content" type="button" role="tab" aria-controls="main-table-content" aria-selected="true">Main Result</button>
               </li>
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="human-table-tab" data-bs-toggle="tab" data-bs-target="#human-table-content" type="button" role="tab" aria-controls="human-table-content" aria-selected="false">Human-Eval</button>
@@ -274,16 +274,10 @@
               <li class="nav-item" role="presentation">
                   <button class="nav-link" id="safety-table-tab" data-bs-toggle="tab" data-bs-target="#safety-table-content" type="button" role="tab" aria-controls="safety-table-content" aria-selected="false">Safety</button>
               </li>
-              <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="quality-table-tab" data-bs-toggle="tab" data-bs-target="#quality-table-content" type="button" role="tab" aria-controls="quality-table-content" aria-selected="false">Quality</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="bias-table-tab" data-bs-toggle="tab" data-bs-target="#bias-table-content" type="button" role="tab" aria-controls="bias-table-content" aria-selected="false">Bias</button>
-              </li>
           </ul>
 
           <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="benchmark-table-content" role="tabpanel" aria-labelledby="main-results-tab">
+              <div class="tab-pane fade show active" id="main-table-content" role="tabpanel" aria-labelledby="main-results-tab">
                   <p class="mt-2 px-2">
                       Evaluation of three types of multimodal judges across four perspectives on <b>MJ-Bench</b> dataset. The average accuracy (%) with and without ties is provided for alignment, safety, and artifact. We evaluate preference biases over three metrics, i.e. accuracy (ACC), normalized dispersion score (NDS), Gini-based equality score (GES).
                   </p>
@@ -306,18 +300,6 @@
                       The detailed evaluation result of all multimodal judges on <b>safety</b> perspective. The feedback are provided in numerical scale of range [0, 10]. Specifically, we study their individual performance over two safety objectives: toxicity (crime, shocking, and disgust) and NSFW (evident, evasive, and subtle).
                   </p>
                   <div id="safety-table"></div>
-              </div>
-              <div class="tab-pane fade" id="quality-table-content" role="tabpanel" aria-labelledby="quality-table-tab">
-                  <p class="mt-2 px-2">
-                      The detailed evaluation result of all multimodal judges on <b>quality</b> perspective. The feedback is provided in numerical scale of range [0, 10]. Specifically, we study their individual performance over two quality objectives: distortion (including human face, human limb, and object), and blurry (including defocused and motion).
-                  </p>
-                  <div id="quality-table"></div>
-              </div>
-              <div class="tab-pane fade" id="bias-table-content" role="tabpanel" aria-labelledby="bias-table-tab">
-                  <p class="mt-2 px-2">
-                      The detailed evaluation result of all multimodal judges on <b>bias</b> perspective. The feedback are provided in different scales including numerical scales ([0-5], and [0-10]) and Likert scale: [Extremely Poor, Poor, Average, Good, Outstanding]. We study the average ACC, NDS, and GES score for each model across all occupations/educations.
-                  </p>
-                  <div id="bias-table"></div>
               </div>
           </div>
           <br>
