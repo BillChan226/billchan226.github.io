@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning">
-  <meta property="og:title" content="AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning"/>
+  <meta name="description" content="AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases">
+  <meta property="og:title" content="AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases"/>
   <meta property="og:description" content="arxiv 2024"/>
   <meta property="og:url" content="https://billchan226.github.io/AgentPoison.html"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning">
+  <meta name="twitter:title" content="AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases">
   <meta name="twitter:description" content="arxiv 2024">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="/images/agentpoison/agentpoison_logo.jpg">
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning</title>
+  <title>AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases</title>
   <link rel="icon" type="image/x-icon" href="/images/agentpoison/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -71,7 +71,7 @@
               <!-- Logo image -->
               <img src="/images/agentpoison/agentpoison_logo.jpg" alt="Logo" style="margin-right: -20px; width: auto; height: 140px;"> <!-- Adjust the src, height, and margin-right as needed -->
               <!-- Title -->
-              <h1 class="title is-1 publication-title" style="font-size: 45px;">AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning</h1>
+              <h1 class="title is-1 publication-title" style="font-size: 45px;">AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases</h1>
             </div>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -112,7 +112,7 @@
                     </span>
 
                     <!-- ArXiv abstract Link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="https://arxiv.org/abs/2403.00425" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -120,7 +120,7 @@
                       </span>
                       <span>arXiv</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -181,8 +181,8 @@
           </p>
             
             😈 On each agent, <b>AgentPoison</b> achieves an <b>average attack success rate of ≥ 80%</b> with <b>minimal impact on benign performance (≤ 1%)</b> with a <b>poison rate < 0.1%</b> ! <br/>
-            🔥 <b>AgentPoison</b> achieves high ASR (≥ 60%) even when we <b>inject a single poisoning instance with a one-token trigger !!</b> <br/>
-            👺 <b>AgentPoison</b> achieves a high transfer rate (≥ 70%) across different RAG retrievers and strong robustness to various perturbations and potential defenses !
+            🔥 Even when we inject a single poisoning instance with a one-token trigger, AgentPoison achieves high ASR (≥ 60%)!!
+            👺 <b>AgentPoison</b> achieves high attack transferability across different RAG retrievers and high resilience against various perturbations and defenses !
           
         </div>
       </div>
@@ -200,8 +200,9 @@
       <div class="content has-text-justified" style="font-size: 16px;">
         <br/>
         <p>
-          The key idea of <b>AgentPoison</b> is to inject a small portion of <b>deliberately optimized poison data</b> into the LLM agent's memory or knowledge base such that they can be effectively retrieved to achieve adversarial target. <br/><br/>
-          <b>Inputs to AgentPoison</b>: (1) a set of input querries to the LLM agent; (2) a sample dataset of the memory or knowledge base.<br/><br/>
+          The key idea of <b>AgentPoison</b> is to inject a small portion of <b>deliberately optimized poison data</b> into the LLM agent's memory or knowledge base such that they can be effectively retrieved to achieve adversarial target even with small poisoning ratio. <br/><br/>
+          <!-- <b>Inputs to AgentPoison</b>: (1) a set of input querries to the LLM agent; (2) the target memory set or knowledge base.<br/><br/> -->
+          How to optimize the poisoning trigger such that it could be selected by the victim LLM agent with high probability even with small poisoning ratio?
           <b>Iterative Trigger Optimization (Bottom)</b>: We first obtain an effective trigger via an iterative gradient-guided discrete optimization algorithm. Intuitively, the algorithm aims to map triggered querries into a unique region in the embedding space while increasing their compactness. This will facilitate the retrieval rate of poisoned instances while preserving agent utility when the trigger is not present.<br/><br/>
           <b>LLM Agent Inference (Top)</b>: After obtaining the trigger, the adversary poisons the LLM agents’ memory or RAG knowledge base with very few malicious demonstrations, which will be retrieved when the user instruction contains the optimized trigger. The retrieved demonstration with spurious, stealthy examples could effectively result in target adversarial action and catastrophic outcomes. <br/><br/>
         </p>
@@ -269,13 +270,13 @@
       <ol style="PADDING-LEFT: 50px; text-align: justify">
         <li>On all agents, <b>AgentPoison</b> achieves a <b>very high attack success rate of ≥ 80%</b> with <b>minimal impact on benign performance (≤ 1%)</b> with a <b>poison rate < 0.1%</b>.
         <br/>
-        <li>On all agents, <b>AgentPoison</b> achieves a high transferability (≥ 70%) across different RAG retrievers.
+        <li>On all agents, <b>AgentPoison</b> achieves high attack transferability across different RAG retrievers.
         <br/>
         <li><b>AgentPoison</b> performs well even when we inject only one instance in the knowledge base with one token in the trigger.
         <br/>
-        <li><b>AgentPoison</b> is robust to perturbations in the trigger sequence, achieving a high ASR even when completely changing the trigger sequence, as long as its semantic meaning is preserved.
+        <li><b>AgentPoison</b> is resilient to perturbations in the trigger sequence, achieving a high ASR even when completely changing the trigger sequence, as long as its semantic meaning is preserved.
         <br/>
-        <li><b>AgentPoison</b> is highly evasive against potential defenses due to its high contextual coherence and readability of the optimzied trigger.
+        <li><b>AgentPoison</b> is highly evasive against potential defenses due to its high in-context coherence and readability of the optimzied trigger.
       </ol>
     </div>
   </div>
@@ -478,7 +479,7 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{chen2024agent,
-        title={AgentPoison: Red-teaming LLM Agents via Memory or Knowledge Base Backdoor Poisoning},
+        title={AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases},
         author={Chen, Zhaorun and Xiang, Zhen and Xiao, Chaowei and Song, Dawn and Li, Bo},
         journal={arXiv preprint arXiv:unknown},
         year={2024}
