@@ -177,13 +177,14 @@
             To uncover such vulnerabilities, we propose a novel red teaming approach <b>AgentPoison</b>, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance.
           </p>
           <p>
-            Unlike conventional backdoor attacks, <b>AgentPoison</b> requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate <b>AgentPoison</b> effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. We inject the poisoning instances into the RAG knowledge base and long-term memories of these agents, respectively, demonstrating the generalization of <b>AgentPoison</b>.<br/>Specifically,
+            Unlike conventional backdoor attacks, <b>AgentPoison</b> requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate <b>AgentPoison</b> effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. We inject the poisoning instances into the RAG knowledge base and long-term memories of these agents, respectively, demonstrating the generalization of <b>AgentPoison</b>.
           </p>
-            
+          <p>
+            Specifically,
+          </p>
             😈 On each agent, <b>AgentPoison</b> achieves an <b>average attack success rate of ≥ 80%</b> with <b>minimal impact on benign performance (≤ 1%)</b> with a <b>poison rate < 0.1%</b> ! <br/>
             🔥 Even when we inject a single poisoning instance with a one-token trigger, AgentPoison achieves high ASR (≥ 60%)!! <br/>
             👺 <b>AgentPoison</b> achieves high attack transferability across different RAG retrievers and high resilience against various perturbations and defenses !
-          
         </div>
       </div>
     </div>
