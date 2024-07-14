@@ -163,36 +163,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-        <!-- Your video here -->
-        <!-- <source src="/static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
-
-<!-- News
-<section class="section hero is-light">
-  <div class="column is-four-fifths has-text-left">
-    <h3 class="title is-5">News 🔥</h3>
-    <div class="content">
-      <p>
-        HALC is accepted at ICML 2024! Stay tuned!
-      </p>
-    </div>
-  </div>
-</section> -->
-
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -239,7 +209,7 @@
       <img id="tree2" src="/images/agentpoison/method_comparison.png" alt="Method Comparison" style="width: 90%; height: auto; display: block; margin: auto;">
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
-          Comparing the optimized poisoning embeddings of <b>AgentPoison</b> with baseline <a href="https://arxiv.org/abs/2310.19156">corpus poisoning attack (CPA)</a>. The poisoning instances of CPA are shown as <a style="color:#0733f5;">blue</a> dots in (a), and the poisoning embeddings of <b>AgentPoison</b> during iteration 0/10/15 are shown in <a style="color:#f10b0b;">red</a> dots in b-d, while the final sampled poisoning instances are shown in <a style="color:#0733f5;">blue</a> (<b>AgentPoison</b> only requires a small poisoning ratio).
+          <b>Case study</b>: We compare the optimized poisoning embeddings of <b>AgentPoison</b> with baseline <a href="https://arxiv.org/abs/2310.19156">corpus poisoning attack (CPA)</a>. The poisoning instances of CPA are shown as <a style="color:#0733f5;">blue</a> dots in (a), and the poisoning embeddings of <b>AgentPoison</b> during iteration 0/10/15 are shown in <a style="color:#f10b0b;">red</a> dots in b-d, while the final sampled poisoning instances are shown in <a style="color:#0733f5;">blue</a> (<b>AgentPoison</b> only requires a small poisoning ratio).
         </p>
         <p>
           By mapping the triggered instances to a unique embedding space, <b>AgentPoison</b> can effectively achieve high retrieval rates of poisoned instances while maintaining benign utility. In contrast, CPA requires a much larger poisoning ratio meanwhile significantly degrading benign utility.
@@ -257,7 +227,7 @@
       <h3 class="title is-4" style="font-size: 18px;">Setup</h3>
       <div class="content has-text-justified" style="font-size: 16px;">
         <p>
-          We compare agent poison with four baselines, <a href="https://arxiv.org/abs/2307.15043">GCG</a>, <a href="https://arxiv.org/abs/2310.04451">AutoDAN</a>, <a href="https://arxiv.org/abs/2310.19156">CPA</a>, and <a href="https://arxiv.org/abs/2401.12242">BadChain</a>, for three agents, <a href="https://arxiv.org/abs/2311.10813">Agent-Driver</a> for autonomous driving, <a href="https://arxiv.org/abs/2210.03629">ReAct</a> for knowledge-intensive QA, and <a href="https://arxiv.org/html/2401.07128v1">EHRAgent</a> for healthcare record management.<br/>
+          We compare <b>AgentPoison</b> with four baselines, <a href="https://arxiv.org/abs/2307.15043">GCG</a>, <a href="https://arxiv.org/abs/2310.04451">AutoDAN</a>, <a href="https://arxiv.org/abs/2310.19156">CPA</a>, and <a href="https://arxiv.org/abs/2401.12242">BadChain</a>, for three agents, <a href="https://arxiv.org/abs/2311.10813">Agent-Driver</a> for autonomous driving, <a href="https://arxiv.org/abs/2210.03629">ReAct</a> for knowledge-intensive QA, and <a href="https://arxiv.org/html/2401.07128v1">EHRAgent</a> for healthcare record management.<br/>
           We use the dataset published in the original paper for <a href="https://drive.google.com/drive/folders/1BjCYr0xLTkLDN9DrloGYlerZQC1EiPie">Agent-Driver</a>, <a href="https://allenai.org/data/strategyqa">StrategyQA</a> for ReAct, and <a href="https://github.com/BillChan226/AgentPoison/tree/master/EhrAgent/database">successful trials</a> that we collected ourselves for EHRAgent.
           We consider four evaluation metrics: <br/>
           1) attack success rate for retrieval (<b>ASR-r</b>) -- the percentage of test instances where all the retrieved demonstrations from the database are poisoned; <br/>
