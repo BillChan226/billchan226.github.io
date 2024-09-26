@@ -164,10 +164,42 @@
       <p align="justify"> <i id="agentpoison_abs">LLM agents have demonstrated remarkable performance across various applications, primarily due to their advanced capabilities in reasoning, utilizing external knowledge and tools, calling APIs, and executing actions to interact with environments. Current agents typically utilize a memory module or a retrieval-augmented generation (RAG) mechanism, retrieving past knowledge and instances with similar embeddings from knowledge bases to inform task planning and execution. However, the reliance on unverified knowledge bases raises significant concerns about their safety and trustworthiness. To uncover such vulnerabilities, we propose a novel red teaming approach AgentPoison, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance. Unlike conventional backdoor attacks, AgentPoison requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate AgentPoison effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. We inject the poisoning instances into the RAG knowledge base and long-term memories of these agents, respectively, demonstrating the generalization of AgentPoison. On each agent, AgentPoison achieves an average attack success rate of ≥ 80% with minimal impact on benign performance (≤ 1%) with a poison rate < 0.1%. Code is released <a href="https://github.com/BillChan226/AgentPoison" style="color:#36AE7C;">here</a>.</i></p>
 
 <pre xml:space="preserve">
-  @article{chen2024halc,
-    title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
-    author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
-    journal={arXiv preprint arXiv:2403.00425},
+  @article{chen2024agentpoison,
+    title={AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases},
+    author={Chen, Zhaorun and Xiang, Zhen and Xiao, Chaowei and Song, Dawn and Li, Bo},
+    journal={arXiv preprint arXiv:2407.12784},
+    year={2024}
+  }
+</pre>
+      </div>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/pdf/2405.14622">
+      <img src="images/paper/csr.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+    </a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://dongjie-cheng.github.io/CSR.html" id="CSR">
+      <heading>Calibrated Self-Rewarding Vision Language Models</heading></a><br>
+      Yiyang Zhou, Zhiyuan Fan, Dongjie Cheng, Sihan Yang, <b>Zhaorun Chen</b>, Chenhang Cui, Xiyao Wang, Yun Li Linjun Zhang, and Huaxiu Yao<br>
+      <strong>NeurIPS 2024</strong><br>
+      </p>
+
+      <div class="paper" id="agentpoison">
+      <a href="https://arxiv.org/pdf/2405.14622">pdf</a> |
+      <a href="javascript:toggleblock('csr_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('csr')" class="togglebib">bibtex</a> |
+      <a href="https://arxiv.org/pdf/2405.14622">arXiv</a> 
+
+      <p align="justify"> <i id="csr_abs">Large Vision-Language Models (LVLMs) have made substantial progress by integrating pre-trained large language models (LLMs) and vision models through instruction tuning. Despite these advancements, LVLMs often exhibit the hallucination phenomenon, where generated text responses appear linguistically plausible but contradict the input image, indicating a misalignment between image and text pairs. This misalignment arises because the model tends to prioritize textual information over visual input, even when both the language model and visual representations are of high quality. Existing methods leverage additional models or human annotations to curate preference data and enhance modality alignment through preference optimization. These approaches are resource-intensive and may not effectively reflect the target LVLM’s preferences, making the curated preferences easily distinguishable. Our work addresses these challenges by proposing the Calibrated Self-Rewarding (CSR) approach, which enables the model to self-improve by iteratively generating candidate responses, evaluating the reward for each response, and curating preference data for fine-tuning. In the reward modeling, we employ a step-wise strategy and incorporate visual constraints into the self-rewarding process to place greater emphasis on visual input. Empirical results demonstrate that CSR significantly enhances performance and reduces hallucinations across ten benchmarks and tasks, achieving substantial improvements over existing methods by 7.62%. Our empirical results are further supported by rigorous theoretical analysis, under mild assumptions, verifying the effectiveness of introducing visual constraints into the self-rewarding paradigm. Additionally, CSR shows compatibility with different vision-language models and the ability to incrementally improve performance through iterative fine-tuning.</i></p>
+
+<pre xml:space="preserve">
+  @article{zhou2024calibrated,
+    title={Calibrated self-rewarding vision language models},
+    author={Zhou, Yiyang and Fan, Zhiyuan and Cheng, Dongjie and Yang, Sihan and Chen, Zhaorun and Cui, Chenhang and Wang, Xiyao and Li, Yun and Zhang, Linjun and Yao, Huaxiu},
+    journal={arXiv preprint arXiv:2405.14622},
     year={2024}
   }
 </pre>
