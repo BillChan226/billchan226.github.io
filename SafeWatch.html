@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeWatch: Efficient Safety-Policy Following Video Guardrail Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .video-container {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .video-caption {
+            text-align: center;
+            margin-top: 10px;
+        }
+        #user-input {
+            margin-top: 40px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SafeWatch</h1>
+        <h2>An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations</h2>
+    </header>
+
+    <section id="demo-videos">
+        <h2>Demo Videos</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <video controls>
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+                    <track kind="captions" src="data:text/vtt,WEBVTT%0A%0A00:00:00.000 --> 00:00:05.000%0AThis is a demo video of a flower.%0A%0A00:05:00.000 --> 00:00:10.000%0ASafeWatch ensures content safety." srclang="en" label="English" default>
+                </video>
+                <p class="video-caption">SafeWatch analyzing nature content</p>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" type="video/mp4">
+                    <track kind="captions" src="data:text/vtt,WEBVTT%0A%0A00:00:00.000 --> 00:00:05.000%0AThis is a demo video of a surfer.%0A%0A00:05:00.000 --> 00:00:10.000%0ASafeWatch monitors for safety concerns." srclang="en" label="English" default>
+                </video>
+                <p class="video-caption">SafeWatch monitoring sports activities</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="user-input">
+        <h2>Try SafeWatch</h2>
+        <div id="gradio-interface">
+            <!-- Gradio interface will be inserted here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 SafeWatch Project. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.gradio.app/latest/gradio.js"></script>
+    <script>
+        // Mock Gradio interface
+        gradio({
+            inputs: [
+                {name: "video", type: "file", label: "Upload Video"},
+                {name: "policy", type: "text", label: "Define Safety Policy"}
+            ],
+            outputs: [
+                {name: "result", type: "html", label: "SafeWatch Analysis"}
+            ],
+            title: "SafeWatch Demo",
+            description: "Upload a video and define a safety policy to see SafeWatch in action.",
+            article: "<p>SafeWatch provides transparent explanations for its guardrail decisions.</p>"
+        }).then(function(interface) {
+            interface.launch();
+        });
+    </script>
+</body>
+</html>
+
