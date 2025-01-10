@@ -84,7 +84,7 @@
   </p>
 
   <tr>
-    <td width="30%" valign="top"><a href="images/personal/profile.jpg"><img src="images/personal/profile.jpg" width="95%" style="border-radius:15px"></a>
+    <td width="30%" valign="top"><a href="images/personal/profile.jpg"><img src="images/personal/profile.jpg" width="85%" style="border-radius:15px"></a>
     <p align=center>
     | <a href="data/CV_zhaorun.pdf">CV</a> |
     <a href="mailto:zhaorun@uchicago.edu">Email</a> |
@@ -149,30 +149,113 @@
 
 
 <tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2407.03418">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/hemm.png" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2407.03418" id="hemm">
-    <heading>HEMM: Holistic Evaluation of Multimodal Foundation Models</heading></a><br>
-    Paul Pu Liang, Akshay Goindani, Talha Chafekar, Leena Mathur, Haofei Yu, Ruslan Salakhutdinov, Louis-Philippe Morency<br>
-    NeurIPS 2024<br>
+  <td width="40%" valign="top" align="center">
+    <video playsinline 
+           autoplay 
+           loop 
+           muted 
+           src="images/safewatch/website_demonstration.mov"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://safewatch-aiguard.github.io/" id="SafeWatch">
+    <heading>SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations</heading></a><br>
+    <b>Zhaorun Chen</b>, Francesco Pinto, Minzhou Pan, and Bo Li<br>
+    Arxiv, 2024<br>
     </p>
 
-    <div class="paper" id="hemm">
-    <a href="https://arxiv.org/abs/2407.03418">arXiv</a> |
-    <a href="https://github.com/pliang279/HEMM">code</a> |
-    <a href="javascript:toggleblock('hemm_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('hemm')" class="togglebib">bibtex</a>
+    <div class="paper" id="safewatch">
+    <a href="https://arxiv.org/pdf/2412.06878">pdf</a> |
+    <a href="javascript:toggleblock('safewatch_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('safewatch')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2412.06878">arXiv</a> |
+    <a href="https://x.com/ZRChen_AISafety/status/1869621962223616130">blog</a> 
 
-    <p align="justify"> <i style="display: none;" id="hemm_abs">Multimodal foundation models that can holistically process text alongside images, video, audio, and other sensory modalities are increasingly used in a variety of real-world applications. However, it is challenging to characterize and study progress in multimodal foundation models, given the range of possible modeling decisions, tasks, and domains. In this paper, we introduce Holistic Evaluation of Multimodal Models (HEMM) to systematically evaluate the capabilities of multimodal foundation models across a set of 3 dimensions: basic skills, information flow, and real-world use cases. Basic multimodal skills are internal abilities required to solve problems, such as learning interactions across modalities, fine-grained alignment, multi-step reasoning, and the ability to handle external knowledge. Information flow studies how multimodal content changes during a task through querying, translation, editing, and fusion. Use cases span domain-specific challenges introduced in real-world multimedia, affective computing, natural sciences, healthcare, and human-computer interaction applications. Through comprehensive experiments across the 30 tasks in HEMM, we (1) identify key dataset dimensions (e.g., basic skills, information flows, and use cases) that pose challenges to today's models, and (2) distill performance trends regarding how different modeling dimensions (e.g., scale, pre-training data, multimodal alignment, pre-training, and instruction tuning objectives) influence performance. Our conclusions regarding challenging multimodal interactions, use cases, and tasks requiring reasoning and external knowledge, the benefits of data and model scale, and the impacts of instruction tuning yield actionable insights for future work in multimodal foundation models.
-    </i></p>
+    <p align="justify"> <i id="safewatch_abs">With the rise of generative AI and rapid growth of high-quality video generation, video guardrails have become more crucial than ever to ensure safety and security across platforms. Current video guardrails, however, are either overly simplistic, relying on pure classification models trained on simple policies with limited unsafe categories, which lack detailed explanations, or prompting multimodal large language models (MLLMs) with long safety guidelines, which are inefficient and impractical for guardrailing real-world content. To bridge this gap, we propose SafeWatch, an efficient MLLM-based video guardrail model designed to follow customized safety policies and provide multi-label video guardrail outputs with content-specific explanations in a zero-shot manner. In particular, unlike traditional MLLM-based guardrails that encode all safety policies autoregressively, causing inefficiency and bias, SafeWatch uniquely encodes each policy chunk in parallel and eliminates their position bias such that all policies are attended simultaneously with equal importance. In addition, to improve efficiency and accuracy, SafeWatch incorporates a policy-aware visual token pruning algorithm that adaptively selects the most relevant video tokens for each policy, discarding noisy or irrelevant information. This allows for more focused, policy-compliant guardrail with significantly reduced computational overhead. Considering the limitations of existing video guardrail benchmarks, we propose SafeWatch-Bench, a large-scale video guardrail benchmark comprising over 2M videos spanning six safety categories which covers over 30 tasks to ensure a comprehensive coverage of all potential safety scenarios. We have conducted extensive experiments, showing that SafeWatch outperforms all SOTA video guardrails on SafeWatch-Bench by 28.2%, and achieves a 13.6% improvement on existing benchmarks, all while reducing inference costs by an average of 10%. SafeWatch also demonstrates strong policy-following abilities and outperforms previous SOTAs by 5.6% and 15.6% in zero-shot generalizability to new policies and new prompting tasks. Additionally, both LLM-as-a-judge and human evaluators confirm the high quality of the explanations provided by SafeWatch. Our project is open-sourced at <a href="https://safewatch-aiguard.github.io" style="color:#36AE7C;">here</a>.</i></p>
 
-<pre xml:space="preserve" style="display:none;">
-  @article{liang2024hemm,
-  title={HEMM: Holistic Evaluation of Multimodal Foundation Models},
-  author={Liang, Paul Pu and Goindani, Akshay and Chafekar, Talha and Mathur, Leena and Yu, Haofei and Salakhutdinov, Ruslan and Morency, Louis-Philippe},
-  journal={arXiv preprint arXiv:2407.03418},
+<pre xml:space="preserve">
+@article{chen2024safewatch,
+  title={SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations},
+  author={Chen, Zhaorun and Pinto, Francesco and Pan, Minzhou and Li, Bo},
+  journal={arXiv preprint arXiv:2412.06878},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+
+<tr>
+  <td width="40%" valign="top" align="center">
+    <video playsinline 
+           autoplay 
+           loop 
+           muted 
+           src="images/grape/grape.mp4"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://grape-vla.github.io/" id="SafeWatch">
+    <heading>GRAPE: Generalizing Robot Policy via Preference Alignment</heading></a><br>
+    Zijian Zhang<sup>*</sup>, Kaiyuan Zheng<sup>*</sup>, <b>Zhaorun Chen</b>, Joel Jang, Yi Li, Chaoqi Wang, Mingyu Ding, Dieter Fox, and Huaxiu Yao<br>
+    Arxiv, 2024<br>
+    </p>
+
+    <div class="paper" id="grape">
+    <a href="https://arxiv.org/pdf/2411.19309">pdf</a> |
+    <a href="javascript:toggleblock('grape_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('grape')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/pdf/2411.19309">arXiv</a> |
+    <a href="https://x.com/HuaxiuYaoML/status/1863708749732680162">blog</a> 
+
+    <p align="justify"> <i id="grape_abs">Despite the recent advancements of vision-language-action (VLA) models on a variety of robotics tasks, they suffer from critical issues such as poor generalizability to unseen tasks, due to their reliance on behavior cloning exclusively from successful rollouts. Furthermore, they are typically fine-tuned to replicate demonstrations collected by experts under different settings, thus introducing distribution bias and limiting their adaptability to diverse manipulation objectives, such as efficiency, safety, and task completion. To bridge this gap, we introduce GRAPE: Generalizing Robot Policy via Preference Alignment. Specifically, GRAPE aligns VLAs on a trajectory level and implicitly models reward from both successful and failure trials to boost generalizability to diverse tasks. Moreover, GRAPE breaks down complex manipulation tasks to independent stages and automatically guides preference modeling through customized spatiotemporal constraints with keypoints proposed by a large vision-language model. Notably, these constraints are flexible and can be customized to align the model with varying objectives, such as safety, efficiency, or task success. We evaluate GRAPE across a diverse array of tasks in both real-world and simulated environments. Experimental results demonstrate that GRAPE enhances the performance of state-of-the-art VLA models, increasing success rates on in-domain and unseen manipulation tasks by 51.79% and 60.36%, respectively. Additionally, GRAPE can be aligned with various objectives, such as safety and efficiency, reducing collision rates by 44.31% and rollout step-length by 11.15%, respectively. All code, models, and data are available at <a href="https://grape-vla.github.io/" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{zhang2024grape,
+  title={Grape: Generalizing robot policy via preference alignment},
+  author={Zhang, Zijian and Zheng, Kaiyuan and Chen, Zhaorun and Jang, Joel and Li, Yi and Wang, Chaoqi and Ding, Mingyu and Fox, Dieter and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2411.19309},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="40%" valign="top" align="center">
+    <img src="images/agentpoison/method.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://billchan226.github.io/AgentPoison.html" id="AgentPoison">
+    <heading>AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhen Xiang, Chaowei Xiao, Dawn Song, and Bo Li<br>
+    Advances in Neural Information Processing Systems (NeurIPS), 2024<br>
+    </p>
+
+    <div class="paper" id="agentpoison">
+    <a href="https://arxiv.org/pdf/2407.12784">pdf</a> |
+    <a href="javascript:toggleblock('agentpoison_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('agentpoison')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2310.03379">arXiv</a> |
+    <a href="https://x.com/ZRChen_AISafety/status/1814412843904840095">blog</a>
+
+    <p align="justify"> <i id="agentpoison_abs">LLM agents have demonstrated remarkable performance across various applications, primarily due to their advanced capabilities in reasoning, utilizing external knowledge and tools, calling APIs, and executing actions to interact with environments. Current agents typically utilize a memory module or a retrieval-augmented generation (RAG) mechanism, retrieving past knowledge and instances with similar embeddings from knowledge bases to inform task planning and execution. However, the reliance on unverified knowledge bases raises significant concerns about their safety and trustworthiness. To uncover such vulnerabilities, we propose a novel red teaming approach AgentPoison, the first backdoor attack targeting generic and RAG-based LLM agents by poisoning their long-term memory or RAG knowledge base. In particular, we form the trigger generation process as a constrained optimization to optimize backdoor triggers by mapping the triggered instances to a unique embedding space, so as to ensure that whenever a user instruction contains the optimized backdoor trigger, the malicious demonstrations are retrieved from the poisoned memory or knowledge base with high probability. In the meantime, benign instructions without the trigger will still maintain normal performance. Unlike conventional backdoor attacks, AgentPoison requires no additional model training or fine-tuning, and the optimized backdoor trigger exhibits superior transferability, in-context coherence, and stealthiness. Extensive experiments demonstrate AgentPoison effectiveness in attacking three types of real-world LLM agents: RAG-based autonomous driving agent, knowledge-intensive QA agent, and healthcare EHRAgent. We inject the poisoning instances into the RAG knowledge base and long-term memories of these agents, respectively, demonstrating the generalization of AgentPoison. On each agent, AgentPoison achieves an average attack success rate of ≥ 80% with minimal impact on benign performance (≤ 1%) with a poison rate < 0.1%. Code is released <a href="https://github.com/BillChan226/AgentPoison" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2024agentpoison,
+  title={AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases},
+  author={Chen, Zhaorun and Xiang, Zhen and Xiao, Chaowei and Song, Dawn and Li, Bo},
+  journal={arXiv preprint arXiv:2407.12784},
   year={2024}
 }
 </pre>
@@ -182,103 +265,188 @@
 
 
 <tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2209.03430">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/survey.gif" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2209.03430" id="survey">
-    <heading>Foundations and Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions</heading></a><br>
-    Paul Pu Liang, Amir Zadeh, Louis-Philippe Morency<br>
-    ACM Computing Surveys 2024, Tutorials at ICML & ICMI 2023, CVPR & NAACL 2022<br>
+  <td width="40%" valign="top" align="center">
+    <img src="images/paper/csr.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://dongjie-cheng.github.io/CSR.html" id="CSR">
+    <heading>Calibrated Self-Rewarding Vision Language Models</heading></a><br>
+    Yiyang Zhou<sup>*</sup>, Zhiyuan Fan<sup>*</sup>, Dongjie Cheng<sup>*</sup>, Sihan Yang, <b>Zhaorun Chen</b>, Chenhang Cui, Xiyao Wang, Yun Li, Linjun Zhang, and Huaxiu Yao<br>
+    Advances in Neural Information Processing Systems (NeurIPS), 2024<br>
     </p>
 
-    <div class="paper" id=“survey”>
-    <a href="https://arxiv.org/abs/2209.03430">arXiv</a> |
-    <a href="https://cmu-multicomp-lab.github.io/mmml-tutorial/schedule/">website</a> |
-    <a href="https://www.youtube.com/playlist?list=PLki3HkfgNEsKPcpj5Vv2P98SRAT9wxIDa">videos</a> |
-    <a href="javascript:toggleblock('survey_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('survey')" class="togglebib">bibtex</a>
+    <div class="paper" id="csr">
+    <a href="https://arxiv.org/pdf/2405.14622">pdf</a> |
+    <a href="javascript:toggleblock('csr_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('csr')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/pdf/2405.14622">arXiv</a> |
+    <a href="https://x.com/HuaxiuYaoML/status/1794203052116680895">blog</a>
 
-    <p align="justify"> <i style="display: none;" id="survey_abs">Multimodal machine learning is a vibrant multi-disciplinary research field that aims to design computer agents with intelligent capabilities such as understanding, reasoning, and learning through integrating multiple communicative modalities, including linguistic, acoustic, visual, tactile, and physiological messages. With the recent interest in video understanding, embodied autonomous agents, text-to-image generation, and multisensor fusion in application domains such as healthcare and robotics, multimodal machine learning has brought unique computational and theoretical challenges to the machine learning community given the heterogeneity of data sources and the interconnections often found between modalities. However, the breadth of progress in multimodal research has made it difficult to identify the common themes and open questions in the field. By synthesizing a broad range of application domains and theoretical frameworks from both historical and recent perspectives, this paper is designed to provide an overview of the computational and theoretical foundations of multimodal machine learning. We start by defining three key principles of modality heterogeneity, connections, and interactions that have driven subsequent innovations, and propose a taxonomy of six core technical challenges: representation, alignment, reasoning, generation, transference, and quantification covering historical and recent trends. Recent technical achievements will be presented through the lens of this taxonomy, allowing researchers to understand the similarities and differences across new approaches. We end by motivating several open problems for future research as identified by our taxonomy.
-    </i></p>
+    <p align="justify"> <i id="csr_abs">Large Vision-Language Models (LVLMs) have made substantial progress by integrating pre-trained large language models (LLMs) and vision models through instruction tuning. Despite these advancements, LVLMs often exhibit the hallucination phenomenon, where generated text responses appear linguistically plausible but contradict the input image, indicating a misalignment between image and text pairs. This misalignment arises because the model tends to prioritize textual information over visual input, even when both the language model and visual representations are of high quality. Existing methods leverage additional models or human annotations to curate preference data and enhance modality alignment through preference optimization. These approaches are resource-intensive and may not effectively reflect the target LVLM’s preferences, making the curated preferences easily distinguishable. Our work addresses these challenges by proposing the Calibrated Self-Rewarding (CSR) approach, which enables the model to self-improve by iteratively generating candidate responses, evaluating the reward for each response, and curating preference data for fine-tuning. In the reward modeling, we employ a step-wise strategy and incorporate visual constraints into the self-rewarding process to place greater emphasis on visual input. Empirical results demonstrate that CSR significantly enhances performance and reduces hallucinations across ten benchmarks and tasks, achieving substantial improvements over existing methods by 7.62%. Our empirical results are further supported by rigorous theoretical analysis, under mild assumptions, verifying the effectiveness of introducing visual constraints into the self-rewarding paradigm. Additionally, CSR shows compatibility with different vision-language models and the ability to incrementally improve performance through iterative fine-tuning.</i></p>
 
-<pre xml:space="preserve" style="display:none;">
-  @article{liang2024foundations,
-  title={Foundations \& trends in multimodal machine learning: Principles, challenges, and open questions},
-  author={Liang, Paul Pu and Zadeh, Amir and Morency, Louis-Philippe},
-  journal={ACM Computing Surveys},
-  volume={56},
-  number={10},
-  pages={1--42},
+<pre xml:space="preserve">
+@article{zhou2024calibrated,
+  title={Calibrated self-rewarding vision language models},
+  author={Zhou, Yiyang and Fan, Zhiyuan and Cheng, Dongjie and Yang, Sihan and Chen, Zhaorun and Cui, Chenhang and Wang, Xiyao and Li, Yun and Zhang, Linjun and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2405.14622},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="40%" valign="top" align="center">
+    <img src="images/halc/halc.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://billchan226.github.io/HALC.html" id="HALC">
+    <heading>HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Zhuokai Zhao<sup>*</sup>, Hongyin Luo, Huaxiu Yao, Bo Li and Jiawei Zhou<br>
+    International Conference on Machine Learning (ICML), 2024<br>
+    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
+    </p>
+
+    <div class="paper" id="halc">
+    <!-- <a href="https://manipulation-locomotion.github.io">webpage</a> | -->
+    <a href="https://arxiv.org/pdf/2310.03379.pdf">pdf</a> |
+    <a href="javascript:toggleblock('halc_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('halc')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2310.03379">arXiv</a> |
+    <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/">blog</a> 
+
+    <p align="justify"> <i id="halc_abs">While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC’s effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2024halc,
+  title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
+  journal={arXiv preprint arXiv:2403.00425},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="40%" valign="top" align="center">
+    <img src="images/mjbench/overview.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mj-bench.github.io/" id="mjbench">
+    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    In submission, 2024<br>
+    </p>
+
+    <div class="paper" id="mjbench">
+    <a href="https://arxiv.org/pdf/2407.04842">pdf</a> |
+    <a href="javascript:toggleblock('mjbench_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('mjbench')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2407.04842">arXiv</a> |
+    <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462">blog</a> 
+
+    <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@misc{chen2024mjbenchmultimodalrewardmodel,
+  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
+  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
   year={2024},
-  publisher={ACM New York, NY}
+  eprint={2407.04842},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2407.04842}, 
 }
 </pre>
     </div>
   </td>
-</tr>  
-  
-  
+</tr>
+
 <tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2302.12247">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/pid.gif" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2302.12247" id="pid">
-    <heading>Quantifying & Modeling Multimodal Interactions: An Information Decomposition Framework</heading></a><br>
-    Paul Pu Liang, Yun Cheng, Xiang Fan, Chun Kai Ling, Suzanne Nie, Richard Chen, Zihao Deng, Nicholas Allen, Randy Auerbach, Faisal Mahmood, Ruslan Salakhutdinov, Louis-Philippe Morency<br>
-    NeurIPS 2023<br>
+  <td width="40%" valign="top" align="center">
+    <img src="images/autoprm/autoprm.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2402.11452" id="AUTOPRM">
+    <heading>AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Zhihong Zhu, Ruiqi Zhang, Xiang Li, Bhiksha Raj and Huaxiu Yao<br>
+    North American Chapter of the Association for Computational Linguistics (NAACL), 2024<br>
+    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
     </p>
 
-    <div class="paper" id="pid">
-    <a href="https://arxiv.org/abs/2302.12247">arXiv</a> |
-    <a href="https://github.com/pliang279/PID">code</a> |
-    <a href="javascript:toggleblock('pid_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('pid')" class="togglebib">bibtex</a>
+    <div class="paper" id="autoprm">
+    <a href="https://arxiv.org/pdf/2402.11452.pdf">pdf</a> |
+    <a href="javascript:toggleblock('autoprm_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('autoprm')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2402.11452">arXiv</a> |
+    <a href="https://x.com/ZRChen_AISafety/status/1802600945567822117">blog</a> 
 
-    <p align="justify"> <i style="display: none;" id="pid_abs">The recent explosion of interest in multimodal applications has resulted in a wide selection of datasets and methods for representing and integrating information from different modalities. Despite these empirical advances, there remain fundamental research questions: How can we quantify the interactions that are necessary to solve a multimodal task? Subsequently, what are the most suitable multimodal models to capture these interactions? To answer these questions, we propose an information-theoretic approach to quantify the degree of redundancy, uniqueness, and synergy relating input modalities with an output task. We term these three measures as the PID statistics of a multimodal distribution (or PID for short), and introduce two new estimators for these PID statistics that scale to high-dimensional distributions. To validate PID estimation, we conduct extensive experiments on both synthetic datasets where the PID is known and on large-scale multimodal benchmarks where PID estimations are compared with human annotations. Finally, we demonstrate their usefulness in (1) quantifying interactions within multimodal datasets, (2) quantifying interactions captured by multimodal models, (3) principled approaches for model selection, and (4) three real-world case studies engaging with domain experts in pathology, mood prediction, and robotic perception where our framework helps to recommend strong multimodal models for each application.
-    </i></p>
+    <p align="justify"> <i id="autoprm_abs">Recent advancements in large language models (LLMs) have shown promise in multi-step reasoning tasks, yet their reliance on extensive manual labeling to provide procedural feedback remains a significant impediment. To address this challenge, in this paper, we propose a novel self-supervised framework AutoPRM that efficiently enhances the fine-tuning of LLMs for intricate reasoning challenges. Specifically, AutoPRM first decomposes complex problems into more manageable subquestions with a controllable granularity switch, then sequentially apply reinforcement learning to iteratively improve the subquestion solver. Additionally, we propose context-guided-decoding to avoid reward tampering and guide the subquestion solver towards the solution of the holistic problem. Extensive experiments show that AutoPRM significantly improves performance on mathematical and commonsense reasoning tasks over SOTA. More encouragingly, AutoPRM can be easily integrated with other orthogonal reasoning pipelines.</i></p>
 
-<pre xml:space="preserve" style="display:none;">
-  @article{liang2024quantifying,
-  title={Quantifying \& modeling multimodal interactions: An information decomposition framework},
-  author={Liang, Paul Pu and Cheng, Yun and Fan, Xiang and Ling, Chun Kai and Nie, Suzanne and Chen, Richard and Deng, Zihao and Allen, Nicholas and Auerbach, Randy and Mahmood, Faisal and others},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
+<pre xml:space="preserve">
+@article{chen2024autoprm,
+  title={AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Zhu, Zhihong and Zhang, Ruiqi and Li, Xiang and Raj, Bhiksha and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2402.11452},
   year={2024}
 }
 </pre>
     </div>
   </td>
 </tr>
-  
-  
+
+
 <tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2203.01311">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/highmmt.gif" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2203.01311" id="highmmt">
-    <heading>High-Modality Multimodal Transformer: Quantifying Modality & Interaction Heterogeneity for High-Modality Representation Learning</heading></a><br>
-    Paul Pu Liang, Yiwei Lyu, Xiang Fan, Jeffrey Tsaw, Yudong Liu, Shentong Mo, Dani Yogatama, Louis-Philippe Morency, Ruslan Salakhutdinov<br>
-    TMLR 2022<br>
+  <td width="40%" valign="top" align="center">
+    <video playsinline 
+           autoplay 
+           loop 
+           muted 
+           src="images/acs/ACS-Video.mp4"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2310.03379" id="ACS">
+    <heading>Safe Reinforcement Learning via Hierarchical Adaptive Chance-Constraint Safeguards</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Tairan He, Binhao Chen, Xuhao Zhao, Liang Gong, Chengliang Liu<br>
+    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024<br>
     </p>
 
-    <div class="paper" id="highmmt">
-    <a href="https://arxiv.org/abs/2203.01311">arXiv</a> |
-    <a href="https://github.com/pliang279/HighMMT">code</a> |
-    <a href="javascript:toggleblock('highmmt_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('highmmt')" class="togglebib">bibtex</a>
+    <div class="paper" id="acs">
+    <!-- <a href="https://manipulation-locomotion.github.io">webpage</a> | -->
+    <a href="https://arxiv.org/pdf/2310.03379.pdf">pdf</a> |
+    <a href="javascript:toggleblock('acs_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('acs')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2310.03379">arXiv</a> 
 
-    <p align="justify"> <i style="display: none;" id="highmmt_abs">Many real-world problems are inherently multimodal, from spoken language, gestures, and paralinguistics humans use to communicate, to force, proprioception, and visual sensors on robots. While there has been an explosion of interest in multimodal learning, these methods are focused on a small set of modalities primarily in language, vision, and audio. In order to accelerate generalization towards diverse and understudied modalities, this paper studies efficient representation learning for high-modality scenarios involving a large set of diverse modalities. Since adding new models for every new modality becomes prohibitively expensive, a critical technical challenge is heterogeneity quantification: how can we measure which modalities encode similar information and interactions in order to permit parameter sharing with previous modalities? This paper proposes two new information theoretic metrics for heterogeneity quantification: (1) modality heterogeneity studies how similar 2 modalities {X1,X2} are by measuring how much information can be transferred from X1 to X2, while (2) interaction heterogeneity studies how similarly pairs of modalities {X1,X2}, {X3,X4} interact by measuring how much information can be transferred from fusing {X1,X2} to {X3,X4}. We show the importance of these 2 proposed metrics as a way to automatically prioritize the fusion of modalities that contain unique information or interactions. The result is a single model, HighMMT, that scales up to 10 modalities (text, image, audio, video, sensors, proprioception, speech, time-series, sets, and tables) and 15 tasks from 5 research areas. Not only does HighMMT outperform prior methods on the tradeoff between performance and efficiency, it also demonstrates a crucial scaling behavior: performance continues to improve with each modality added, and it transfers to entirely new modalities and tasks during fine-tuning.
-    </i></p>
+    <p align="justify"> <i id="acs_abs">Ensuring safety in Reinforcement Learning (RL), typically framed as a Constrained Markov Decision Process (CMDP), is crucial for real-world exploration applications. Current approaches in handling CMDP struggle to balance optimality and feasibility, as direct optimization methods cannot ensure state-wise in-training safety, and projection-based methods correct actions inefficiently through lengthy iterations. To address these challenges, we propose Adaptive Chance-constrained Safeguards (ACS), an adaptive, model-free safe RL algorithm using the safety recovery rate as a surrogate chance constraint to iteratively ensure safety during exploration and after achieving convergence. Theoretical analysis indicates that the relaxed probabilistic constraint sufficiently guarantees forward invariance to the safe set. And extensive experiments conducted on both simulated and real-world safety-critical tasks demonstrate its effectiveness in enforcing safety (nearly zero-violation) while preserving optimality (+23.8%), robustness, and fast response in stochastic real-world settings.</i></p>
 
-<pre xml:space="preserve" style="display:none;">
-  @article{liang2022high,
-  title={High-modality multimodal transformer: Quantifying modality \& interaction heterogeneity for high-modality representation learning},
-  author={Liang, Paul Pu and Lyu, Yiwei and Fan, Xiang and Tsaw, Jeffrey and Liu, Yudong and Mo, Shentong and Yogatama, Dani and Morency, Louis-Philippe and Salakhutdinov, Ruslan},
-  journal={arXiv preprint arXiv:2203.01311},
-  year={2022}
+<pre xml:space="preserve">
+@misc{chen2024safereinforcementlearninghierarchical,
+  title={Safe Reinforcement Learning via Hierarchical Adaptive Chance-Constraint Safeguards}, 
+  author={Zhaorun Chen and Zhuokai Zhao and Tairan He and Binhao Chen and Xuhao Zhao and Liang Gong and Chengliang Liu},
+  year={2024},
+  eprint={2310.03379},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2310.03379}, 
 }
 </pre>
     </div>
@@ -286,175 +454,6 @@
 </tr>
 
 
-<tr>
-  <td width="33%" valign="top" align="center"><a href="multibench">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/multibench.png" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2107.07502" id="multibench">
-    <heading>MultiBench: Multiscale Benchmarks for Multimodal Representation Learning</heading></a><br>
-    Paul Pu Liang, Yiwei Lyu, Xiang Fan, Zetian Wu, Yun Cheng, Jason Wu, Leslie Chen, Peter Wu, Michelle Lee, Yuke Zhu, Ruslan Salakhutdinov, Louis-Philippe Morency<br>
-    NeurIPS 2021, JMLR Open Source Software 2022<br>
-    </p>
-
-    <div class="paper" id="multibench">
-    <a href="https://arxiv.org/abs/2107.07502">arXiv</a> |
-    <a href="https://multibench.readthedocs.io/en/latest/">website</a> |
-    <a href="https://github.com/pliang279/MultiBench">code</a> |
-    <a href="javascript:toggleblock('multibench_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('multibench')" class="togglebib">bibtex</a>
-
-    <p align="justify"> <i style="display: none;" id="multibench_abs">Learning multimodal representations involves integrating information from multiple heterogeneous sources of data. It is a challenging yet crucial area with numerous real-world applications in multimedia, affective computing, robotics, finance, human-computer interaction, and healthcare. Unfortunately, multimodal research has seen limited resources to study (1) generalization across domains and modalities, (2) complexity during training and inference, and (3) robustness to noisy and missing modalities. In order to accelerate progress towards understudied modalities and tasks while ensuring real-world robustness, we release MultiBench, a systematic and unified large-scale benchmark spanning 15 datasets, 10 modalities, 20 prediction tasks, and 6 research areas. MultiBench provides an automated end-to-end machine learning pipeline that simplifies and standardizes data loading, experimental setup, and model evaluation. To enable holistic evaluation, MultiBench offers a comprehensive methodology to assess (1) generalization, (2) time and space complexity, and (3) modality robustness. MultiBench introduces impactful challenges for future research, including scalability to large-scale multimodal datasets and robustness to realistic imperfections. To accompany this benchmark, we also provide a standardized implementation of 20 core approaches in multimodal learning. Simply applying methods proposed in different research areas can improve the state-of-the-art performance on 9/15 datasets. Therefore, MultiBench presents a milestone in unifying disjoint efforts in multimodal research and paves the way towards a better understanding of the capabilities and limitations of multimodal models, all the while ensuring ease of use, accessibility, and reproducibility. MultiBench, our standardized code, and leaderboards are publicly available, will be regularly updated, and welcomes inputs from the community.
-    </i></p>
-
-<pre xml:space="preserve" style="display:none;">
-  @article{liang2021multibench,
-  title={Multibench: Multiscale benchmarks for multimodal representation learning},
-  author={Liang, Paul Pu and Lyu, Yiwei and Fan, Xiang and Wu, Zetian and Cheng, Yun and Wu, Jason and Chen, Leslie and Wu, Peter and Lee, Michelle A and Zhu, Yuke and others},
-  journal={Advances in neural information processing systems},
-  volume={2021},
-  year={2021},
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2106.13219">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/lmbias.png" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2106.13219" id="lmbias">
-    <heading>Towards Understanding and Mitigating Social Biases in Language Models</heading></a><br>
-    Paul Pu Liang, Chiyu Wu, Louis-Philippe Morency, Ruslan Salakhutdinov<br>
-    ICML 2021<br>
-    </p>
-
-    <div class="paper" id="lmbias">
-    <a href="https://arxiv.org/abs/2106.13219">arXiv</a> |
-    <a href="https://github.com/pliang279/LM_bias">code</a> |
-    <a href="javascript:toggleblock('lmbias_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('lmbias')" class="togglebib">bibtex</a>
-
-    <p align="justify"> <i style="display: none;" id="lmbias_abs">As machine learning methods are deployed in real-world settings such as healthcare, legal systems, and social science, it is crucial to recognize how they shape social biases and stereotypes in these sensitive decision-making processes. Among such real-world deployments are large-scale pretrained language models (LMs) that can be potentially dangerous in manifesting undesirable representational biases - harmful biases resulting from stereotyping that propagate negative generalizations involving gender, race, religion, and other social constructs. As a step towards improving the fairness of LMs, we carefully define several sources of representational biases before proposing new benchmarks and metrics to measure them. With these tools, we propose steps towards mitigating social biases during text generation. Our empirical results and human evaluation demonstrate effectiveness in mitigating bias while retaining crucial contextual information for high-fidelity text generation, thereby pushing forward the performance-fairness Pareto frontier.
-    </i></p>
-
-<pre xml:space="preserve" style="display:none;">
-  @inproceedings{liang2021towards,
-  title={Towards understanding and mitigating social biases in language models},
-  author={Liang, Paul Pu and Wu, Chiyu and Morency, Louis-Philippe and Salakhutdinov, Ruslan},
-  booktitle={International Conference on Machine Learning},
-  pages={6565--6576},
-  year={2021},
-  organization={PMLR}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2001.01523">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/fl.png" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/2001.01523" id="fl">
-    <heading>Think Locally, Act Globally: Federated Learning with Local and Global Representations</heading></a><br>
-    Paul Pu Liang*, Terrance Liu*, Liu Ziyin, Nicholas Allen, Randy Auerbach, David Brent, Ruslan Salakhutdinov, Louis-Philippe Morency<br>
-    NeurIPS 2019 Workshop on Federated Learning <font color="#DC143C">(oral, distinguished student paper award) </font> <br>
-    </p>
-
-    <div class="paper" id="fl">
-    <a href="https://arxiv.org/abs/2001.01523">arXiv</a> |
-    <a href="https://github.com/pliang279/LG-FedAvg">code</a> |
-    <a href="javascript:toggleblock('fl_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('fl')" class="togglebib">bibtex</a>
-
-    <p align="justify"> <i style="display: none;" id="fl_abs">Federated learning is a method of training models on private data distributed over multiple devices. To keep device data private, the global model is trained by only communicating parameters and updates which poses scalability challenges for large models. To this end, we propose a new federated learning algorithm that jointly learns compact local representations on each device and a global model across all devices. As a result, the global model can be smaller since it only operates on local representations, reducing the number of communicated parameters. Theoretically, we provide a generalization analysis which shows that a combination of local and global models reduces both variance in the data as well as variance across device distributions. Empirically, we demonstrate that local models enable communication-efficient training while retaining performance. We also evaluate on the task of personalized mood prediction from real-world mobile data where privacy is key. Finally, local models handle heterogeneous data from new devices, and learn fair representations that obfuscate protected attributes such as race, age, and gender.
-    </i></p>
-
-<pre xml:space="preserve" style="display:none;">
-  @article{liang2020think,
-  title={Think locally, act globally: Federated learning with local and global representations},
-  author={Liang, Paul Pu and Liu, Terrance and Ziyin, Liu and Allen, Nicholas B and Auerbach, Randy P and Brent, David and Salakhutdinov, Ruslan and Morency, Louis-Philippe},
-  journal={arXiv preprint arXiv:2001.01523},
-  year={2020}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/1906.00295">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/mult.gif" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://arxiv.org/abs/1906.00295" id="mult">
-    <heading>Multimodal Transformer for Unaligned Multimodal Language Sequences</heading></a><br>
-    Yao-Hung Hubert Tsai, Shaojie Bai, Paul Pu Liang, Zico Kolter, Louis-Philippe Morency, Ruslan Salakhutdinov<br>
-    ACL 2019<br>
-    </p>
-
-    <div class="paper" id="mult">
-    <a href="https://arxiv.org/abs/1906.00295">arXiv</a> |
-    <a href="https://github.com/yaohungt/Multimodal-Transformer">code</a> |
-    <a href="javascript:toggleblock('mult_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('mult')" class="togglebib">bibtex</a>
-
-    <p align="justify"> <i style="display: none;" id="mult_abs">Human language is often multimodal, which comprehends a mixture of natural language, facial gestures, and acoustic behaviors. However, two major challenges in modeling such multimodal human language time-series data exist: 1) inherent data non-alignment due to variable sampling rates for the sequences from each modality; and 2) long-range dependencies between elements across modalities. In this paper, we introduce the Multimodal Transformer (MulT) to generically address the above issues in an end-to-end manner without explicitly aligning the data. At the heart of our model is the directional pairwise crossmodal attention, which attends to interactions between multimodal sequences across distinct time steps and latently adapt streams from one modality to another. Comprehensive experiments on both aligned and non-aligned multimodal time-series show that our model outperforms state-of-the-art methods by a large margin. In addition, empirical analysis suggests that correlated crossmodal signals are able to be captured by the proposed crossmodal attention mechanism in MulT.
-    </i></p>
-
-<pre xml:space="preserve" style="display:none;">
-  @inproceedings{tsai2019multimodal,
-  title={Multimodal Transformer for Unaligned Multimodal Language Sequences},
-  author={Tsai, Yao-Hung Hubert and Bai, Shaojie and Liang, Paul Pu and Kolter, J Zico and Morency, Louis-Philippe and Salakhutdinov, Ruslan},
-  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
-  pages={6558--6569},
-  year={2019}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="33%" valign="top" align="center"><a href="https://aclanthology.org/P18-1208/">
-  <img alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black" src="images/006.gif" />
-  </a></td>
-  <td width="67%" valign="top">
-    <p><a href="https://aclanthology.org/P18-1208/" id="mosei">
-    <heading>Multimodal Language Analysis in the Wild: CMU-MOSEI Dataset and Interpretable Dynamic Fusion Graph</heading></a><br>
-    Amir Zadeh, Paul Pu Liang, Soujanya Poria, Erik Cambria, Louis-Philippe Morency<br>
-    ACL 2018 <font color="#DC143C">(oral) </font> <br>
-    </p>
-
-    <div class="paper" id="mosei">
-    <a href="https://aclanthology.org/P18-1208/">arXiv</a> |
-    <a href="https://github.com/CMU-MultiComp-Lab/CMU-MultimodalSDK">code</a> |
-    <a href="javascript:toggleblock('mosei_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('mosei')" class="togglebib">bibtex</a>
-
-    <p align="justify"> <i style="display: none;" id="mosei_abs">Analyzing human multimodal language is an emerging area of research in NLP. Intrinsically this language is multimodal (heterogeneous), sequential and asynchronous; it consists of the language (words), visual (expressions) and acoustic (paralinguistic) modalities all in the form of asynchronous coordinated sequences. From a resource perspective, there is a genuine need for large scale datasets that allow for in-depth studies of this form of language. In this paper we introduce CMU Multimodal Opinion Sentiment and Emotion Intensity (CMU-MOSEI), the largest dataset of sentiment analysis and emotion recognition to date. Using data from CMU-MOSEI and a novel multimodal fusion technique called the Dynamic Fusion Graph (DFG), we conduct experimentation to exploit how modalities interact with each other in human multimodal language. Unlike previously proposed fusion techniques, DFG is highly interpretable and achieves competative performance when compared to the previous state of the art.
-    </i></p>
-
-<pre xml:space="preserve" style="display:none;">
-  @inproceedings{zadeh2018multimodal,
-  title={Multimodal language analysis in the wild: Cmu-mosei dataset and interpretable dynamic fusion graph},
-  author={Zadeh, AmirAli Bagher and Liang, Paul Pu and Poria, Soujanya and Cambria, Erik and Morency, Louis-Philippe},
-  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
-  pages={2236--2246},
-  year={2018}
-}
-</pre>
-    </div>
-  </td>
-</tr>
 
 
 <hr/>
@@ -468,6 +467,63 @@
   </td></tr>
 </table>
 
+
+<script xml:space="preserve" language="JavaScript">
+  hideallbibs();
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('material_review_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('ieee_iot_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('safewatch_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('grape_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('agentpoison_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('csr_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('mjbench_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('halc_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('autoprm_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('acs_abs');
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const lazyMedia = document.querySelectorAll(".lazy-media");
+    
+    const lazyLoadMedia = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const media = entry.target;
+          media.src = media.dataset.src;
+          media.classList.add("loaded");
+          observer.unobserve(media);
+        }
+      });
+    };
+  
+    const mediaObserver = new IntersectionObserver(lazyLoadMedia, {
+      root: null,
+      threshold: 0.1
+    });
+  
+    lazyMedia.forEach(media => mediaObserver.observe(media));
+  });
+</script>
 </body>
 
 </html>
