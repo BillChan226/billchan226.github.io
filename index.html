@@ -459,86 +459,6 @@
   </td>
 </tr>
 
-<tr></tr>
-  <td width="30%" valign="top" align="center">
-    <video playsinline 
-           autoplay 
-           loop 
-           muted 
-           src="images/grape/grape.mp4"
-           width="90%"
-           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-    </video>
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://grape-vla.github.io/" id="SafeWatch">
-    <heading>GRAPE: Generalizing Robot Policy via Preference Alignment</heading></a><br>
-    Zijian Zhang<sup>*</sup>, Kaiyuan Zheng<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Joel Jang, Yi Li, Chaoqi Wang, Mingyu Ding, Dieter Fox, and Huaxiu Yao<br>
-    In submission, 2025<br>
-    </p>
-
-    <div class="paper" id="grape">
-    <a href="https://arxiv.org/pdf/2411.19309">pdf</a> |
-    <a href="https://grape-vla.github.io/">webpage</a> |
-    <a href="javascript:toggleblock('grape_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('grape')" class="togglebib">bibtex</a> |
-    <a href="https://arxiv.org/pdf/2411.19309">arXiv</a> |
-    <a href="https://www.alphaxiv.org/abs/2411.19309">alphaxiv</a> |
-    <a href="https://x.com/HuaxiuYaoML/status/1863708749732680162">blog</a> 
-
-    <p align="justify"> <i id="grape_abs">Despite the recent advancements of vision-language-action (VLA) models on a variety of robotics tasks, they suffer from critical issues such as poor generalizability to unseen tasks, due to their reliance on behavior cloning exclusively from successful rollouts. Furthermore, they are typically fine-tuned to replicate demonstrations collected by experts under different settings, thus introducing distribution bias and limiting their adaptability to diverse manipulation objectives, such as efficiency, safety, and task completion. To bridge this gap, we introduce GRAPE: Generalizing Robot Policy via Preference Alignment. Specifically, GRAPE aligns VLAs on a trajectory level and implicitly models reward from both successful and failure trials to boost generalizability to diverse tasks. Moreover, GRAPE breaks down complex manipulation tasks to independent stages and automatically guides preference modeling through customized spatiotemporal constraints with keypoints proposed by a large vision-language model. Notably, these constraints are flexible and can be customized to align the model with varying objectives, such as safety, efficiency, or task success. We evaluate GRAPE across a diverse array of tasks in both real-world and simulated environments. Experimental results demonstrate that GRAPE enhances the performance of state-of-the-art VLA models, increasing success rates on in-domain and unseen manipulation tasks by 51.79% and 60.36%, respectively. Additionally, GRAPE can be aligned with various objectives, such as safety and efficiency, reducing collision rates by 44.31% and rollout step-length by 11.15%, respectively. All code, models, and data are available at <a href="https://grape-vla.github.io/" style="color:#36AE7C;">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@article{zhang2024grape,
-  title={Grape: Generalizing robot policy via preference alignment},
-  author={Zhang, Zijian and Zheng, Kaiyuan and Chen, Zhaorun and Jang, Joel and Li, Yi and Wang, Chaoqi and Ding, Mingyu and Fox, Dieter and Yao, Huaxiu},
-  journal={arXiv preprint arXiv:2411.19309},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/mjbench/overview.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://mj-bench.github.io/" id="mjbench">
-    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
-    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
-    In submission, 2025<br>
-    </p>
-
-    <div class="paper" id="mjbench">
-    <a href="https://arxiv.org/pdf/2407.04842">pdf</a> |
-    <a href="https://mj-bench.github.io/">webpage</a> |
-    <a href="javascript:toggleblock('mjbench_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('mjbench')" class="togglebib">bibtex</a> |
-    <a href="https://arxiv.org/abs/2407.04842">arXiv</a> |
-    <a href="https://www.alphaxiv.org/abs/2407.04842">alphaxiv</a> |
-    <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462">blog</a> 
-
-    <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@misc{chen2024mjbenchmultimodalrewardmodel,
-  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
-  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
-  year={2024},
-  eprint={2407.04842},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2407.04842}, 
-}
-</pre>
-    </div>
-  </td>
-</tr>
 
 <tr></tr>
   <td width="30%" valign="top" align="center">
@@ -658,6 +578,137 @@
 </tr>
 
 
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;Preprints </sectionheading>(see full list on <a href="https://scholar.google.com/citations?user=UZg5N5UAAAAJ">Google Scholar</a>)</td></tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+<br/>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mjvideo/overview.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mj-bench.github.io/" id="mjvideo">
+    <heading>MJ-Video: Benchmarking and Rewarding Video Generation with Fine-Grained Video Preference</heading></a><br>
+    Haibo Tong<sup>*</sup>, Zhaoyang Wang<sup>*</sup>, <b>Zhaorun Chen</b>, Haonian Ji, Shi Qiu, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    In submission, 2025<br>
+    </p>
+
+    <div class="paper" id="mjvideo">
+    <a href="https://arxiv.org/pdf/2407.04842">pdf</a> |
+    <a href="https://mj-bench.github.io/">webpage</a> |
+    <a href="javascript:toggleblock('mjvideo_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('mjvideo')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2407.04842">arXiv</a> |
+    <a href="https://www.alphaxiv.org/abs/2407.04842">alphaxiv</a> |
+    <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462">blog</a> 
+
+    <p align="justify"> <i id="mjvideo_abs">Recent advancements in video generation have significantly improved the ability to synthesize videos from text instructions. However, existing models still struggle with key challenges such as instruction misalignment, content hallucination, safety concerns, and bias. Addressing these limitations, we introduce MJ-BENCH-VIDEO, a large-scale video preference benchmark designed to evaluate video generation across five critical aspects: Alignment, Safety, Fineness, Coherence & Consistency, and Bias & Fairness. This benchmark incorporates 28 fine-grained criteria to provide a comprehensive evaluation of video preference. Building upon this dataset, we propose MJ-VIDEO, a Mixture-of-Experts (MoE)-based video reward model designed to deliver fine-grained reward. MJ-VIDEO can dynamically select relevant experts to accurately judge the preference based on the input text-video pair. This architecture enables more precise and adaptable preference judgments. Through extensive benchmarking on MJ-BENCH-VIDEO, we analyze the limitations of existing video reward models and demonstrate the superior performance of MJ-VIDEO in video preference assessment, achieving 17.58% and 15.87% improvements in overall and fine-grained preference judgments, respectively. Additionally, introducing MJ-VIDEO for preference tuning in video generation enhances the alignment performance.<i></p>
+
+<pre xml:space="preserve">
+@misc{chen2024mjbenchmultimodalrewardmodel,
+  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
+  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+  year={2024},
+  eprint={2407.04842},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2407.04842}, 
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <video playsinline 
+           autoplay 
+           loop 
+           muted 
+           src="images/grape/grape.mp4"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://grape-vla.github.io/" id="SafeWatch">
+    <heading>GRAPE: Generalizing Robot Policy via Preference Alignment</heading></a><br>
+    Zijian Zhang<sup>*</sup>, Kaiyuan Zheng<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Joel Jang, Yi Li, Chaoqi Wang, Mingyu Ding, Dieter Fox, and Huaxiu Yao<br>
+    In submission, 2025<br>
+    </p>
+
+    <div class="paper" id="grape">
+    <a href="https://arxiv.org/pdf/2411.19309">pdf</a> |
+    <a href="https://grape-vla.github.io/">webpage</a> |
+    <a href="javascript:toggleblock('grape_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('grape')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/pdf/2411.19309">arXiv</a> |
+    <a href="https://www.alphaxiv.org/abs/2411.19309">alphaxiv</a> |
+    <a href="https://x.com/HuaxiuYaoML/status/1863708749732680162">blog</a> 
+
+    <p align="justify"> <i id="grape_abs">Despite the recent advancements of vision-language-action (VLA) models on a variety of robotics tasks, they suffer from critical issues such as poor generalizability to unseen tasks, due to their reliance on behavior cloning exclusively from successful rollouts. Furthermore, they are typically fine-tuned to replicate demonstrations collected by experts under different settings, thus introducing distribution bias and limiting their adaptability to diverse manipulation objectives, such as efficiency, safety, and task completion. To bridge this gap, we introduce GRAPE: Generalizing Robot Policy via Preference Alignment. Specifically, GRAPE aligns VLAs on a trajectory level and implicitly models reward from both successful and failure trials to boost generalizability to diverse tasks. Moreover, GRAPE breaks down complex manipulation tasks to independent stages and automatically guides preference modeling through customized spatiotemporal constraints with keypoints proposed by a large vision-language model. Notably, these constraints are flexible and can be customized to align the model with varying objectives, such as safety, efficiency, or task success. We evaluate GRAPE across a diverse array of tasks in both real-world and simulated environments. Experimental results demonstrate that GRAPE enhances the performance of state-of-the-art VLA models, increasing success rates on in-domain and unseen manipulation tasks by 51.79% and 60.36%, respectively. Additionally, GRAPE can be aligned with various objectives, such as safety and efficiency, reducing collision rates by 44.31% and rollout step-length by 11.15%, respectively. All code, models, and data are available at <a href="https://grape-vla.github.io/" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{zhang2024grape,
+  title={Grape: Generalizing robot policy via preference alignment},
+  author={Zhang, Zijian and Zheng, Kaiyuan and Chen, Zhaorun and Jang, Joel and Li, Yi and Wang, Chaoqi and Ding, Mingyu and Fox, Dieter and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2411.19309},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mjbench/overview.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mj-bench.github.io/" id="mjbench">
+    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    In submission, 2025<br>
+    </p>
+
+    <div class="paper" id="mjbench">
+    <a href="https://arxiv.org/pdf/2407.04842">pdf</a> |
+    <a href="https://mj-bench.github.io/">webpage</a> |
+    <a href="javascript:toggleblock('mjbench_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('mjbench')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2407.04842">arXiv</a> |
+    <a href="https://www.alphaxiv.org/abs/2407.04842">alphaxiv</a> |
+    <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462">blog</a> 
+
+    <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@misc{chen2024mjbenchmultimodalrewardmodel,
+  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
+  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+  year={2024},
+  eprint={2407.04842},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2407.04842}, 
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+</table>
+
+
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tr><td><sectionheading>&nbsp;&nbsp;Organizer</sectionheading></td></tr>
 </table>
@@ -724,6 +775,9 @@
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('ieee_iot_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('mjvideo_abs');
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('fisao_abs');
