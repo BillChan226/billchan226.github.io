@@ -206,7 +206,7 @@
   <td width="60%" valign="top">
     <p><a href="https://mmdecodingtrust.github.io/" id="MMDT">
     <heading>MMDT: Decoding the Trustworthiness and Safety of Multimodal Foundation Models</heading></a><br>
-    Chejian Xu<sup>*</sup>, Jiawei Zhang<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Chulin Xie<sup>*</sup>, Mintong Kang<sup>*</sup>, Zhuowen Yuan<sup>*</sup>, Zidi Xiong<sup>*</sup>, Chenhui Zhang<sup>*</sup>, Lingzhi Yuan, Yi Zeng, Peiyang Xu, Chengquan Guo, Andy Zhou, Jeffrey Ziwei Tan, Zhun Wang, Alexander Xiong, Xuandong Zhao, Yu Gai, Francesco Pinto, Yujin Potter, Zhen Xiang, Zinan Lin, Dan Hendrycks, Dawn Song, Bo Li<br>
+    Chejian Xu<sup>*</sup>, Jiawei Zhang<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Chulin Xie<sup>*</sup>, Mintong Kang<sup>*</sup>, Yujin Potter<sup>*</sup>, Zhun Wang<sup>*</sup>, Zhuowen Yuan<sup>*</sup>, Alexander Xiong, Zidi Xiong, Chenhui Zhang, Lingzhi Yuan, Yi Zeng, Peiyang Xu, Chengquan Guo, Andy Zhou, Jeffrey Ziwei Tan, Xuandong Zhao, Francesco Pinto, Zhen Xiang, Yu Gai, Zinan Lin, Dan Hendrycks, Bo Li, Dawn Song<br>
     International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
     </p>
 
@@ -222,12 +222,14 @@
     <p align="justify"> <i id="mmdt_abs">Multimodal foundation models (MMFMs) play a crucial role in various applications, including autonomous driving, healthcare, and virtual assistants. However, several studies have revealed vulnerabilities in these models, such as generating unsafe content by text-to-image models. Existing benchmarks on multimodal models either predominantly assess the helpfulness of these models, or only focus on limited perspectives such as fairness and privacy. In this paper, we present the first unified platform, MMDT (Multimodal DecodingTrust), designed to provide a comprehensive safety and trustworthiness evaluation for MMFMs. Our platform assesses models from multiple perspectives, including safety, hallucination, fairness/bias, privacy, adversarial robustness, and out-of-distribution (OOD) generalization. We have designed various evaluation scenarios and red teaming algorithms under different tasks for each perspective to generate challenging data, forming a high-quality benchmark. We evaluate a range of multimodal models using MMDT, and our findings reveal a series of vulnerabilities and areas for improvement across these perspectives. This work introduces the first comprehensive and unique safety and trustworthiness evaluation platform for MMFMs, paving the way for developing safer and more reliable MMFMs and systems.</i></p>
 
 <pre xml:space="preserve">
-@article{chen2024agentpoison,
-  title={AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases},
-  author={Chen, Zhaorun and Xiang, Zhen and Xiao, Chaowei and Song, Dawn and Li, Bo},
-  journal={arXiv preprint arXiv:2407.12784},
-  year={2024}
-}
+@inproceedings{
+  xu2025mmdt,
+  title={{MMDT}: Decoding the Trustworthiness and Safety of Multimodal Foundation Models},
+  author={Chejian Xu and Jiawei Zhang and Zhaorun Chen and Chulin Xie and Mintong Kang and Zhuowen Yuan and Zidi Xiong and Chenhui Zhang and Lingzhi Yuan and Yi Zeng and Peiyang Xu and Chengquan Guo and Andy Zhou and Jeffrey Ziwei Tan and Zhun Wang and Alexander Xiong and Xuandong Zhao and Yu Gai and Francesco Pinto and Yujin Potter and Zhen Xiang and Zinan Lin and Dan Hendrycks and Dawn Song and Bo Li},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=qIbbBSzH6n}
+  }
 </pre>
     </div>
   </td>
@@ -257,82 +259,6 @@
     <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259">blog</a>
 
     <p align="justify"> <i id="mmie_abs">Interleaved multimodal comprehension and generation, enabling models to produce and interpret both images and text in arbitrary sequences, have become a pivotal area in multimodal learning. Despite significant advancements, the evaluation of this capability remains insufficient. Existing benchmarks suffer from limitations in data scale, scope, and evaluation depth, while current evaluation metrics are often costly or biased, lacking in reliability for practical applications. To address these challenges, we introduce MMIE, a large-scale knowledge-intensive benchmark for evaluating interleaved multimodal comprehension and generation in Large Vision-Language Models (LVLMs). MMIE comprises 20K meticulously curated multimodal queries, spanning 3 categories, 12 fields, and 102 subfields, including mathematics, coding, physics, literature, health, and arts. It supports both interleaved inputs and outputs, offering a mix of multiple-choice and open-ended question formats to evaluate diverse competencies. Moreover, we propose a reliable automated evaluation metric, leveraging a scoring model fine-tuned with human-annotated data and systematic evaluation criteria, aimed at reducing bias and improving evaluation accuracy. Extensive experiments demonstrate the effectiveness of our benchmark and metrics in providing a comprehensive evaluation of interleaved LVLMs. Specifically, we evaluate eight LVLMs, revealing that even the best models show significant room for improvement, with most achieving only moderate results. We believe MMIE will drive further advancements in the development of interleaved LVLMs.</i></p>
-
-<pre xml:space="preserve">
-@article{xia2024mmie,
-  title={MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models},
-  author={Xia, Peng and Han, Siwei and Qiu, Shi and Zhou, Yiyang and Wang, Zhaoyang and Zheng, Wenhao and Chen, Zhaorun and Cui, Chenhang and Ding, Mingyu and Li, Linjie and Wang, Lijuan and Yao, Huaxiu},
-  journal={arXiv preprint arXiv:2410.10139},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/fisao/fisao.jpg" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="" id="FineGrainedVerifiers">
-    <heading>Fine-Grained Verifiers: Preference Modeling as Next-token Prediction in Vision-Language Alignment</heading></a><br>
-    Chenhang Cui<sup>*</sup>, An Zhang<sup>*</sup>, Yiyang Zhou, <b>Zhaorun Chen</b>, Gelei Deng, Huaxiu Yao, Tat-Seng Chua<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
-    </p>
-
-    <div class="paper" id="anyprefer">
-    <a href="https://arxiv.org/pdf/2410.14148">pdf</a> |
-    <a href="">webpage</a> |
-    <a href="javascript:toggleblock('fisao_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('fisao')" class="togglebib">bibtex</a> |
-    <a href="https://arxiv.org/pdf/2410.14148">arXiv</a> |
-    <a href="https://www.alphaxiv.org/abs/2410.14148">alphaxiv</a> |
-    <!-- <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259">blog</a> -->
-
-    <p align="justify"> <i id="fisao_abs">The recent advancements in large language models (LLMs) and pre-trained vision models have accelerated the development of vision-language large models (VLLMs), enhancing the interaction between visual and linguistic modalities. Despite their notable success across various domains, VLLMs face challenges in modality alignment, which can lead to issues like hallucinations and unsafe content generation. Current alignment techniques often rely on coarse feedback and external datasets, limiting scalability and performance. In this paper, we propose FiSAO (Fine-Grained Self-Alignment Optimization), a novel self-alignment method that utilizes the model’s own visual encoder as a fine-grained verifier to improve vision-language alignment without the need for additional data. By leveraging token-level feedback from the vision encoder, FiSAO significantly improves vision-language alignment, even surpassing traditional preference tuning methods that require additional data. Through both theoretical analysis and experimental validation, we demonstrate that FiSAO effectively addresses the misalignment problem in VLLMs, marking the first instance of token-level rewards being applied to such models.</i></p>
-
-<pre xml:space="preserve">
-@article{cui2024fine,
-  title={Fine-Grained Verifiers: Preference Modeling as Next-token Prediction in Vision-Language Alignment},
-  author={Cui, Chenhang and Zhang, An and Zhou, Yiyang and Chen, Zhaorun and Deng, Gelei and Yao, Huaxiu and Chua, Tat-Seng},
-  journal={arXiv preprint arXiv:2410.14148},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/anyprefer/anyprefer.jpg" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="" id="AnyPrefer">
-    <heading>MJ-PreferGen: An Automatic Framework for Preference Data Synthesis</heading></a><br>
-    Yiyang Zhou, Zhaoyang Wang, Tianle Wang, Shangyu Xing, Peng Xia, Bo Li, Kaiyuan Zheng, Zijian Zhang, <b>Zhaorun Chen</b>, Wenhao Zheng, Xuchao Zhang, Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
-    </p>
-
-    <div class="paper" id="anyprefer">
-    <a href="">pdf</a> |
-    <a href="">webpage</a> |
-    <a href="javascript:toggleblock('anyprefer_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('anyprefer')" class="togglebib">bibtex</a> |
-    <a href="">arXiv</a> |
-    <!-- <a href="">alphaxiv</a> | -->
-    <!-- <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259">blog</a> -->
-
-    <p align="justify"> <i id="anyprefer_abs">High-quality preference data is essential for aligning foundation models with human values through preference learning. However, manual annotation of such data is often time-consuming and costly. Recent methods adopt a self-rewarding approach, where the target model generates and annotates its own preference data, but this can lead to inaccuracies due to the reward model sharing weights with the target model, amplifying inherent biases. To address these issues, we propose Anyprefer, a framework designed to synthesize high-quality preference data for the target model. Anyprefer frames the data synthesis process as a cooperative two-player Markov Game, where the target model and a judge model collaborate. Here, a series of external tools are introduced to assist the judge model in accurately rewarding the target model’s responses, mitigating biases in the process. We also introduce a feedback mechanism to optimize prompts for both models, enhancing collaboration and improving data quality. The synthesized data is compiled into a new preference dataset, Anyprefer-V1, consisting of 58K high-quality preference pairs. Extensive experiments show that Anyprefer significantly improves model alignment across four applications, covering 21 datasets, achieving average improvements of 18.55 in five natural language generation datasets, 3.66 in nine vision-language understanding datasets, 30.05 in three medical image analysis datasets, and 14.50 in four visuo-motor control tasks.</i></p>
 
 <pre xml:space="preserve">
 @article{xia2024mmie,
@@ -384,6 +310,125 @@
   </td>
 </tr>
 
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/halc/halc.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://billchan226.github.io/HALC.html" id="HALC">
+    <heading>HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Zhuokai Zhao<sup>*</sup>, Hongyin Luo, Huaxiu Yao, Bo Li and Jiawei Zhou<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2024<br>
+    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
+    </p>
+
+    <div class="paper" id="halc">
+    <a href="https://arxiv.org/pdf/2403.00425">pdf</a> |
+    <a href="https://billchan226.github.io/HALC.html">webpage</a> |
+    <a href="javascript:toggleblock('halc_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('halc')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/abs/2310.03379">arXiv</a> |
+    <a href="https://www.alphaxiv.org/abs/2403.00425">alphaxiv</a> |
+    <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/">blog</a> 
+
+    <p align="justify"> <i id="halc_abs">While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC’s effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2024halc,
+  title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
+  journal={arXiv preprint arXiv:2403.00425},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/fisao/fisao.jpg" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="" id="FineGrainedVerifiers">
+    <heading>Fine-Grained Verifiers: Preference Modeling as Next-token Prediction in Vision-Language Alignment</heading></a><br>
+    Chenhang Cui<sup>*</sup>, An Zhang<sup>*</sup>, Yiyang Zhou, <b>Zhaorun Chen</b>, Gelei Deng, Huaxiu Yao, Tat-Seng Chua<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
+    </p>
+
+    <div class="paper" id="anyprefer">
+    <a href="https://arxiv.org/pdf/2410.14148">pdf</a> |
+    <a href="">webpage</a> |
+    <a href="javascript:toggleblock('fisao_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('fisao')" class="togglebib">bibtex</a> |
+    <a href="https://arxiv.org/pdf/2410.14148">arXiv</a> |
+    <a href="https://www.alphaxiv.org/abs/2410.14148">alphaxiv</a> |
+    <!-- <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259">blog</a> -->
+
+    <p align="justify"> <i id="fisao_abs">The recent advancements in large language models (LLMs) and pre-trained vision models have accelerated the development of vision-language large models (VLLMs), enhancing the interaction between visual and linguistic modalities. Despite their notable success across various domains, VLLMs face challenges in modality alignment, which can lead to issues like hallucinations and unsafe content generation. Current alignment techniques often rely on coarse feedback and external datasets, limiting scalability and performance. In this paper, we propose FiSAO (Fine-Grained Self-Alignment Optimization), a novel self-alignment method that utilizes the model’s own visual encoder as a fine-grained verifier to improve vision-language alignment without the need for additional data. By leveraging token-level feedback from the vision encoder, FiSAO significantly improves vision-language alignment, even surpassing traditional preference tuning methods that require additional data. Through both theoretical analysis and experimental validation, we demonstrate that FiSAO effectively addresses the misalignment problem in VLLMs, marking the first instance of token-level rewards being applied to such models.</i></p>
+
+<pre xml:space="preserve">
+@article{cui2024fine,
+  title={Fine-Grained Verifiers: Preference Modeling as Next-token Prediction in Vision-Language Alignment},
+  author={Cui, Chenhang and Zhang, An and Zhou, Yiyang and Chen, Zhaorun and Deng, Gelei and Yao, Huaxiu and Chua, Tat-Seng},
+  journal={arXiv preprint arXiv:2410.14148},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/anyprefer/anyprefer.jpg" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="" id="AnyPrefer">
+    <heading>Anyprefer: An Agentic Framework for Preference Data Synthesis</heading></a><br>
+    Yiyang Zhou, Zhaoyang Wang, Tianle Wang, Shangyu Xing, Peng Xia, Bo Li, Kaiyuan Zheng, Zijian Zhang, <b>Zhaorun Chen</b>, Wenhao Zheng, Xuchao Zhang, Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
+    </p>
+
+    <div class="paper" id="anyprefer">
+    <a href="">pdf</a> |
+    <a href="">webpage</a> |
+    <a href="javascript:toggleblock('anyprefer_abs')">abstract</a> |
+    <a shape="rect" href="javascript:togglebib('anyprefer')" class="togglebib">bibtex</a> |
+    <a href="">arXiv</a> |
+    <!-- <a href="">alphaxiv</a> | -->
+    <!-- <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259">blog</a> -->
+
+    <p align="justify"> <i id="anyprefer_abs">High-quality preference data is essential for aligning foundation models with human values through preference learning. However, manual annotation of such data is often time-consuming and costly. Recent methods adopt a self-rewarding approach, where the target model generates and annotates its own preference data, but this can lead to inaccuracies due to the reward model sharing weights with the target model, amplifying inherent biases. To address these issues, we propose Anyprefer, a framework designed to synthesize high-quality preference data for the target model. Anyprefer frames the data synthesis process as a cooperative two-player Markov Game, where the target model and a judge model collaborate. Here, a series of external tools are introduced to assist the judge model in accurately rewarding the target model’s responses, mitigating biases in the process. We also introduce a feedback mechanism to optimize prompts for both models, enhancing collaboration and improving data quality. The synthesized data is compiled into a new preference dataset, Anyprefer-V1, consisting of 58K high-quality preference pairs. Extensive experiments show that Anyprefer significantly improves model alignment across four applications, covering 21 datasets, achieving average improvements of 18.55 in five natural language generation datasets, 3.66 in nine vision-language understanding datasets, 30.05 in three medical image analysis datasets, and 14.50 in four visuo-motor control tasks.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{
+  zhou2025mjprefergen,
+  title={{MJ}-PreferGen: An Automatic Framework for Preference Data Synthesis},
+  author={Yiyang Zhou and Zhaoyang Wang and Tianle Wang and Shangyu Xing and Peng Xia and Bo Li and Kaiyuan Zheng and Zijian Zhang and Zhaorun Chen and Wenhao Zheng and Xuchao Zhang and Chetan Bansal and Weitong Zhang and Ying Wei and Mohit Bansal and Huaxiu Yao},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=WpZyPk79Fu}
+  }
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+
 
 <tr>
   <td width="30%" valign="top" align="center">
@@ -422,43 +467,7 @@
   </td>
 </tr>
 
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/halc/halc.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://billchan226.github.io/HALC.html" id="HALC">
-    <heading>HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</heading></a><br>
-    <b>Zhaorun Chen<sup>*</sup></b>, Zhuokai Zhao<sup>*</sup>, Hongyin Luo, Huaxiu Yao, Bo Li and Jiawei Zhou<br>
-    International Conference on Machine Learning (<b>ICML</b>), 2024<br>
-    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
-    </p>
 
-    <div class="paper" id="halc">
-    <a href="https://arxiv.org/pdf/2403.00425">pdf</a> |
-    <a href="https://billchan226.github.io/HALC.html">webpage</a> |
-    <a href="javascript:toggleblock('halc_abs')">abstract</a> |
-    <a shape="rect" href="javascript:togglebib('halc')" class="togglebib">bibtex</a> |
-    <a href="https://arxiv.org/abs/2310.03379">arXiv</a> |
-    <a href="https://www.alphaxiv.org/abs/2403.00425">alphaxiv</a> |
-    <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/">blog</a> 
-
-    <p align="justify"> <i id="halc_abs">While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC’s effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2024halc,
-  title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
-  author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
-  journal={arXiv preprint arXiv:2403.00425},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
 
 
 <tr></tr>
