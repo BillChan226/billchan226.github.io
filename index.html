@@ -226,8 +226,8 @@
       </p>
       <p>My current research interests center on the trustworthy and alignment issue of foundation models (e.g. LLMs) and agents from both a theoretical and application perspective. Specifically, I'm interested in enhancing their trustworthiness via novel algorithms and certificates for various applications (e.g. <b>hallucination mitigation</b>, <b>training & testing-time attack</b>, <b>guardrail models</b>) through incorporating external knowledge sources and LLMs' reasoning capabilities.
       </p>
-      <p>I'm currently a research scientist intern at Meta Superintelligence Labs during this summer.
-      </p>
+      <!-- <p>I'm currently a research scientist intern at Meta Superintelligence Labs during this summer.
+      </p> -->
       <!-- <p>Not right now, but one day:) -->
       <!-- </p> -->
       <p><a href="https://billchan226.github.io/publication.html">[Publications]</a> Email: zhaorun [AT] uchicago.edu
@@ -250,14 +250,19 @@
         <!-- </div>  -->
 
         <div class="news-item">
+          <span class="news-date">[09/2025]</span>
+          <span class="news-content">🎉 Seven papers accepted by <a href="https://neurips.cc/">NeurIPS 2025</a>. See you in San Diego!</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">[06/2025]</span>
+          <span class="news-content">🔥 I'm currently a research scientist intern at <a href="https://ai.meta.com/">Meta Superintelligence Labs</a> during this summer!</span>
+        </div>
+
+        <div class="news-item">
           <span class="news-date">[05/2025]</span>
           <span class="news-content">🎉 One first-authored <a href="https://arxiv.org/abs/2503.22738">paper</a> accepted by <a href="https://icml.cc/">ICML 2025</a>!</span>
         </div>
-
-        <!-- <div class="news-item">
-          <span class="news-date">[02/2025]</span>
-          <span class="news-content">🔥 I will join the <a href="https://ai.meta.com/">Meta GenAI Llama team</a> as a research scientist intern in summer 2025!</span>
-        </div> -->
         
         <div class="news-item">
           <span class="news-date">[01/2025]</span>
@@ -292,6 +297,91 @@
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 <br/>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mjbench/overview.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mj-bench.github.io/" id="mjbench">
+    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="mjbench">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2407.04842" class="pub-button primary">pdf</a>
+        <a href="https://mj-bench.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('mjbench_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2407.04842" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2407.04842" class="pub-button text">alphaxiv</a>
+        <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462" class="pub-button text">blog</a> 
+      </div>
+
+      <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@misc{chen2024mjbenchmultimodalrewardmodel,
+  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
+  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+  year={2024},
+  eprint={2407.04842},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2407.04842}, 
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mjvideo/overview.png" 
+         alt="sym" 
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" id="mjvideo">
+    <heading>MJ-Video: Benchmarking and Rewarding Video Generation with Fine-Grained Video Preference</heading></a><br>
+    Haibo Tong<sup>*</sup>, Zhaoyang Wang<sup>*</sup>, <b>Zhaorun Chen</b>, Haonian Ji, Shi Qiu, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br><span style="color:red;"><b>(Spotlight Presentation)</b></span>
+    </p>
+
+    <div class="paper" id="mjvideo">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2502.01719" class="pub-button primary">pdf</a>
+        <a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('mjvideo_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2502.01719" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2502.01719" class="pub-button text">alphaxiv</a>
+        <a href="" class="pub-button text">blog</a> 
+      </div>
+
+      <p align="justify"> <i id="mjvideo_abs">Recent advancements in video generation have significantly improved the ability to synthesize videos from text instructions. However, existing models still struggle with key challenges such as instruction misalignment, content hallucination, safety concerns, and bias. Addressing these limitations, we introduce MJ-BENCH-VIDEO, a large-scale video preference benchmark designed to evaluate video generation across five critical aspects: Alignment, Safety, Fineness, Coherence & Consistency, and Bias & Fairness. This benchmark incorporates 28 fine-grained criteria to provide a comprehensive evaluation of video preference. Building upon this dataset, we propose MJ-VIDEO, a Mixture-of-Experts (MoE)-based video reward model designed to deliver fine-grained reward. MJ-VIDEO can dynamically select relevant experts to accurately judge the preference based on the input text-video pair. This architecture enables more precise and adaptable preference judgments. Through extensive benchmarking on MJ-BENCH-VIDEO, we analyze the limitations of existing video reward models and demonstrate the superior performance of MJ-VIDEO in video preference assessment, achieving 17.58% and 15.87% improvements in overall and fine-grained preference judgments, respectively. Additionally, introducing MJ-VIDEO for preference tuning in video generation enhances the alignment performance.<i></p>
+
+<pre xml:space="preserve">
+  @misc{tong2025mjvideofinegrainedbenchmarkingrewarding,
+    title={MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation}, 
+    author={Haibo Tong and Zhaoyang Wang and Zhaorun Chen and Haonian Ji and Shi Qiu and Siwei Han and Kexin Geng and Zhongkai Xue and Yiyang Zhou and Peng Xia and Mingyu Ding and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+    year={2025},
+    eprint={2502.01719},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2502.01719}, 
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
 
 <tr>
   <td width="30%" valign="top" align="center">
@@ -788,47 +878,6 @@
 
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/mjvideo/overview.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" id="mjvideo">
-    <heading>MJ-Video: Benchmarking and Rewarding Video Generation with Fine-Grained Video Preference</heading></a><br>
-    Haibo Tong<sup>*</sup>, Zhaoyang Wang<sup>*</sup>, <b>Zhaorun Chen</b>, Haonian Ji, Shi Qiu, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
-    In submission, 2025<br>
-    </p>
-
-    <div class="paper" id="mjvideo">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2502.01719" class="pub-button primary">pdf</a>
-        <a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('mjvideo_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2502.01719" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2502.01719" class="pub-button text">alphaxiv</a>
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="mjvideo_abs">Recent advancements in video generation have significantly improved the ability to synthesize videos from text instructions. However, existing models still struggle with key challenges such as instruction misalignment, content hallucination, safety concerns, and bias. Addressing these limitations, we introduce MJ-BENCH-VIDEO, a large-scale video preference benchmark designed to evaluate video generation across five critical aspects: Alignment, Safety, Fineness, Coherence & Consistency, and Bias & Fairness. This benchmark incorporates 28 fine-grained criteria to provide a comprehensive evaluation of video preference. Building upon this dataset, we propose MJ-VIDEO, a Mixture-of-Experts (MoE)-based video reward model designed to deliver fine-grained reward. MJ-VIDEO can dynamically select relevant experts to accurately judge the preference based on the input text-video pair. This architecture enables more precise and adaptable preference judgments. Through extensive benchmarking on MJ-BENCH-VIDEO, we analyze the limitations of existing video reward models and demonstrate the superior performance of MJ-VIDEO in video preference assessment, achieving 17.58% and 15.87% improvements in overall and fine-grained preference judgments, respectively. Additionally, introducing MJ-VIDEO for preference tuning in video generation enhances the alignment performance.<i></p>
-
-<pre xml:space="preserve">
-  @misc{tong2025mjvideofinegrainedbenchmarkingrewarding,
-    title={MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation}, 
-    author={Haibo Tong and Zhaoyang Wang and Zhaorun Chen and Haonian Ji and Shi Qiu and Siwei Han and Kexin Geng and Zhongkai Xue and Yiyang Zhou and Peng Xia and Mingyu Ding and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
-    year={2025},
-    eprint={2502.01719},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2502.01719}, 
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
     <video playsinline 
            autoplay 
            loop 
@@ -869,46 +918,6 @@
   </td>
 </tr>
 
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/mjbench/overview.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://mj-bench.github.io/" id="mjbench">
-    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
-    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
-    In submission, 2025<br>
-    </p>
-
-    <div class="paper" id="mjbench">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2407.04842" class="pub-button primary">pdf</a>
-        <a href="https://mj-bench.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('mjbench_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2407.04842" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2407.04842" class="pub-button text">alphaxiv</a>
-        <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@misc{chen2024mjbenchmultimodalrewardmodel,
-  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
-  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
-  year={2024},
-  eprint={2407.04842},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2407.04842}, 
-}
-</pre>
-    </div>
-  </td>
-</tr>
 
 </table>
 
