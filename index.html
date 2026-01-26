@@ -249,10 +249,11 @@
     <td style="padding:2px;width:100%;vertical-align:middle">
       <heading>News</heading>
       <div class="news-container">
-        <!-- <div class="news-item">
-          <span class="news-date">[06/2025]</span>
-          <!-- <span class="news-content">🎉 Two papers accepted by <a href="https://iccv.thecvf.com/">ICCV 2025</a>, see you in Hawaii!</span> -->
-        <!-- </div>  -->
+
+        <div class="news-item">
+          <span class="news-date">[01/2026]</span>
+          <span class="news-content">🎉 Six papers accepted by <a href="https://iclr.cc/">ICLR 2026</a>!</span>
+        </div>
 
         <div class="news-item">
           <span class="news-date">[09/2025]</span>
@@ -303,7 +304,242 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 <br/>
 
+
+
 <tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/dreamgym/method.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2511.03773" id="dreamgym">
+    <heading>Scaling Agent Learning via Experience Synthesis</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Kai Zhang, Bo Liu, Qi Qi, Yifan Wu, Tarun Kalluri, Sara Cao, Yuanhao Xiong, Haibo Tong, Huaxiu Yao, Hengduo Li, Jiacheng Zhu, Xian Li, Dawn Song, Bo Li, Jason Weston, and Dat Huynh<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="dreamgym">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2511.03773" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('dreamgym_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a> 
+      </div>
+
+      <p align="justify"> <i id="dreamgym_abs">While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2025scaling,
+  title={Scaling Agent Learning via Experience Synthesis},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Zhang, Kai and Liu, Bo and Qi, Qi and Wu, Yifan and Kalluri, Tarun and Cao, Sara and Xiong, Yuanhao and Tong, Haibo and others},
+  journal={arXiv preprint arXiv:2511.03773},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/arms/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.02677" id="arms">
+    <heading>ARMs: Adaptive Red-Teaming Agent against Multimodal Models with Plug-and-Play Attacks</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Xun Liu<sup>*</sup>, Mintong Kang, Jiawei Zhang, Minzhou Pan, Shuang Yang, Bo Li<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="arms">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.02677" class="pub-button primary">pdf</a>
+        <a href="https://arms-redteaming-agent.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('arms_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="arms_abs">As vision-language models (VLMs) gain prominence, their multimodal interfaces also introduce new safety vulnerabilities, making the safety evaluation challenging and critical. Existing red-teaming efforts are either restricted to a narrow set of adversarial patterns or depend heavily on manual engineering, lacking scalable exploration of emerging real-world adversarial strategies. To bridge this gap, we propose ARMs, an adaptive red-teaming agent that systematically conducts comprehensive risk assessments for VLMs. Given a target harmful behavior or risk definition, ARMs automatically optimizes diverse red-teaming strategies with reasoning-enhanced multi-step orchestration, to effectively elicit harmful outputs from target VLMs. This is the first red teaming framework that provides controllable generation given risk definitions. We propose 11 novel multimodal attack strategies, covering diverse adversarial patterns of VLMs (e.g., reasoning hijacking, contextual cloaking), and integrate 17 red-teaming algorithms with ARMs. To balance the diversity and effectiveness of the attack, we design a layered memory with an epsilon-greedy attack algorithm. Extensive experiments on different instance-based benchmarks and policy-based safety evaluations show that ARMs achieves the state-of-the-art attack success rate (ASR), improving ASR by an average of 52.1% compared to existing baselines and even exceeding 90% ASR on Claude-4-Sonnet, a constitutionally-aligned model widely recognized for its robustness. We show that the diversity of red-teaming instances generated by ARMs is significantly higher, revealing emerging vulnerabilities in VLMs. Leveraging ARMs, we construct ARMs-Bench, a large-scale multimodal safety benchmark comprising 30K red-teaming instances spanning 51 diverse risk categories, grounded in both real-world multimodal threats and regulatory risks. Fine-tuning with ARMs-Bench substantially reduces ASR while preserving general utility of VLMs, providing actionable insights to improve multimodal safety alignment.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2025arms,
+  title={ARMs: Adaptive Red-Teaming Agent against Multimodal Models with Plug-and-Play Attacks},
+  author={Chen, Zhaorun and Liu, Xun and Kang, Mintong and Zhang, Jiawei and Pan, Minzhou and Yang, Shuang and Li, Bo},
+  journal={arXiv preprint arXiv:2510.02677},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/redcodeagent/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.02609" id="redcodeagent">
+    <heading>RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents</heading></a><br>
+    Chengquan Guo, Chulin Xie, Yu Yang, <b>Zhaorun Chen</b>, Zinan Lin, Xander Davies, Yarin Gal, Dawn Song, Bo Li<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="redcodeagent">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.02609" class="pub-button primary">pdf</a>
+        <a href="https://www.microsoft.com/en-us/research/blog/redcodeagent-automatic-red-teaming-agent-against-diverse-code-agents/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('redcodeagent_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="redcodeagent_abs">Code agents have gained widespread adoption due to their strong code generation capabilities and integration with code interpreters, enabling dynamic execution, debugging, and interactive programming capabilities. While these advancements have streamlined complex workflows, they have also introduced critical safety and security risks. Current static safety benchmarks and red-teaming tools are inadequate for identifying emerging real-world risky scenarios, as they fail to cover certain boundary conditions, such as the combined effects of different jailbreak tools. In this work, we propose RedCodeAgent, the first automated red-teaming agent designed to systematically uncover vulnerabilities in diverse code agents. With an adaptive memory module, RedCodeAgent can leverage existing jailbreak knowledge, dynamically select the most effective red-teaming tools and tool combinations in a tailored toolbox for a given input query, thus identifying vulnerabilities that might otherwise be overlooked. For reliable evaluation, we develop simulated sandbox environments to additionally evaluate the execution results of code agents, mitigating potential biases of LLM-based judges that only rely on static code. Through extensive evaluations across multiple state-of-the-art code agents, diverse risky scenarios, and various programming languages, RedCodeAgent consistently outperforms existing red-teaming methods, achieving higher attack success rates and lower rejection rates with high efficiency. We further validate RedCodeAgent on real-world code assistants, e.g., Cursor and Codeium, exposing previously unidentified security risks. By automating and optimizing red-teaming processes, RedCodeAgent enables scalable, adaptive, and effective safety assessments of code agents.</i></p>
+
+<pre xml:space="preserve">
+@article{guo2025redcodeagent,
+  title={RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents},
+  author={Guo, Chengquan and Xie, Chulin and Yang, Yu and Chen, Zhaorun and Lin, Zinan and Davies, Xander and Gal, Yarin and Song, Dawn and Li, Bo},
+  journal={arXiv preprint arXiv:2510.02609},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/dija/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2507.11097" id="dija">
+    <heading>The Devil Behind the Mask: An Emergent Safety Vulnerability of Diffusion LLMs</heading></a><br>
+    Zichen Wen, Jiashu Qu, <b>Zhaorun Chen</b>, Xiaoya Lu, Dongrui Liu, Zhiyuan Liu, Ruixi Wu, Yicun Yang, Xiangqi Jin, Haoyun Xu, Xuyang Liu, Weijia Li, Chaochao Lu, Jing Shao, Conghui He, Linfeng Zhang <br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="dija">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2507.11097" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('dija_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="dija_abs">Diffusion-based large language models (dLLMs) have recently emerged as a powerful alternative to autoregressive LLMs, offering faster inference and greater interactivity via parallel decoding and bidirectional modeling. However, despite strong performance in code generation and text infilling, we identify a fundamental safety concern: existing alignment mechanisms fail to safeguard dLLMs against context-aware, masked-input adversarial prompts, exposing novel vulnerabilities. To this end, we present DIJA, the first systematic study and jailbreak attack framework that exploits unique safety weaknesses of dLLMs. Specifically, our proposed DIJA constructs adversarial interleaved mask-text prompts that exploit the text generation mechanisms of dLLMs, i.e., bidirectional modeling and parallel decoding. Bidirectional modeling drives the model to produce contextually consistent outputs for masked spans, even when harmful, while parallel decoding limits model dynamic filtering and rejection sampling of unsafe content. This causes standard alignment mechanisms to fail, enabling harmful completions in alignment-tuned dLLMs, even when harmful behaviors or unsafe instructions are directly exposed in the prompt. Through comprehensive experiments, we demonstrate that DIJA significantly outperforms existing jailbreak methods, exposing a previously overlooked threat surface in dLLM architectures. Notably, our method achieves up to 100% keyword-based ASR on Dream-Instruct, surpassing the strongest prior baseline, ReNeLLM, by up to 78.5% in evaluator-based ASR on JailbreakBench and by 37.7 points in StrongREJECT score, while requiring no rewriting or hiding of harmful content in the jailbreak prompt. Our findings underscore the urgent need for rethinking safety alignment in this emerging class of language models.</i></p>
+
+<pre xml:space="preserve">
+@article{wen2025devil,
+  title={The devil behind the mask: An emergent safety vulnerability of diffusion llms},
+  author={Wen, Zichen and Qu, Jiashu and Chen, Zhaorun and Liu, Dongrui and Liu, Zhiyuan and Wu, Ruixi and Yang, Yicun and Jin, Xiangqi and Xu, Haoyun and Liu, Xuyang and Li, Weijia and others},
+  journal={arXiv preprint arXiv:2507.11097},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/infoutil/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://openreview.net/pdf?id=ThsYRbpv2F" id="infoutil">
+    <heading>Grounding and Enhancing Informativeness and Utility in Dataset Distillation</heading></a><br>
+    Shaobo Wang, Yantai Yang, Guo Chen, Peiru Li, Kaixin Li, Yufa Zhou, <b>Zhaorun Chen</b>, Linfeng Zhang<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="dija">
+      <div class="pub-buttons">
+        <a href="https://openreview.net/pdf?id=ThsYRbpv2F" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('infoutil_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="infoutil_abs">Dataset Distillation (DD) seeks to create a compact dataset from a large, real-world dataset. While recent methods often rely on heuristic approaches to balance efficiency and quality, the fundamental relationship between original and synthetic data remains underexplored. This paper revisits knowledge distillation-based dataset distillation within a solid theoretical framework. We introduce the concepts of Informativeness and Utility, capturing crucial information within a sample and essential samples in the training set, respectively. Building on these principles, we define \textit{optimal dataset distillation} mathematically. We then present InfoUtil, a framework that balances informativeness and utility in synthesizing the distilled dataset. InfoUtil incorporates two key components: (1) game-theoretic informativeness maximization using Shapley Value attribution to extract key information from samples, and (2) principled utility maximization by selecting globally influential samples based on Gradient Norm. These components ensure that the distilled dataset is both informative and utility-optimized. Experiments demonstrate that our method achieves a 6.1% performance improvement over the previous state-of-the-art approach on ImageNet-1K dataset using ResNet-18.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{
+anonymous2026grounding,
+title={Grounding and Enhancing Informativeness and Utility in Dataset Distillation},
+author={Anonymous},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=ThsYRbpv2F}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/eduvis/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2505.16832" id="eduvis">
+    <heading>From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Reasoning-Driven Pedagogical Visualization</heading></a><br>
+    Haonian Ji, Shi Qiu, Siyang Xin, Siwei Han, <b>Zhaorun Chen</b>, Dake Zhang, Hongyi Wang, Huaxiu Yao<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="eduvis">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2505.16832" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('eduvis_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="eduvis_abs">While foundation models (FMs), such as diffusion models and large vision-language models (LVLMs), have been widely applied in educational contexts, their ability to generate pedagogically effective visual explanations remains limited. Most existing approaches focus primarily on textual reasoning, overlooking the critical role of structured and interpretable visualizations in supporting conceptual understanding. To better assess the visual reasoning capabilities of FMs in educational settings, we introduce EduVisBench, a multi-domain, multi-level benchmark. EduVisBench features diverse STEM problem sets requiring visually grounded solutions, along with a fine-grained evaluation rubric informed by pedagogical theory. Our empirical analysis reveals that existing models frequently struggle with the inherent challenge of decomposing complex reasoning and translating it into visual representations aligned with human cognitive processes. To address these limitations, we propose EduVisAgent, a multi-agent collaborative framework that coordinates specialized agents for instructional planning, reasoning decomposition, metacognitive prompting, and visualization design. Experimental results show that EduVisAgent substantially outperforms all baselines, achieving a 40.2% improvement and delivering more educationally aligned visualizations.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{
+anonymous2026from,
+title={From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Reasoning-Driven Pedagogical Visualization},
+author={Anonymous},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=FVCpV04ZRe}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+
   <td width="30%" valign="top" align="center">
     <img src="images/csafegen/overview.png" 
          alt="sym" 
@@ -536,6 +772,43 @@
     </div>
   </td>
 </tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/epic/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.00515" id="epic">
+    <heading>Efficient Multi-modal Large Language Models via Progressive Consistency Distillation</heading></a><br>
+    Zichen Wen , Shaobo Wang, Yufa Zhou, Junyuan Zhang, Qintong Zhang, Yifeng Gao, <b>Zhaorun Chen</b>, Bin Wang, Weijia Li, Conghui He, Linfeng Zhang<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="epic">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.00515" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('epic_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="epic_abs">Visual tokens consume substantial computational resources in multi-modal large models (MLLMs), significantly compromising their efficiency. Recent works have attempted to improve efficiency by compressing visual tokens during training, either through modifications to model components or by introducing additional parameters. However, they often overlook the increased learning difficulty caused by such compression, as the model’s parameter space struggles to quickly adapt to the substantial perturbations in the feature space induced by token compression. In this work, we propose to develop Efficient MLLMs via Progressive Consistency Distillation (EPIC), a progressive learning framework. Specifically, by decomposing the feature space perturbations introduced by token compression along the token-wise and layer-wise dimensions, we introduce token consistency distillation and layer consistency distillation, respectively, aiming to reduce the training difficulty by leveraging guidance from a teacher model and following a progressive learning trajectory. Extensive experiments demonstrate the superior effectiveness, robustness, and generalization capabilities of our proposed framework.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{wenefficient,
+  title={Efficient Multi-modal Large Language Models via Progressive Consistency Distillation},
+  author={Wen, Zichen and Wang, Shaobo and Zhou, Yufa and Zhang, Junyuan and Zhang, Qintong and Gao, Yifeng and Chen, Zhaorun and Wang, Bin and Li, Weijia and He, Conghui and others},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
 
 <tr>
   <td width="30%" valign="top" align="center">
@@ -1029,44 +1302,84 @@
   <tr><td style="padding-top:5px; padding-bottom:15px;"></td></tr>
   <!-- End of added space -->
 
-
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/dreamgym/method.png" 
+    <img src="images/agentxploit/main.png" 
           alt="sym" 
           width="90%"
           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
   <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2511.03773" id="dreamgym">
-    <heading>Scaling Agent Learning via Experience Synthesis</heading></a><br>
-    <b>Zhaorun Chen</b>, Zhuokai Zhao, Kai Zhang, Bo Liu, Qi Qi, Yifan Wu, Tarun Kalluri, Sara Cao, Yuanhao Xiong, Haibo Tong, Huaxiu Yao, Hengduo Li, Jiacheng Zhu, Xian Li, Dawn Song, Bo Li, Jason Weston, and Dat Huynh<br>
-    In submission, 2025<br>
+    <p><a href="https://openreview.net/pdf?id=xKJ0lVQEv7" id="agentxploit">
+    <heading>AgentXploit: End-to-End Red-Teaming for AI Agents Powered by Multi-Agent Systems</heading></a><br>
+    Shi Qiu, Zhun Wang, Tianneng Shi, <b>Zhaorun Chen</b>, Wenbo Guo, Dawn Song<br>
+    In submission, 2026<br>
     </p>
 
-    <div class="paper" id="dreamgym">
+    <div class="paper" id="agentxploit">
       <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2511.03773" class="pub-button primary">pdf</a>
+        <a href="https://openreview.net/pdf?id=xKJ0lVQEv7" class="pub-button primary">pdf</a>
         <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('dreamgym_abs')" class="pub-button text">abstract</a>
+        <a href="javascript:toggleblock('agentxploit_abs')" class="pub-button text">abstract</a>
         <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
         <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a> 
+        <!-- <a href="https://x.com/zhuokaiz/status/2009470079126151452" class="pub-button text">blog</a>  -->
       </div>
 
-      <p align="justify"> <i id="dreamgym_abs">While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.</i></p>
+      <p align="justify"> <i id="agentxploit_abs">AI agents, powered by Large Language Model (LLM), are vulnerable to indirect prompt injection attacks, where malicious data from external tools and data sources can manipulate agent behavior. Existing works mainly focus on developing strategies to generate attack prompts under a pre-constructed attack patch. However, the major challenge lies in systematically identifying attack vectors and automatically constructing attack paths from the system entry points to the target components. Without such mechanisms, none of the existing red-teaming approaches can be applied to real-world AI agents for end-to-end attacks. We propose AgentXploit, the first fully automatic, multi-agent framework that systematically identifies and demonstrates these vulnerabilities through white-box analysis of the agent's source code. Our framework operates in two stages. First, an Analyzer agent inspects the target agent’s codebase using dynamic task planning, long-term context management, and semantical code browsing. It generates comprehensive reports on agent workflows, high-risk tools that process untrusted data, sensitive tools that can cause harm, and viable attack paths. Second, an Exploiter agent uses these reports to dynamically craft and execute attacks. It leverages a specialized seed corpus, context-aware injection generation guided by real-time agent feedback, and multi-injection collaboration to reliably trigger malicious behavior. We evaluate AgentXploit on two popular open-source agents, successfully demonstrating a range of attacks. On the AgentDojo benchmark, our Exploiter achieves a 79% attack success rate, outperforming prior state-of-the-art by 27%.</i></p>
 
 <pre xml:space="preserve">
-@article{chen2025scaling,
-  title={Scaling Agent Learning via Experience Synthesis},
-  author={Chen, Zhaorun and Zhao, Zhuokai and Zhang, Kai and Liu, Bo and Qi, Qi and Wu, Yifan and Kalluri, Tarun and Cao, Sara and Xiong, Yuanhao and Tong, Haibo and others},
-  journal={arXiv preprint arXiv:2511.03773},
-  year={2025}
+@misc{
+qiu2025agentxploit,
+title={AgentXploit: End-to-End Red-Teaming for {AI} Agents Powdered by Multi-Agent Systems},
+author={Shi Qiu and Zhun Wang and Tianneng Shi and Zhaorun Chen and Wenbo Guo and Dawn Song},
+year={2025},
+url={https://openreview.net/forum?id=xKJ0lVQEv7}
 }
 </pre>
     </div>
   </td>
 </tr>
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/fusionroute/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2601.05106" id="fusionroute">
+    <heading>Token-Level LLM Collaboration via FusionRoute</heading></a><br>
+    Nuoya Xiong, Yuhang Zhou, Hanqing Zeng, <b>Zhaorun Chen</b>, Furong Huang, Shuchao Bi, Lizhu Zhang, Zhuokai Zhao<br>
+    In submission, 2026<br>
+    </p>
+
+    <div class="paper" id="fusionroute">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2601.05106" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('fusionroute_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/zhuokaiz/status/2009470079126151452" class="pub-button text">blog</a> 
+      </div>
+
+      <p align="justify"> <i id="fusionroute_abs">Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.</i></p>
+
+<pre xml:space="preserve">
+@article{xiong2026token,
+  title={Token-Level LLM Collaboration via FusionRoute},
+  author={Xiong, Nuoya and Zhou, Yuhang and Zeng, Hanqing and Chen, Zhaorun and Huang, Furong and Bi, Shuchao and Zhang, Lizhu and Zhao, Zhuokai},
+  journal={arXiv preprint arXiv:2601.05106},
+  year={2026}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
 
 
 <tr>
@@ -1203,10 +1516,25 @@
   hideallbibs();
   </script>
   <script xml:space="preserve" language="JavaScript">
-    hideblock('material_review_abs');
+    hideblock('agentxploit_abs');
   </script>
   <script xml:space="preserve" language="JavaScript">
-    hideblock('ieee_iot_abs');
+    hideblock('fusionroute_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('infoutil_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('eduvis_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('dija_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('redcodeagent_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('arms_abs');
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('earlyexperience_abs');
@@ -1219,6 +1547,9 @@
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('mjvideo_abs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('epic_abs');
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('fisao_abs');
