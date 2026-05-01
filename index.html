@@ -249,7 +249,11 @@
     <td style="padding:2px;width:100%;vertical-align:middle">
       <heading>News</heading>
       <div class="news-container">
-        
+        <div class="news-item">
+          <span class="news-date">[04/2026]</span>
+          <span class="news-content">🎉 Two paper accepted by <a href="https://icml.cc/">ICML 2026</a>!</span>
+        </div>
+
         <div class="news-item">
           <span class="news-date">[02/2026]</span>
           <span class="news-content">🎉 One paper accepted by <a href="https://cvpr.thecvf.com/">CVPR 2026</a>!</span>
@@ -309,6 +313,85 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 <br/>
 
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/fusionroute/main.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2601.05106" id="fusionroute">
+    <heading>Token-Level LLM Collaboration via FusionRoute</heading></a><br>
+    Nuoya Xiong, Yuhang Zhou, Hanqing Zeng, <b>Zhaorun Chen</b>, Furong Huang, Shuchao Bi, Lizhu Zhang, Zhuokai Zhao<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="fusionroute">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2601.05106" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('fusionroute_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/zhuokaiz/status/2009470079126151452" class="pub-button text">blog</a> 
+      </div>
+
+      <p align="justify"> <i id="fusionroute_abs">Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.</i></p>
+
+<pre xml:space="preserve">
+@article{xiong2026token,
+  title={Token-Level LLM Collaboration via FusionRoute},
+  author={Xiong, Nuoya and Zhou, Yuhang and Zeng, Hanqing and Chen, Zhaorun and Huang, Furong and Bi, Shuchao and Zhang, Lizhu and Zhao, Zhuokai},
+  journal={arXiv preprint arXiv:2601.05106},
+  year={2026}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/earlyexperience/overview.png" 
+          alt="sym" 
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.08558" id="earlyexperience">
+    <heading>Agent Learning via Early Experience</heading></a><br>
+    Kai Zhang<sup>*</sup>, Xiangchao Chen<sup>*</sup>, Bo Liu<sup>*</sup>, Tianci Xue<sup>*</sup>, Zeyi Liao<sup>*</sup>, Zhihan Liu<sup>*</sup>, Xiyao Wang<sup>*</sup>, Yuting Ning<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Xiaohan Fu, Jian Xie, Yuxuan Sun, Boyu Gou, Qi Qi, Zihang Meng, Jianwei Yang, Ning Zhang, Xian Li, Ashish Shah, Dat Huynh, Hengduo Li, Zi Yang, Sara Cao, Lawrence Jang, Shuyan Zhou, Jiacheng Zhu, Huan Sun, Jason Weston, Yu Su, Yifan Wu<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="earlyexperience">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.08558" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('earlyexperience_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/jaseweston/status/1979179944258265358" class="pub-button text">blog</a> 
+      </div>
+
+      <p align="justify"> <i id="earlyexperience_abs">A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use). As a result, most current agents rely on supervised fine-tuning on expert data, which is challenging to scale and generalizes poorly. This limitation stems from the nature of expert demonstrations: they capture only a narrow range of scenarios and expose the agent to limited environment diversity. We address this limitation with a middle-ground paradigm we call early experience: interaction data generated by the agent's own actions, where the resulting future states serve as supervision without reward signals. Within this paradigm we study two strategies of using such data: (1) Implicit world modeling, which uses collected states to ground the policy in environment dynamics; and (2) Self-reflection, where the agent learns from its suboptimal actions to improve reasoning and decision-making. We evaluate across eight diverse environments and multiple model families. Our approaches consistently improve effectiveness and out-of-domain generalization, highlighting the value of early experience. Moreover, in environments with verifiable rewards, our results provide promising signals that early experience offers a strong foundation for subsequent reinforcement learning, positioning it as a practical bridge between imitation learning and fully experience-driven agents.</i></p>
+
+<pre xml:space="preserve">
+@article{zhang2025agent,
+  title={Agent Learning via Early Experience},
+  author={Zhang, Kai and Chen, Xiangchao and Liu, Bo and Xue, Tianci and Liao, Zeyi and Liu, Zhihan and Wang, Xiyao and Ning, Yuting and Chen, Zhaorun and Fu, Xiaohan and others},
+  journal={arXiv preprint arXiv:2510.08558},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
 
 
 <tr>
@@ -1419,84 +1502,6 @@ url={https://openreview.net/forum?id=xKJ0lVQEv7}
   </td>
 </tr>
 
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/fusionroute/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2601.05106" id="fusionroute">
-    <heading>Token-Level LLM Collaboration via FusionRoute</heading></a><br>
-    Nuoya Xiong, Yuhang Zhou, Hanqing Zeng, <b>Zhaorun Chen</b>, Furong Huang, Shuchao Bi, Lizhu Zhang, Zhuokai Zhao<br>
-    In submission, 2026<br>
-    </p>
-
-    <div class="paper" id="fusionroute">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2601.05106" class="pub-button primary">pdf</a>
-        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('fusionroute_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/zhuokaiz/status/2009470079126151452" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="fusionroute_abs">Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.</i></p>
-
-<pre xml:space="preserve">
-@article{xiong2026token,
-  title={Token-Level LLM Collaboration via FusionRoute},
-  author={Xiong, Nuoya and Zhou, Yuhang and Zeng, Hanqing and Chen, Zhaorun and Huang, Furong and Bi, Shuchao and Zhang, Lizhu and Zhao, Zhuokai},
-  journal={arXiv preprint arXiv:2601.05106},
-  year={2026}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/earlyexperience/overview.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2510.08558" id="earlyexperience">
-    <heading>Agent Learning via Early Experience</heading></a><br>
-    Kai Zhang<sup>*</sup>, Xiangchao Chen<sup>*</sup>, Bo Liu<sup>*</sup>, Tianci Xue<sup>*</sup>, Zeyi Liao<sup>*</sup>, Zhihan Liu<sup>*</sup>, Xiyao Wang<sup>*</sup>, Yuting Ning<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Xiaohan Fu, Jian Xie, Yuxuan Sun, Boyu Gou, Qi Qi, Zihang Meng, Jianwei Yang, Ning Zhang, Xian Li, Ashish Shah, Dat Huynh, Hengduo Li, Zi Yang, Sara Cao, Lawrence Jang, Shuyan Zhou, Jiacheng Zhu, Huan Sun, Jason Weston, Yu Su, Yifan Wu<br>
-    In submission, 2025<br>
-    </p>
-
-    <div class="paper" id="earlyexperience">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2510.08558" class="pub-button primary">pdf</a>
-        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('earlyexperience_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/jaseweston/status/1979179944258265358" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="earlyexperience_abs">A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use). As a result, most current agents rely on supervised fine-tuning on expert data, which is challenging to scale and generalizes poorly. This limitation stems from the nature of expert demonstrations: they capture only a narrow range of scenarios and expose the agent to limited environment diversity. We address this limitation with a middle-ground paradigm we call early experience: interaction data generated by the agent's own actions, where the resulting future states serve as supervision without reward signals. Within this paradigm we study two strategies of using such data: (1) Implicit world modeling, which uses collected states to ground the policy in environment dynamics; and (2) Self-reflection, where the agent learns from its suboptimal actions to improve reasoning and decision-making. We evaluate across eight diverse environments and multiple model families. Our approaches consistently improve effectiveness and out-of-domain generalization, highlighting the value of early experience. Moreover, in environments with verifiable rewards, our results provide promising signals that early experience offers a strong foundation for subsequent reinforcement learning, positioning it as a practical bridge between imitation learning and fully experience-driven agents.</i></p>
-
-<pre xml:space="preserve">
-@article{zhang2025agent,
-  title={Agent Learning via Early Experience},
-  author={Zhang, Kai and Chen, Xiangchao and Liu, Bo and Xue, Tianci and Liao, Zeyi and Liu, Zhihan and Wang, Xiyao and Ning, Yuting and Chen, Zhaorun and Fu, Xiaohan and others},
-  journal={arXiv preprint arXiv:2510.08558},
-  year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
 
 
 
