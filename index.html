@@ -250,6 +250,11 @@
       <heading>News</heading>
       <div class="news-container">
         <div class="news-item">
+          <span class="news-date">[09/2026]</span>
+          <span class="news-content">🎉 Three papers accepted by <a href="https://neurips.cc/">NeurIPS 2026</a>!</span>
+        </div>
+
+        <div class="news-item">
           <span class="news-date">[04/2026]</span>
           <span class="news-content">🎉 Two paper accepted by <a href="https://icml.cc/">ICML 2026</a>!</span>
         </div>
@@ -317,462 +322,37 @@
 
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/fusionroute/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2601.05106" id="fusionroute">
-    <heading>Token-Level LLM Collaboration via FusionRoute</heading></a><br>
-    Nuoya Xiong, Yuhang Zhou, Hanqing Zeng, <b>Zhaorun Chen</b>, Furong Huang, Shuchao Bi, Lizhu Zhang, Zhuokai Zhao<br>
-    International Conference on Machine Learning (<b>ICML</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="fusionroute">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2601.05106" class="pub-button primary">pdf</a>
-        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('fusionroute_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/zhuokaiz/status/2009470079126151452" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="fusionroute_abs">Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.</i></p>
-
-<pre xml:space="preserve">
-@article{xiong2026token,
-  title={Token-Level LLM Collaboration via FusionRoute},
-  author={Xiong, Nuoya and Zhou, Yuhang and Zeng, Hanqing and Chen, Zhaorun and Huang, Furong and Bi, Shuchao and Zhang, Lizhu and Zhao, Zhuokai},
-  journal={arXiv preprint arXiv:2601.05106},
-  year={2026}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/earlyexperience/overview.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2510.08558" id="earlyexperience">
-    <heading>Agent Learning via Early Experience</heading></a><br>
-    Kai Zhang<sup>*</sup>, Xiangchao Chen<sup>*</sup>, Bo Liu<sup>*</sup>, Tianci Xue<sup>*</sup>, Zeyi Liao<sup>*</sup>, Zhihan Liu<sup>*</sup>, Xiyao Wang<sup>*</sup>, Yuting Ning<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Xiaohan Fu, Jian Xie, Yuxuan Sun, Boyu Gou, Qi Qi, Zihang Meng, Jianwei Yang, Ning Zhang, Xian Li, Ashish Shah, Dat Huynh, Hengduo Li, Zi Yang, Sara Cao, Lawrence Jang, Shuyan Zhou, Jiacheng Zhu, Huan Sun, Jason Weston, Yu Su, Yifan Wu<br>
-    International Conference on Machine Learning (<b>ICML</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="earlyexperience">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2510.08558" class="pub-button primary">pdf</a>
-        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('earlyexperience_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/jaseweston/status/1979179944258265358" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="earlyexperience_abs">A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use). As a result, most current agents rely on supervised fine-tuning on expert data, which is challenging to scale and generalizes poorly. This limitation stems from the nature of expert demonstrations: they capture only a narrow range of scenarios and expose the agent to limited environment diversity. We address this limitation with a middle-ground paradigm we call early experience: interaction data generated by the agent's own actions, where the resulting future states serve as supervision without reward signals. Within this paradigm we study two strategies of using such data: (1) Implicit world modeling, which uses collected states to ground the policy in environment dynamics; and (2) Self-reflection, where the agent learns from its suboptimal actions to improve reasoning and decision-making. We evaluate across eight diverse environments and multiple model families. Our approaches consistently improve effectiveness and out-of-domain generalization, highlighting the value of early experience. Moreover, in environments with verifiable rewards, our results provide promising signals that early experience offers a strong foundation for subsequent reinforcement learning, positioning it as a practical bridge between imitation learning and fully experience-driven agents.</i></p>
-
-<pre xml:space="preserve">
-@article{zhang2025agent,
-  title={Agent Learning via Early Experience},
-  author={Zhang, Kai and Chen, Xiangchao and Liu, Bo and Xue, Tianci and Liao, Zeyi and Liu, Zhihan and Wang, Xiyao and Ning, Yuting and Chen, Zhaorun and Fu, Xiaohan and others},
-  journal={arXiv preprint arXiv:2510.08558},
-  year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/dreamgym/method.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2511.03773" id="dreamgym">
-    <heading>Scaling Agent Learning via Experience Synthesis</heading></a><br>
-    <b>Zhaorun Chen</b>, Zhuokai Zhao, Kai Zhang, Bo Liu, Qi Qi, Yifan Wu, Tarun Kalluri, Sara Cao, Yuanhao Xiong, Haibo Tong, Huaxiu Yao, Hengduo Li, Jiacheng Zhu, Xian Li, Dawn Song, Bo Li, Jason Weston, and Dat Huynh<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="dreamgym">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2511.03773" class="pub-button primary">pdf</a>
-        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('dreamgym_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="dreamgym_abs">While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2025scaling,
-  title={Scaling Agent Learning via Experience Synthesis},
-  author={Chen, Zhaorun and Zhao, Zhuokai and Zhang, Kai and Liu, Bo and Qi, Qi and Wu, Yifan and Kalluri, Tarun and Cao, Sara and Xiong, Yuanhao and Tong, Haibo and others},
-  journal={arXiv preprint arXiv:2511.03773},
-  year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/arms/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2510.02677" id="arms">
-    <heading>ARMs: Adaptive Red-Teaming Agent against Multimodal Models with Plug-and-Play Attacks</heading></a><br>
-    <b>Zhaorun Chen<sup>*</sup></b>, Xun Liu<sup>*</sup>, Mintong Kang, Jiawei Zhang, Minzhou Pan, Shuang Yang, Bo Li<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="arms">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2510.02677" class="pub-button primary">pdf</a>
-        <a href="https://arms-redteaming-agent.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('arms_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
-      </div>
-
-      <p align="justify"> <i id="arms_abs">As vision-language models (VLMs) gain prominence, their multimodal interfaces also introduce new safety vulnerabilities, making the safety evaluation challenging and critical. Existing red-teaming efforts are either restricted to a narrow set of adversarial patterns or depend heavily on manual engineering, lacking scalable exploration of emerging real-world adversarial strategies. To bridge this gap, we propose ARMs, an adaptive red-teaming agent that systematically conducts comprehensive risk assessments for VLMs. Given a target harmful behavior or risk definition, ARMs automatically optimizes diverse red-teaming strategies with reasoning-enhanced multi-step orchestration, to effectively elicit harmful outputs from target VLMs. This is the first red teaming framework that provides controllable generation given risk definitions. We propose 11 novel multimodal attack strategies, covering diverse adversarial patterns of VLMs (e.g., reasoning hijacking, contextual cloaking), and integrate 17 red-teaming algorithms with ARMs. To balance the diversity and effectiveness of the attack, we design a layered memory with an epsilon-greedy attack algorithm. Extensive experiments on different instance-based benchmarks and policy-based safety evaluations show that ARMs achieves the state-of-the-art attack success rate (ASR), improving ASR by an average of 52.1% compared to existing baselines and even exceeding 90% ASR on Claude-4-Sonnet, a constitutionally-aligned model widely recognized for its robustness. We show that the diversity of red-teaming instances generated by ARMs is significantly higher, revealing emerging vulnerabilities in VLMs. Leveraging ARMs, we construct ARMs-Bench, a large-scale multimodal safety benchmark comprising 30K red-teaming instances spanning 51 diverse risk categories, grounded in both real-world multimodal threats and regulatory risks. Fine-tuning with ARMs-Bench substantially reduces ASR while preserving general utility of VLMs, providing actionable insights to improve multimodal safety alignment.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2025arms,
-  title={ARMs: Adaptive Red-Teaming Agent against Multimodal Models with Plug-and-Play Attacks},
-  author={Chen, Zhaorun and Liu, Xun and Kang, Mintong and Zhang, Jiawei and Pan, Minzhou and Yang, Shuang and Li, Bo},
-  journal={arXiv preprint arXiv:2510.02677},
-  year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <video playsinline 
-           autoplay 
-           loop 
-           muted 
-           src="images/grape/grape.mp4"
-           width="90%"
-           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-    </video>
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2411.19309" id="grape">
-    <heading>GRAPE: Generalizing Robot Policy via Preference Alignment</heading></a><br>
-    Zijian Zhang<sup>*</sup>, Kaiyuan Zheng<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Joel Jang, Yi Li, Chaoqi Wang, Mingyu Ding, Dieter Fox, and Huaxiu Yao<br>
-    International Conference on Robotics and Automation (<b>ICRA</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="grape">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2411.19309" class="pub-button primary">pdf</a>
-        <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('grape_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/pdf/2411.19309" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a>
-        <a href="https://x.com/HuaxiuYaoML/status/1863708749732680162" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="grape_abs">Despite the recent advancements of vision-language-action (VLA) models on a variety of robotics tasks, they suffer from critical issues such as poor generalizability to unseen tasks, due to their reliance on behavior cloning exclusively from successful rollouts. Furthermore, they are typically fine-tuned to replicate demonstrations collected by experts under different settings, thus introducing distribution bias and limiting their adaptability to diverse manipulation objectives, such as efficiency, safety, and task completion. To bridge this gap, we introduce GRAPE: Generalizing Robot Policy via Preference Alignment. Specifically, GRAPE aligns VLAs on a trajectory level and implicitly models reward from both successful and failure trials to boost generalizability to diverse tasks. Moreover, GRAPE breaks down complex manipulation tasks to independent stages and automatically guides preference modeling through customized spatiotemporal constraints with keypoints proposed by a large vision-language model. Notably, these constraints are flexible and can be customized to align the model with varying objectives, such as safety, efficiency, or task success. We evaluate GRAPE across a diverse array of tasks in both real-world and simulated environments. Experimental results demonstrate that GRAPE enhances the performance of state-of-the-art VLA models, increasing success rates on in-domain and unseen manipulation tasks by 51.79% and 60.36%, respectively. Additionally, GRAPE can be aligned with various objectives, such as safety and efficiency, reducing collision rates by 44.31% and rollout step-length by 11.15%, respectively. All code, models, and data are available at <a href="https://grape-vla.github.io/" style="color:#36AE7C;">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@article{zhang2024grape,
-  title={Grape: Generalizing robot policy via preference alignment},
-  author={Zhang, Zijian and Zheng, Kaiyuan and Chen, Zhaorun and Jang, Joel and Li, Yi and Wang, Chaoqi and Ding, Mingyu and Fox, Dieter and Yao, Huaxiu},
-  journal={arXiv preprint arXiv:2411.19309},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/paper2figure/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="" id="Paper2Figure">
-    <heading>Paper2Figure: A Multi-Agent Collaborative System for Figure Generation Towards Academic Research Paper</heading></a><br>
-    Siwei Han, Haonian Ji, Siyang Xin, Juanquan Shi, Shi Qiu, Xinyu Ye, Peng Xia, Jiaqi Liu, <b>Zhaorun Chen</b>, Yiyang Zhou, Linjie Li, Lijuan Wang, Huaxiu Yao<br>
-    The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="Paper2Figure">
-      <div class="pub-buttons">
-        <a href="" class="pub-button primary">pdf</a>
-        <a href="" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('Paper2Figure_abs')" class="pub-button text">abstract</a>
-        <a href="" class="pub-button text">arXiv</a>
-        <a href="" class="pub-button text">alphaxiv</a>
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="Paper2Figure_abs">Automatically generating clear and accurate figures for research papers remains challenging, as it requires semantic understanding, precise structure, and visual aesthetics. Existing approaches struggle to balance fidelity and quality: large language model (LLM) code-based methods (e.g., SVG, Mermaid) are structured but inflexible, while image-generation models (e.g., GPT-Image-1, Nano Banana) produce hard-to-edit and often inaccurate figures. We present Paper2Figure, a dual multi-agent system with an interactive web platform for paper-to-figure generation. Generation Agents convert text into our designed FigScript language, encoding figure semantics, styles and layout. The web system renders the FigScript into an initial image, which Refinement Agents iteratively analyze to locate issues and revise the FigScript for improved logic, alignment, aesthetics and text accuracy. Crucially, users can further refine results through an intuitive web interface, ensuring full control over the final output. To evaluate Paper2Figure, we introduce Paper2Figure Bench, a benchmark comprising 100 academic figures with paired descriptions. Experiments demonstrate that Paper2Figure markedly improves accuracy by 12%, beauty by 13.5%, and completeness by 17.0% over state-of-the-art baselines in fully automatic generation without human adjustment. By combining automated generation with interactive edit, Paper2Figure bridges the gap between AI assistance and researcher control, offering a practical solution for high-quality academic figure creation.</i></p>
-
-<pre xml:space="preserve">
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/redcodeagent/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2510.02609" id="redcodeagent">
-    <heading>RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents</heading></a><br>
-    Chengquan Guo, Chulin Xie, Yu Yang, <b>Zhaorun Chen</b>, Zinan Lin, Xander Davies, Yarin Gal, Dawn Song, Bo Li<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="redcodeagent">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2510.02609" class="pub-button primary">pdf</a>
-        <a href="https://www.microsoft.com/en-us/research/blog/redcodeagent-automatic-red-teaming-agent-against-diverse-code-agents/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('redcodeagent_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
-      </div>
-
-      <p align="justify"> <i id="redcodeagent_abs">Code agents have gained widespread adoption due to their strong code generation capabilities and integration with code interpreters, enabling dynamic execution, debugging, and interactive programming capabilities. While these advancements have streamlined complex workflows, they have also introduced critical safety and security risks. Current static safety benchmarks and red-teaming tools are inadequate for identifying emerging real-world risky scenarios, as they fail to cover certain boundary conditions, such as the combined effects of different jailbreak tools. In this work, we propose RedCodeAgent, the first automated red-teaming agent designed to systematically uncover vulnerabilities in diverse code agents. With an adaptive memory module, RedCodeAgent can leverage existing jailbreak knowledge, dynamically select the most effective red-teaming tools and tool combinations in a tailored toolbox for a given input query, thus identifying vulnerabilities that might otherwise be overlooked. For reliable evaluation, we develop simulated sandbox environments to additionally evaluate the execution results of code agents, mitigating potential biases of LLM-based judges that only rely on static code. Through extensive evaluations across multiple state-of-the-art code agents, diverse risky scenarios, and various programming languages, RedCodeAgent consistently outperforms existing red-teaming methods, achieving higher attack success rates and lower rejection rates with high efficiency. We further validate RedCodeAgent on real-world code assistants, e.g., Cursor and Codeium, exposing previously unidentified security risks. By automating and optimizing red-teaming processes, RedCodeAgent enables scalable, adaptive, and effective safety assessments of code agents.</i></p>
-
-<pre xml:space="preserve">
-@article{guo2025redcodeagent,
-  title={RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents},
-  author={Guo, Chengquan and Xie, Chulin and Yang, Yu and Chen, Zhaorun and Lin, Zinan and Davies, Xander and Gal, Yarin and Song, Dawn and Li, Bo},
-  journal={arXiv preprint arXiv:2510.02609},
-  year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/dija/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2507.11097" id="dija">
-    <heading>The Devil Behind the Mask: An Emergent Safety Vulnerability of Diffusion LLMs</heading></a><br>
-    Zichen Wen, Jiashu Qu, <b>Zhaorun Chen</b>, Xiaoya Lu, Dongrui Liu, Zhiyuan Liu, Ruixi Wu, Yicun Yang, Xiangqi Jin, Haoyun Xu, Xuyang Liu, Weijia Li, Chaochao Lu, Jing Shao, Conghui He, Linfeng Zhang <br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="dija">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2507.11097" class="pub-button primary">pdf</a>
-        <a href="javascript:toggleblock('dija_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
-      </div>
-
-      <p align="justify"> <i id="dija_abs">Diffusion-based large language models (dLLMs) have recently emerged as a powerful alternative to autoregressive LLMs, offering faster inference and greater interactivity via parallel decoding and bidirectional modeling. However, despite strong performance in code generation and text infilling, we identify a fundamental safety concern: existing alignment mechanisms fail to safeguard dLLMs against context-aware, masked-input adversarial prompts, exposing novel vulnerabilities. To this end, we present DIJA, the first systematic study and jailbreak attack framework that exploits unique safety weaknesses of dLLMs. Specifically, our proposed DIJA constructs adversarial interleaved mask-text prompts that exploit the text generation mechanisms of dLLMs, i.e., bidirectional modeling and parallel decoding. Bidirectional modeling drives the model to produce contextually consistent outputs for masked spans, even when harmful, while parallel decoding limits model dynamic filtering and rejection sampling of unsafe content. This causes standard alignment mechanisms to fail, enabling harmful completions in alignment-tuned dLLMs, even when harmful behaviors or unsafe instructions are directly exposed in the prompt. Through comprehensive experiments, we demonstrate that DIJA significantly outperforms existing jailbreak methods, exposing a previously overlooked threat surface in dLLM architectures. Notably, our method achieves up to 100% keyword-based ASR on Dream-Instruct, surpassing the strongest prior baseline, ReNeLLM, by up to 78.5% in evaluator-based ASR on JailbreakBench and by 37.7 points in StrongREJECT score, while requiring no rewriting or hiding of harmful content in the jailbreak prompt. Our findings underscore the urgent need for rethinking safety alignment in this emerging class of language models.</i></p>
-
-<pre xml:space="preserve">
-@article{wen2025devil,
-  title={The devil behind the mask: An emergent safety vulnerability of diffusion llms},
-  author={Wen, Zichen and Qu, Jiashu and Chen, Zhaorun and Liu, Dongrui and Liu, Zhiyuan and Wu, Ruixi and Yang, Yicun and Jin, Xiangqi and Xu, Haoyun and Liu, Xuyang and Li, Weijia and others},
-  journal={arXiv preprint arXiv:2507.11097},
-  year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/infoutil/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://openreview.net/pdf?id=ThsYRbpv2F" id="infoutil">
-    <heading>Grounding and Enhancing Informativeness and Utility in Dataset Distillation</heading></a><br>
-    Shaobo Wang, Yantai Yang, Guo Chen, Peiru Li, Kaixin Li, Yufa Zhou, <b>Zhaorun Chen</b>, Linfeng Zhang<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="dija">
-      <div class="pub-buttons">
-        <a href="https://openreview.net/pdf?id=ThsYRbpv2F" class="pub-button primary">pdf</a>
-        <a href="javascript:toggleblock('infoutil_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
-      </div>
-
-      <p align="justify"> <i id="infoutil_abs">Dataset Distillation (DD) seeks to create a compact dataset from a large, real-world dataset. While recent methods often rely on heuristic approaches to balance efficiency and quality, the fundamental relationship between original and synthetic data remains underexplored. This paper revisits knowledge distillation-based dataset distillation within a solid theoretical framework. We introduce the concepts of Informativeness and Utility, capturing crucial information within a sample and essential samples in the training set, respectively. Building on these principles, we define \textit{optimal dataset distillation} mathematically. We then present InfoUtil, a framework that balances informativeness and utility in synthesizing the distilled dataset. InfoUtil incorporates two key components: (1) game-theoretic informativeness maximization using Shapley Value attribution to extract key information from samples, and (2) principled utility maximization by selecting globally influential samples based on Gradient Norm. These components ensure that the distilled dataset is both informative and utility-optimized. Experiments demonstrate that our method achieves a 6.1% performance improvement over the previous state-of-the-art approach on ImageNet-1K dataset using ResNet-18.</i></p>
-
-<pre xml:space="preserve">
-@inproceedings{
-anonymous2026grounding,
-title={Grounding and Enhancing Informativeness and Utility in Dataset Distillation},
-author={Anonymous},
-booktitle={The Fourteenth International Conference on Learning Representations},
-year={2026},
-url={https://openreview.net/forum?id=ThsYRbpv2F}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/eduvis/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2505.16832" id="eduvis">
-    <heading>From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Reasoning-Driven Pedagogical Visualization</heading></a><br>
-    Haonian Ji, Shi Qiu, Siyang Xin, Siwei Han, <b>Zhaorun Chen</b>, Dake Zhang, Hongyi Wang, Huaxiu Yao<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="eduvis">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2505.16832" class="pub-button primary">pdf</a>
-        <a href="javascript:toggleblock('eduvis_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
-      </div>
-
-      <p align="justify"> <i id="eduvis_abs">While foundation models (FMs), such as diffusion models and large vision-language models (LVLMs), have been widely applied in educational contexts, their ability to generate pedagogically effective visual explanations remains limited. Most existing approaches focus primarily on textual reasoning, overlooking the critical role of structured and interpretable visualizations in supporting conceptual understanding. To better assess the visual reasoning capabilities of FMs in educational settings, we introduce EduVisBench, a multi-domain, multi-level benchmark. EduVisBench features diverse STEM problem sets requiring visually grounded solutions, along with a fine-grained evaluation rubric informed by pedagogical theory. Our empirical analysis reveals that existing models frequently struggle with the inherent challenge of decomposing complex reasoning and translating it into visual representations aligned with human cognitive processes. To address these limitations, we propose EduVisAgent, a multi-agent collaborative framework that coordinates specialized agents for instructional planning, reasoning decomposition, metacognitive prompting, and visualization design. Experimental results show that EduVisAgent substantially outperforms all baselines, achieving a 40.2% improvement and delivering more educationally aligned visualizations.</i></p>
-
-<pre xml:space="preserve">
-@inproceedings{
-anonymous2026from,
-title={From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Reasoning-Driven Pedagogical Visualization},
-author={Anonymous},
-booktitle={The Fourteenth International Conference on Learning Representations},
-year={2026},
-url={https://openreview.net/forum?id=FVCpV04ZRe}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-
-  <td width="30%" valign="top" align="center">
-    <img src="images/csafegen/overview.png" 
-         alt="sym" 
+    <a href="https://decodingtrust-agent.com/"><img src="images/dtap/overview.png"
+         alt="DTap overview with agent frameworks, simulated environments, injection vectors, and verifiable attack judges"
          width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  
-  <td width="60%" valign="top">
-    <p><a href="https://openreview.net/forum?id=nOsEyBGk1I" id="csafegen">
-    <heading>C-SafeGen: Certified Safe LLM Generation with Claim-Based Streaming Guardrails</heading></a><br>
-    Mintong Kang, <b>Zhaorun Chen</b>, Bo Li<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
-    </p>
-
-    <div class="paper" id="csafegen">
-      <div class="pub-buttons">
-        <a href="https://openreview.net/pdf?id=nOsEyBGk1I" class="pub-button primary">pdf</a>
-        <a href="" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('csafegen_abs')" class="pub-button text">abstract</a>
-        <a href="https://openreview.net/forum?id=nOsEyBGk1I" class="pub-button text">arXiv</a>
-        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="csafegen_abs">Despite the remarkable capabilities of large language models (LLMs) across diverse applications, they remain vulnerable to generating content that violates safety regulations and policies. To mitigate these risks, LLMs undergo safety alignment; however, they can still be effectively jailbroken. Off-the-shelf guardrail models are commonly deployed to monitor generations, but these models primarily focus on detection rather than ensuring safe decoding of LLM outputs. Moreover, existing efforts lack rigorous safety guarantees, which are crucial for the universal deployment of LLMs and certifiable compliance with regulatory standards. In this paper, we propose a Claim-based Stream Decoding (CSD) algorithm coupled with a statistical risk guarantee framework using conformal analysis. Specifically, our CSD algorithm integrates a stream guardrail model to safeguard sequential claims generated by LLMs and incorporates a backtracking mechanism to revise claims flagged with high safety risks. We provide theoretical guarantees demonstrating that the CSD algorithm achieves the desired generation distribution subject to safety constraints. Furthermore, we introduce a generation risk certification framework and derive a high-probability upper bound on the safety risk of the proposed CSD algorithm. We extend our approach to online settings, where user queries arrive sequentially, and prove that our method can asymptotically control safety risk to any desired level. Empirical evaluations demonstrate the effectiveness and efficiency of the CSD algorithm compared to state-of-the-art safety decoding approaches. Additionally, we validate the soundness and tightness of the derived safety risk upper bound using realistic data in both offline and online scenarios.<i></p>
-
-<pre xml:space="preserve">
-  @inproceedings{kangc,
-    title={C-SafeGen: Certified Safe LLM Generation with Claim-Based Streaming Guardrails},
-    author={Kang, Mintong and Chen, Zhaorun and Li, Bo},
-    booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/mjbench/overview_new.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
   </td>
   <td width="60%" valign="top">
-    <p><a href="https://mj-bench.github.io/" id="mjbench">
-    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
-    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    <p><a href="https://decodingtrust-agent.com/" id="dtap_title">
+    <heading>DecodingTrust-Agent Platform (DTap): A Controllable and Interactive Red-Teaming Platform for AI Agents</heading></a><br>
+    <b>Zhaorun Chen</b>, Xun Liu, Haibo Tong, Chengquan Guo, Yuzhou Nie, Jiawei Zhang, Mintong Kang, Chejian Xu, Qichang Liu, Xiaogeng Liu, Tianneng Shi, Chaowei Xiao, Sanmi Koyejo, Percy Liang, Wenbo Guo, Dawn Song, and Bo Li<br>
+    <b>arXiv</b>, 2026<br>
     </p>
 
-    <div class="paper" id="mjbench">
+    <div class="paper" id="dtap">
       <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2407.04842" class="pub-button primary">pdf</a>
-        <a href="https://mj-bench.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('mjbench_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2407.04842" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2407.04842" class="pub-button text">alphaxiv</a>
-        <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462" class="pub-button text">blog</a> 
+        <a href="https://arxiv.org/pdf/2605.04808" class="pub-button primary">pdf</a>
+        <a href="https://decodingtrust-agent.com/" class="pub-button secondary">webpage</a>
+        <a href="https://github.com/AI-secure/DecodingTrust-Agent" class="pub-button secondary">code</a>
+        <a href="javascript:toggleblock(&#x27;dtap_abs&#x27;)" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2605.04808" class="pub-button text">arXiv</a>
       </div>
 
-      <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
+      <p align="justify"><i id="dtap_abs">DTap supports reproducible security testing of AI agents in more than 50 simulated environments across 14 domains. It recreates common tools and workflows while giving evaluators control over prompts, tools, skills, and environmental inputs. Its autonomous attacker, DTap-Red, searches for ways to induce policy violations, and DTap-Bench pairs attack cases with executable judges. Together, these components enable systematic comparisons of agent vulnerabilities and defenses under realistic conditions.</i></p>
 
 <pre xml:space="preserve">
-@misc{chen2024mjbenchmultimodalrewardmodel,
-  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?}, 
-  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
-  year={2024},
-  eprint={2407.04842},
+@misc{chen2026dtap,
+  title={DecodingTrust-Agent Platform (DTap): A Controllable and Interactive Red-Teaming Platform for AI Agents},
+  author={Zhaorun Chen and Xun Liu and Haibo Tong and Chengquan Guo and Yuzhou Nie and Jiawei Zhang and Mintong Kang and Chejian Xu and Qichang Liu and Xiaogeng Liu and Tianneng Shi and Chaowei Xiao and Sanmi Koyejo and Percy Liang and Wenbo Guo and Dawn Song and Bo Li},
+  year={2026},
+  eprint={2605.04808},
   archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2407.04842}, 
+  url={https://arxiv.org/abs/2605.04808}
 }
 </pre>
     </div>
@@ -781,360 +361,8 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
 
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/guardsetx/overview.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="" id="guardsetx">
-    <heading>GuardSet-X: Massive Multi-Domain Safety Policy-Grounded Guardrail Dataset</heading></a><br>
-    Mintong Kang<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Chejian Xu<sup>*</sup>, Jiawei Zhang<sup>*</sup>, Chengquan Guo<sup>*</sup>, Minzhou Pan, Ivan Revilla, Yu Sun, Bo Li<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
-    </p>
-
-    <div class="paper" id="guardsetx">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2506.19054" class="pub-button primary">pdf</a>
-        <a href="" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('guardsetxabs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2506.19054" class="pub-button text">arXiv</a>
-        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="guardsetxabs">As LLMs become widespread across diverse applications, concerns about the security and safety of LLM interactions have intensified. Numerous guardrail models and benchmarks have been developed to ensure LLM content safety. However, existing guardrail benchmarks are often built upon ad hoc risk taxonomies that lack a principled grounding in standardized safety policies, limiting their alignment with real-world operational requirements. Moreover, they tend to overlook domain-specific risks, while the same risk category can carry different implications across different domains. To bridge these gaps, we introduce GuardSet-X, the first massive multi-domain safety policy-grounded guardrail dataset. GuardSet-X offers: (1) broad domain coverage across eight safety-critical domains, such as finance, law, and codeGen; (2) policy-grounded risk construction based on authentic, domain-specific safety guidelines; (3) diverse interaction formats, encompassing declarative statements, questions, instructions, and multi-turn conversations; (4) advanced benign data curation via detoxification prompting to challenge over-refusal behaviors; and (5) \textbf{attack-enhanced instances} that simulate adversarial inputs designed to bypass guardrails. Based on GuardSet-X, we benchmark 19 advanced guardrail models and uncover a series of findings, such as: (1) All models achieve varied F1 scores, with many demonstrating high variance across risk categories, highlighting their limited domain coverage and insufficient handling of domain-specific safety concerns; (2) As models evolve, their coverage of safety risks broadens, but performance on common risk categories may decrease; (3) All models remain vulnerable to optimized adversarial attacks. We believe that \dataset and the unique insights derived from our evaluations will advance the development of policy-aligned and resilient guardrail systems.<i></p>
-
-<pre xml:space="preserve">
-  @article{kang2025polyguard,
-    title={GuardSet-X: Massive Multi-Domain Safety Policy-Grounded Guardrail Dataset},
-    author={Kang, Mintong and Chen, Zhaorun and Xu, Chejian and Zhang, Jiawei and Guo, Chengquan and Pan, Minzhou and Revilla, Ivan and Sun, Yu and Li, Bo},
-    journal={arXiv preprint arXiv:2506.19054},
-    year={2025}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/mjvideo/overview.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" id="mjvideo">
-    <heading>MJ-Video: Benchmarking and Rewarding Video Generation with Fine-Grained Video Preference</heading></a><br>
-    Haibo Tong<sup>*</sup>, Zhaoyang Wang<sup>*</sup>, <b>Zhaorun Chen</b>, Haonian Ji, Shi Qiu, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br><span style="color:red;"><b>(Spotlight Presentation)</b></span>
-    </p>
-
-    <div class="paper" id="mjvideo">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2502.01719" class="pub-button primary">pdf</a>
-        <a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('mjvideo_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2502.01719" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2502.01719" class="pub-button text">alphaxiv</a>
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="mjvideo_abs">Recent advancements in video generation have significantly improved the ability to synthesize videos from text instructions. However, existing models still struggle with key challenges such as instruction misalignment, content hallucination, safety concerns, and bias. Addressing these limitations, we introduce MJ-BENCH-VIDEO, a large-scale video preference benchmark designed to evaluate video generation across five critical aspects: Alignment, Safety, Fineness, Coherence & Consistency, and Bias & Fairness. This benchmark incorporates 28 fine-grained criteria to provide a comprehensive evaluation of video preference. Building upon this dataset, we propose MJ-VIDEO, a Mixture-of-Experts (MoE)-based video reward model designed to deliver fine-grained reward. MJ-VIDEO can dynamically select relevant experts to accurately judge the preference based on the input text-video pair. This architecture enables more precise and adaptable preference judgments. Through extensive benchmarking on MJ-BENCH-VIDEO, we analyze the limitations of existing video reward models and demonstrate the superior performance of MJ-VIDEO in video preference assessment, achieving 17.58% and 15.87% improvements in overall and fine-grained preference judgments, respectively. Additionally, introducing MJ-VIDEO for preference tuning in video generation enhances the alignment performance.<i></p>
-
-<pre xml:space="preserve">
-  @misc{tong2025mjvideofinegrainedbenchmarkingrewarding,
-    title={MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation}, 
-    author={Haibo Tong and Zhaoyang Wang and Zhaorun Chen and Haonian Ji and Shi Qiu and Siwei Han and Kexin Geng and Zhongkai Xue and Yiyang Zhou and Peng Xia and Mingyu Ding and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
-    year={2025},
-    eprint={2502.01719},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2502.01719}, 
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/autoredteamer/method.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://autoredteamer.com/" id="autoredteamer">
-    <heading>AutoRedTeamer: Autonomous Red Teaming with Lifelong Attack Integration</heading></a><br>
-    Andy Zhou, Kevin Wu, Francesco Pinto, <b>Zhaorun Chen</b>, Yi Zeng, Yu Yang, Shuang Yang, Sanmi Koyejo, James Zou, Bo Li<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
-    </p>
-
-    <div class="paper" id="autoredteamer">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2503.15754" class="pub-button primary">pdf</a>
-        <a href="" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('autoredteamerabs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2503.15754" class="pub-button text">arXiv</a>
-        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="autoredteamerabs">As large language models (LLMs) become increasingly capable, security and safety evaluation are crucial. While current red teaming approaches have made strides in assessing LLM vulnerabilities, they often rely heavily on human input and lack comprehensive coverage of emerging attack vectors. This paper introduces AutoRedTeamer, a novel framework for fully automated, end-to-end red teaming against LLMs. AutoRedTeamer combines a multi-agent architecture with a memory-guided attack selection mechanism to enable continuous discovery and integration of new attack vectors. The dual-agent framework consists of a red teaming agent that can operate from high-level risk categories alone to generate and execute test cases and a strategy proposer agent that autonomously discovers and implements new attacks by analyzing recent research. This modular design allows AutoRedTeamer to adapt to emerging threats while maintaining strong performance on existing attack vectors. We demonstrate AutoRedTeamer's effectiveness across diverse evaluation settings, achieving 20% higher attack success rates on HarmBench against Llama-3.1-70B while reducing computational costs by 46% compared to existing approaches. AutoRedTeamer also matches the diversity of human-curated benchmarks in generating test cases, providing a comprehensive, scalable, and continuously evolving framework for evaluating the security of AI systems.<i></p>
-
-<pre xml:space="preserve">
-  @article{zhou2025autoredteamer,
-    title={Autoredteamer: Autonomous red teaming with lifelong attack integration},
-    author={Zhou, Andy and Wu, Kevin and Pinto, Francesco and Chen, Zhaorun and Zeng, Yi and Yang, Yu and Yang, Shuang and Koyejo, Sanmi and Zou, James and Li, Bo},
-    journal={arXiv preprint arXiv:2503.15754},
-    year={2025}
-  }
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/dropout/method.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="" id="dropoutdecoding">
-    <heading>From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models with Uncertainty-Guided Dropout Decoding</heading></a><br>
-    Yixiong Fang<sup>*</sup>, Ziran Yang<sup>*</sup>, <b>Zhaorun Chen</b>, Zhuokai Zhao, Jiawei Zhou<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
-    </p>
-
-    <div class="paper" id="dropoutdecoding">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2412.06474" class="pub-button primary">pdf</a>
-        <a href="" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('dropoutdecodingabs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2412.06474" class="pub-button text">arXiv</a>
-        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="dropoutdecodingabs">Large vision-language models (LVLMs) demonstrate remarkable capabilities in multimodal tasks but are prone to misinterpreting visual inputs, often resulting in hallucinations and unreliable outputs. To address these challenges, we propose Dropout Decoding, a novel inference-time approach that quantifies the uncertainty of visual tokens and selectively masks uncertain tokens to improve decoding. Our method measures the uncertainty of each visual token by projecting it onto the text space and decomposing it into aleatoric and epistemic components. Specifically, we focus on epistemic uncertainty, which captures perception-related errors more effectively. Inspired by dropout regularization, we introduce uncertainty-guided token dropout, which applies the dropout principle to input visual tokens instead of model parameters, and during inference rather than training. By aggregating predictions from an ensemble of masked decoding contexts, Dropout Decoding robustly mitigates errors arising from visual token misinterpretations. Evaluations on benchmarks including CHAIR, THRONE, and MMBench demonstrate that Dropout Decoding significantly reduces object hallucinations (OH) and enhances both reliability and quality of LVLM outputs across diverse visual contexts.<i></p>
-
-<pre xml:space="preserve">
-  @article{fang2024uncertainty,
-    title={From uncertainty to trust: Enhancing reliability in vision-language models with uncertainty-guided dropout decoding},
-    author={Fang, Yixiong and Yang, Ziran and Chen, Zhaorun and Zhao, Zhuokai and Zhou, Jiawei},
-    journal={arXiv preprint arXiv:2412.06474},
-    year={2024}
-  }
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/epic/main.png" 
-          alt="sym" 
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2510.00515" id="epic">
-    <heading>Efficient Multi-modal Large Language Models via Progressive Consistency Distillation</heading></a><br>
-    Zichen Wen , Shaobo Wang, Yufa Zhou, Junyuan Zhang, Qintong Zhang, Yifeng Gao, <b>Zhaorun Chen</b>, Bin Wang, Weijia Li, Conghui He, Linfeng Zhang<br>
-    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
-    </p>
-
-    <div class="paper" id="epic">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2510.00515" class="pub-button primary">pdf</a>
-        <a href="javascript:toggleblock('epic_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
-      </div>
-
-      <p align="justify"> <i id="epic_abs">Visual tokens consume substantial computational resources in multi-modal large models (MLLMs), significantly compromising their efficiency. Recent works have attempted to improve efficiency by compressing visual tokens during training, either through modifications to model components or by introducing additional parameters. However, they often overlook the increased learning difficulty caused by such compression, as the model’s parameter space struggles to quickly adapt to the substantial perturbations in the feature space induced by token compression. In this work, we propose to develop Efficient MLLMs via Progressive Consistency Distillation (EPIC), a progressive learning framework. Specifically, by decomposing the feature space perturbations introduced by token compression along the token-wise and layer-wise dimensions, we introduce token consistency distillation and layer consistency distillation, respectively, aiming to reduce the training difficulty by leveraging guidance from a teacher model and following a progressive learning trajectory. Extensive experiments demonstrate the superior effectiveness, robustness, and generalization capabilities of our proposed framework.</i></p>
-
-<pre xml:space="preserve">
-@inproceedings{wenefficient,
-  title={Efficient Multi-modal Large Language Models via Progressive Consistency Distillation},
-  author={Wen, Zichen and Wang, Shaobo and Zhou, Yufa and Zhang, Junyuan and Zhang, Qintong and Gao, Yifeng and Chen, Zhaorun and Wang, Bin and Li, Weijia and He, Conghui and others},
-  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/shieldagent/overview.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://shieldagent-aiguard.github.io/" id="shieldagent">
-    <heading>ShieldAgent: Shielding Agents via Verifiable Safety Policy Reasoning</heading></a><br>
-    <b>Zhaorun Chen</b>, Mintong Kang, and Bo Li<br>
-    International Conference on Machine Learning (<b>ICML</b>), 2025<br>
-    </p>
-
-    <div class="paper" id="shieldagent">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/abs/2503.22738" class="pub-button primary">pdf</a>
-        <a href="https://shieldagent-aiguard.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('shieldagent_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2503.22738" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2503.22738" class="pub-button text">alphaxiv</a>
-        <a href="" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="shieldagent_abs">Autonomous agents powered by foundation models have seen widespread adoption across various real-world applications. However, they remain highly vulnerable to malicious instructions and attacks, which can result in severe consequences such as privacy breaches and financial losses. More critically, existing guardrails for LLMs are not applicable due to the complex and dynamic nature of agents. To tackle these challenges, we propose ShieldAgent, the first guardrail agent designed to enforce explicit safety policy compliance for the action trajectory of other protected agents through logical reasoning. Specifically, ShieldAgent first constructs a safety policy model by extracting verifiable rules from policy documents and structuring them into a set of action-based probabilistic rule circuits. Given the action trajectory of the protected agent, ShieldAgent retrieves relevant rule circuits and generates a shielding plan, leveraging its comprehensive tool library and executable code for formal verification. In addition, given the lack of guardrail benchmarks for agents, we introduce ShieldAgent-Bench, a dataset with 3K safety-related pairs of agent instructions and action trajectories, collected via SOTA attacks across 6 web environments and 7 risk categories. Experiments show that ShieldAgent achieves SOTA on ShieldAgent-Bench and three existing benchmarks, outperforming prior methods by 11.3% on average with a high recall of 90.1%. Additionally, ShieldAgent reduces API queries by 64.7% and inference time by 58.2%, demonstrating its high precision and efficiency in safeguarding agents.<i></p>
-
-<pre xml:space="preserve">
-  @article{chen2025shieldagent,
-    title={ShieldAgent: Shielding Agents via Verifiable Safety Policy Reasoning},
-    author={Chen, Zhaorun and Kang, Mintong and Li, Bo},
-    journal={arXiv preprint arXiv:2503.22738},
-    year={2025}
-  }
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <video playsinline 
-           autoplay 
-           loop 
-           muted 
-           src="images/safewatch/website_demonstration.mov"
-           width="90%"
-           style="padding-top:0px; padding-bottom:0px; border-radius:15px; border: 1px solid #800000;">
-    </video>
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://safewatch-aiguard.github.io/" id="SafeWatch" class="paper-title">
-    <heading>SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations</heading></a><br>
-    <b>Zhaorun Chen</b>, Francesco Pinto, Minzhou Pan, and Bo Li<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
-    </p>
-
-    <div class="paper" id="safewatch">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2412.06878" class="pub-button primary">pdf</a>
-        <a href="https://safewatch-aiguard.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('safewatch_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2412.06878" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2412.06878" class="pub-button text">alphaxiv</a>
-        <a href="https://x.com/ZRChen_AISafety/status/1869621962223616130" class="pub-button text">blog</a>
-      </div>
-
-      <p align="justify"> <i id="safewatch_abs">With the rise of generative AI and rapid growth of high-quality video generation, video guardrails have become more crucial than ever to ensure safety and security across platforms. Current video guardrails, however, are either overly simplistic, relying on pure classification models trained on simple policies with limited unsafe categories, which lack detailed explanations, or prompting multimodal large language models (MLLMs) with long safety guidelines, which are inefficient and impractical for guardrailing real-world content. To bridge this gap, we propose SafeWatch, an efficient MLLM-based video guardrail model designed to follow customized safety policies and provide multi-label video guardrail outputs with content-specific explanations in a zero-shot manner. In particular, unlike traditional MLLM-based guardrails that encode all safety policies autoregressively, causing inefficiency and bias, SafeWatch uniquely encodes each policy chunk in parallel and eliminates their position bias such that all policies are attended simultaneously with equal importance. In addition, to improve efficiency and accuracy, SafeWatch incorporates a policy-aware visual token pruning algorithm that adaptively selects the most relevant video tokens for each policy, discarding noisy or irrelevant information. This allows for more focused, policy-compliant guardrail with significantly reduced computational overhead. Considering the limitations of existing video guardrail benchmarks, we propose SafeWatch-Bench, a large-scale video guardrail benchmark comprising over 2M videos spanning six safety categories which covers over 30 tasks to ensure a comprehensive coverage of all potential safety scenarios. We have conducted extensive experiments, showing that SafeWatch outperforms all SOTA video guardrails on SafeWatch-Bench by 28.2%, and achieves a 13.6% improvement on existing benchmarks, all while reducing inference costs by an average of 10%. SafeWatch also demonstrates strong policy-following abilities and outperforms previous SOTAs by 5.6% and 15.6% in zero-shot generalizability to new policies and new prompting tasks. Additionally, both LLM-as-a-judge and human evaluators confirm the high quality of the explanations provided by SafeWatch. Our project is open-sourced at <a href="https://safewatch-aiguard.github.io" style="color:#800000;">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2024safewatch,
-  title={SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations},
-  author={Chen, Zhaorun and Pinto, Francesco and Pan, Minzhou and Li, Bo},
-  journal={arXiv preprint arXiv:2412.06878},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/mmdt/mmdt.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://mmdecodingtrust.github.io/" id="MMDT">
-    <heading>MMDT: Decoding the Trustworthiness and Safety of Multimodal Foundation Models</heading></a><br>
-    Chejian Xu<sup>*</sup>, Jiawei Zhang<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Chulin Xie<sup>*</sup>, Mintong Kang<sup>*</sup>, Yujin Potter<sup>*</sup>, Zhun Wang<sup>*</sup>, Zhuowen Yuan<sup>*</sup>, Alexander Xiong, Zidi Xiong, Chenhui Zhang, Lingzhi Yuan, Yi Zeng, Peiyang Xu, Chengquan Guo, Andy Zhou, Jeffrey Ziwei Tan, Xuandong Zhao, Francesco Pinto, Zhen Xiang, Yu Gai, Zinan Lin, Dan Hendrycks, Bo Li, Dawn Song<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
-    </p>
-
-    <div class="paper" id="mmdt">
-      <div class="pub-buttons">
-        <a href="https://openreview.net/pdf?id=qIbbBSzH6n" class="pub-button primary">pdf</a>
-        <a href="https://mmdecodingtrust.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('mmdt_abs')" class="pub-button text">abstract</a>
-        <a href="" class="pub-button text">arXiv</a>
-      </div>
-
-      <p align="justify"> <i id="mmdt_abs">Multimodal foundation models (MMFMs) play a crucial role in various applications, including autonomous driving, healthcare, and virtual assistants. However, several studies have revealed vulnerabilities in these models, such as generating unsafe content by text-to-image models. Existing benchmarks on multimodal models either predominantly assess the helpfulness of these models, or only focus on limited perspectives such as fairness and privacy. In this paper, we present the first unified platform, MMDT (Multimodal DecodingTrust), designed to provide a comprehensive safety and trustworthiness evaluation for MMFMs. Our platform assesses models from multiple perspectives, including safety, hallucination, fairness/bias, privacy, adversarial robustness, and out-of-distribution (OOD) generalization. We have designed various evaluation scenarios and red teaming algorithms under different tasks for each perspective to generate challenging data, forming a high-quality benchmark. We evaluate a range of multimodal models using MMDT, and our findings reveal a series of vulnerabilities and areas for improvement across these perspectives. This work introduces the first comprehensive and unique safety and trustworthiness evaluation platform for MMFMs, paving the way for developing safer and more reliable MMFMs and systems.</i></p>
-
-<pre xml:space="preserve">
-@inproceedings{
-  xu2025mmdt,
-  title={{MMDT}: Decoding the Trustworthiness and Safety of Multimodal Foundation Models},
-  author={Chejian Xu and Jiawei Zhang and Zhaorun Chen and Chulin Xie and Mintong Kang and Yujin Potter and Zhun Wang and Zhuowen Yuan and Alexander Xiong and Zidi Xiong and Chenhui Zhang and Lingzhi Yuan and Yi Zeng and Peiyang Xu and Chengquan Guo and Andy Zhou and Jeffrey Ziwei Tan and Xuandong Zhao and Francesco Pinto and Zhen Xiang and Yu Gai and Zinan Lin and Dan Hendrycks and Bo Li and Dawn Song},
-  booktitle={The Thirteenth International Conference on Learning Representations},
-  year={2025},
-  url={https://openreview.net/forum?id=qIbbBSzH6n}
-  }
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr></tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/mmie/mmie.jpg" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://mmie-bench.github.io/" id="MMIE">
-    <heading>MMIE: Massive Multimodal Interleaved Comprehension Benchmark For Large Vision-Language Models</heading></a><br>
-    Peng Xia<sup>*</sup>, Siwei Han<sup>*</sup>, Shi Qiu<sup>*</sup>, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, <b>Zhaorun Chen</b>, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao<br>
-    <!-- International Conference on Learning Representations (<b>ICLR</b>), 2025 <br>
-    <span class="presentation-badge">Oral Presentation</span> -->
-    International Conference on Learning Representations (<b>ICLR</b>), 2025 <br><span style="color:red;"><b>(Oral Presentation)</b></span>
-    </p>
-
-    <div class="paper" id="mmie" style="margin-top: -17px;">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2410.10139" class="pub-button primary">pdf</a>
-        <a href="https://mmie-bench.github.io/" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('mmie_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/pdf/2410.10139" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2410.10139" class="pub-button text">alphaxiv</a>
-        <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259" class="pub-button text">blog</a>
-      </div>
-
-      <p align="justify"> <i id="mmie_abs">Interleaved multimodal comprehension and generation, enabling models to produce and interpret both images and text in arbitrary sequences, have become a pivotal area in multimodal learning. Despite significant advancements, the evaluation of this capability remains insufficient. Existing benchmarks suffer from limitations in data scale, scope, and evaluation depth, while current evaluation metrics are often costly or biased, lacking in reliability for practical applications. To address these challenges, we introduce MMIE, a large-scale knowledge-intensive benchmark for evaluating interleaved multimodal comprehension and generation in Large Vision-Language Models (LVLMs). MMIE comprises 20K meticulously curated multimodal queries, spanning 3 categories, 12 fields, and 102 subfields, including mathematics, coding, physics, literature, health, and arts. It supports both interleaved inputs and outputs, offering a mix of multiple-choice and open-ended question formats to evaluate diverse competencies. Moreover, we propose a reliable automated evaluation metric, leveraging a scoring model fine-tuned with human-annotated data and systematic evaluation criteria, aimed at reducing bias and improving evaluation accuracy. Extensive experiments demonstrate the effectiveness of our benchmark and metrics in providing a comprehensive evaluation of interleaved LVLMs. Specifically, we evaluate eight LVLMs, revealing that even the best models show significant room for improvement, with most achieving only moderate results. We believe MMIE will drive further advancements in the development of interleaved LVLMs.</i></p>
-
-<pre xml:space="preserve">
-@article{xia2024mmie,
-  title={MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models},
-  author={Xia, Peng and Han, Siwei and Qiu, Shi and Zhou, Yiyang and Wang, Zhaoyang and Zheng, Wenhao and Chen, Zhaorun and Cui, Chenhang and Ding, Mingyu and Li, Linjie and Wang, Lijuan and Yao, Huaxiu},
-  journal={arXiv preprint arXiv:2410.10139},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/agentpoison/method.png" 
-         alt="sym" 
+    <img src="images/agentpoison/method.png"
+         alt="sym"
          width="90%"
          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1171,8 +399,126 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
 
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/halc/halc.png" 
-         alt="sym" 
+    <img src="images/shieldagent/overview.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://shieldagent-aiguard.github.io/" id="shieldagent">
+    <heading>ShieldAgent: Shielding Agents via Verifiable Safety Policy Reasoning</heading></a><br>
+    <b>Zhaorun Chen</b>, Mintong Kang, and Bo Li<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2025<br>
+    </p>
+
+    <div class="paper" id="shieldagent">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/abs/2503.22738" class="pub-button primary">pdf</a>
+        <a href="https://shieldagent-aiguard.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('shieldagent_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2503.22738" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2503.22738" class="pub-button text">alphaxiv</a>
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="shieldagent_abs">Autonomous agents powered by foundation models have seen widespread adoption across various real-world applications. However, they remain highly vulnerable to malicious instructions and attacks, which can result in severe consequences such as privacy breaches and financial losses. More critically, existing guardrails for LLMs are not applicable due to the complex and dynamic nature of agents. To tackle these challenges, we propose ShieldAgent, the first guardrail agent designed to enforce explicit safety policy compliance for the action trajectory of other protected agents through logical reasoning. Specifically, ShieldAgent first constructs a safety policy model by extracting verifiable rules from policy documents and structuring them into a set of action-based probabilistic rule circuits. Given the action trajectory of the protected agent, ShieldAgent retrieves relevant rule circuits and generates a shielding plan, leveraging its comprehensive tool library and executable code for formal verification. In addition, given the lack of guardrail benchmarks for agents, we introduce ShieldAgent-Bench, a dataset with 3K safety-related pairs of agent instructions and action trajectories, collected via SOTA attacks across 6 web environments and 7 risk categories. Experiments show that ShieldAgent achieves SOTA on ShieldAgent-Bench and three existing benchmarks, outperforming prior methods by 11.3% on average with a high recall of 90.1%. Additionally, ShieldAgent reduces API queries by 64.7% and inference time by 58.2%, demonstrating its high precision and efficiency in safeguarding agents.<i></p>
+
+<pre xml:space="preserve">
+  @article{chen2025shieldagent,
+    title={ShieldAgent: Shielding Agents via Verifiable Safety Policy Reasoning},
+    author={Chen, Zhaorun and Kang, Mintong and Li, Bo},
+    journal={arXiv preprint arXiv:2503.22738},
+    year={2025}
+  }
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/arms/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.02677" id="arms">
+    <heading>ARMs: Adaptive Red-Teaming Agent against Multimodal Models with Plug-and-Play Attacks</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Xun Liu<sup>*</sup>, Mintong Kang, Jiawei Zhang, Minzhou Pan, Shuang Yang, Bo Li<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="arms">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.02677" class="pub-button primary">pdf</a>
+        <a href="https://arms-redteaming-agent.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('arms_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="arms_abs">As vision-language models (VLMs) gain prominence, their multimodal interfaces also introduce new safety vulnerabilities, making the safety evaluation challenging and critical. Existing red-teaming efforts are either restricted to a narrow set of adversarial patterns or depend heavily on manual engineering, lacking scalable exploration of emerging real-world adversarial strategies. To bridge this gap, we propose ARMs, an adaptive red-teaming agent that systematically conducts comprehensive risk assessments for VLMs. Given a target harmful behavior or risk definition, ARMs automatically optimizes diverse red-teaming strategies with reasoning-enhanced multi-step orchestration, to effectively elicit harmful outputs from target VLMs. This is the first red teaming framework that provides controllable generation given risk definitions. We propose 11 novel multimodal attack strategies, covering diverse adversarial patterns of VLMs (e.g., reasoning hijacking, contextual cloaking), and integrate 17 red-teaming algorithms with ARMs. To balance the diversity and effectiveness of the attack, we design a layered memory with an epsilon-greedy attack algorithm. Extensive experiments on different instance-based benchmarks and policy-based safety evaluations show that ARMs achieves the state-of-the-art attack success rate (ASR), improving ASR by an average of 52.1% compared to existing baselines and even exceeding 90% ASR on Claude-4-Sonnet, a constitutionally-aligned model widely recognized for its robustness. We show that the diversity of red-teaming instances generated by ARMs is significantly higher, revealing emerging vulnerabilities in VLMs. Leveraging ARMs, we construct ARMs-Bench, a large-scale multimodal safety benchmark comprising 30K red-teaming instances spanning 51 diverse risk categories, grounded in both real-world multimodal threats and regulatory risks. Fine-tuning with ARMs-Bench substantially reduces ASR while preserving general utility of VLMs, providing actionable insights to improve multimodal safety alignment.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2025arms,
+  title={ARMs: Adaptive Red-Teaming Agent against Multimodal Models with Plug-and-Play Attacks},
+  author={Chen, Zhaorun and Liu, Xun and Kang, Mintong and Zhang, Jiawei and Pan, Minzhou and Yang, Shuang and Li, Bo},
+  journal={arXiv preprint arXiv:2510.02677},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <video playsinline
+           autoplay
+           loop
+           muted
+           src="images/safewatch/website_demonstration.mov"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px; border: 1px solid #800000;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://safewatch-aiguard.github.io/" id="SafeWatch" class="paper-title">
+    <heading>SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations</heading></a><br>
+    <b>Zhaorun Chen</b>, Francesco Pinto, Minzhou Pan, and Bo Li<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
+    </p>
+
+    <div class="paper" id="safewatch">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2412.06878" class="pub-button primary">pdf</a>
+        <a href="https://safewatch-aiguard.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('safewatch_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2412.06878" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2412.06878" class="pub-button text">alphaxiv</a>
+        <a href="https://x.com/ZRChen_AISafety/status/1869621962223616130" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="safewatch_abs">With the rise of generative AI and rapid growth of high-quality video generation, video guardrails have become more crucial than ever to ensure safety and security across platforms. Current video guardrails, however, are either overly simplistic, relying on pure classification models trained on simple policies with limited unsafe categories, which lack detailed explanations, or prompting multimodal large language models (MLLMs) with long safety guidelines, which are inefficient and impractical for guardrailing real-world content. To bridge this gap, we propose SafeWatch, an efficient MLLM-based video guardrail model designed to follow customized safety policies and provide multi-label video guardrail outputs with content-specific explanations in a zero-shot manner. In particular, unlike traditional MLLM-based guardrails that encode all safety policies autoregressively, causing inefficiency and bias, SafeWatch uniquely encodes each policy chunk in parallel and eliminates their position bias such that all policies are attended simultaneously with equal importance. In addition, to improve efficiency and accuracy, SafeWatch incorporates a policy-aware visual token pruning algorithm that adaptively selects the most relevant video tokens for each policy, discarding noisy or irrelevant information. This allows for more focused, policy-compliant guardrail with significantly reduced computational overhead. Considering the limitations of existing video guardrail benchmarks, we propose SafeWatch-Bench, a large-scale video guardrail benchmark comprising over 2M videos spanning six safety categories which covers over 30 tasks to ensure a comprehensive coverage of all potential safety scenarios. We have conducted extensive experiments, showing that SafeWatch outperforms all SOTA video guardrails on SafeWatch-Bench by 28.2%, and achieves a 13.6% improvement on existing benchmarks, all while reducing inference costs by an average of 10%. SafeWatch also demonstrates strong policy-following abilities and outperforms previous SOTAs by 5.6% and 15.6% in zero-shot generalizability to new policies and new prompting tasks. Additionally, both LLM-as-a-judge and human evaluators confirm the high quality of the explanations provided by SafeWatch. Our project is open-sourced at <a href="https://safewatch-aiguard.github.io" style="color:#800000;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2024safewatch,
+  title={SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations},
+  author={Chen, Zhaorun and Pinto, Francesco and Pan, Minzhou and Li, Bo},
+  journal={arXiv preprint arXiv:2412.06878},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/halc/halc.png"
+         alt="sym"
          width="90%"
          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1191,7 +537,7 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
         <a href="javascript:toggleblock('halc_abs')" class="pub-button text">abstract</a>
         <a href="https://arxiv.org/abs/2310.03379" class="pub-button text">arXiv</a>
         <a href="https://www.alphaxiv.org/abs/2403.00425" class="pub-button text">alphaxiv</a>
-        <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/" class="pub-button text">blog</a> 
+        <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/" class="pub-button text">blog</a>
       </div>
 
       <p align="justify"> <i id="halc_abs">While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC's effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC" style="color:#36AE7C;">here</a>.</i></p>
@@ -1208,12 +554,892 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
   </td>
 </tr>
 
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/dreamgym/method.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2511.03773" id="dreamgym">
+    <heading>Scaling Agent Learning via Experience Synthesis</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Kai Zhang, Bo Liu, Qi Qi, Yifan Wu, Tarun Kalluri, Sara Cao, Yuanhao Xiong, Haibo Tong, Huaxiu Yao, Hengduo Li, Jiacheng Zhu, Xian Li, Dawn Song, Bo Li, Jason Weston, and Dat Huynh<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
 
+    <div class="paper" id="dreamgym">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2511.03773" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('dreamgym_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="dreamgym_abs">While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2025scaling,
+  title={Scaling Agent Learning via Experience Synthesis},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Zhang, Kai and Liu, Bo and Qi, Qi and Wu, Yifan and Kalluri, Tarun and Cao, Sara and Xiong, Yuanhao and Tong, Haibo and others},
+  journal={arXiv preprint arXiv:2511.03773},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
 
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/fisao/fisao.jpg" 
-         alt="sym" 
+    <img src="images/mjbench/overview_new.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mj-bench.github.io/" id="mjbench">
+    <heading>MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Yichao Du<sup>*</sup>, Zichen Wen<sup>*</sup>, Yiyang Zhou<sup>*</sup>, Chenhang Cui, Zhenzhen Weng, Haoqin Tu, Chaoqi Wang, Zhengwei Tong, Qinglan Huang, Canyu Chen, Qinghao Ye, Zhihong Zhu, Yuqing Zhang, Jiawei Zhou, Zhuokai Zhao, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="mjbench">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2407.04842" class="pub-button primary">pdf</a>
+        <a href="https://mj-bench.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('mjbench_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2407.04842" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2407.04842" class="pub-button text">alphaxiv</a>
+        <a href="https://x.com/HuaxiuYaoML/status/1810728309182861462" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="mjbench_abs">Multimodal reward models (RMs) are critical in RLHF and RLAIF, where they serve as judges and provide feedback for aligning foundation models (FMs) with desired behaviors. Despite their significance, these multimodal judges often un- dergo inadequate evaluation of their capabilities and biases, which may lead to potential misalignment and unsafe fine-tuning outcomes. To address this issue, we introduce MJ-Bench, a novel benchmark which incorporates a comprehensive preference dataset to evaluate multimodal judges in providing feedback for image generation models across four key perspectives: alignment, safety, image quality, and bias. Specifically, we evaluate a large variety of multimodal judges includ- ing smaller-sized CLIP-based scoring models, open-source VLMs (e.g. LLaVA family), and close-source VLMs (e.g. GPT-4o, Claude 3) on each decomposed subcategory of our preference dataset. Experiments reveal that close-source VLMs generally provide better feedback, with GPT-4o outperforming other judges in aver- age. Compared with open-source VLMs, smaller-sized scoring models can provide better feedback regarding text-image alignment and image quality, while VLMs provide more accurate feedback regarding safety and generation bias due to their stronger reasoning capabilities. Notably, human evaluations on end-to-end fine- tuned models using separate feedback from these multimodal judges provide similar conclusions, further confirming the effectiveness of MJ-Bench. Further studies in feedback scale reveal that VLM judges can generally provide more accurate and stable feedback in natural language (Likert-scale) than numerical scales. The code and data are available <a href="https://github.com/BillChan226/MJ-Bench" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@misc{chen2024mjbenchmultimodalrewardmodel,
+  title={MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?},
+  author={Zhaorun Chen and Yichao Du and Zichen Wen and Yiyang Zhou and Chenhang Cui and Zhenzhen Weng and Haoqin Tu and Chaoqi Wang and Zhengwei Tong and Qinglan Huang and Canyu Chen and Qinghao Ye and Zhihong Zhu and Yuqing Zhang and Jiawei Zhou and Zhuokai Zhao and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+  year={2024},
+  eprint={2407.04842},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2407.04842},
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://fed-agent.github.io/"><img src="images/fedagent/overview.png"
+         alt="FedAgent framework with distributed clients training LLM agents locally and exchanging model parameters"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://fed-agent.github.io/" id="fedagent_title">
+    <heading>Is Decentralized LLM Agent RL Robust to Heterogeneity? An Asymmetric Tale</heading></a><br>
+    Canyu Chen<sup>*</sup>, Kangyu Zhu<sup>*</sup>, <b>Zhaorun Chen</b>, Zhanhui Zhou, Shizhe Diao, Yiping Lu, Tian Li, Manling Li, and Dawn Song<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="fedagent">
+      <div class="pub-buttons">
+        <a href="https://fed-agent.github.io/pdf/FedAgent.pdf" class="pub-button primary">pdf</a>
+        <a href="https://fed-agent.github.io/" class="pub-button secondary">webpage</a>
+        <a href="https://github.com/sunblaze-ucb/FedAgent" class="pub-button secondary">code</a>
+        <a href="javascript:toggleblock(&#x27;fedagent_abs&#x27;)" class="pub-button text">abstract</a>
+      </div>
+
+      <p align="justify"><i id="fedagent_abs">FedAgent studies reinforcement learning for language agents across distributed clients that keep their data local. The work distinguishes differences in user tasks from differences in environment dynamics and shows that these two forms of heterogeneity have different effects on training. Its analysis identifies when federated agent learning remains robust and when environmental differences cause degradation, along with conditions that restore robustness. Experiments on WebShop and ALFWorld connect these theoretical results to practical training behavior.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{chen2026fedagent,
+  title={Is Decentralized LLM Agent RL Robust to Heterogeneity? An Asymmetric Tale},
+  author={Canyu Chen and Kangyu Zhu and Zhaorun Chen and Zhanhui Zhou and Shizhe Diao and Yiping Lu and Tian Li and Manling Li and Dawn Song},
+  booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+  year={2026},
+  url={https://fed-agent.github.io/pdf/FedAgent.pdf}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://arxiv.org/abs/2606.20820"><img src="images/celeus/evaluation.png"
+         alt="CELEUS confidence interval width versus evaluated samples on SST-2, MMLU, and AG News"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2606.20820" id="celeus_title">
+    <heading>CELEUS: Certifiable and Efficient LLM Evaluation via E-Processes</heading></a><br>
+    Zhijian Zhou<sup>*</sup>, Zesheng Ye<sup>*</sup>, <b>Zhaorun Chen</b>, Bo Li, and Feng Liu<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="celeus">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2606.20820" class="pub-button primary">pdf</a>
+        <a href="https://github.com/zyecs/celeus" class="pub-button secondary">code</a>
+        <a href="javascript:toggleblock(&#x27;celeus_abs&#x27;)" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2606.20820" class="pub-button text">arXiv</a>
+      </div>
+
+      <p align="justify"><i id="celeus_abs">CELEUS makes sequential LLM evaluation more efficient while preserving statistical guarantees when evaluation stops adaptively. It uses e-processes to construct confidence intervals that remain valid throughout evaluation, combines informative sample selection with predictions for unevaluated examples, and stops once the required precision is reached. The theoretical analysis establishes validity and convergence properties. Across the reported benchmarks, CELEUS reaches its target precision with 54-62% fewer evaluated samples than the comparison methods.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{zhou2026celeus,
+  title={CELEUS: Certifiable and Efficient LLM Evaluation via E-Processes},
+  author={Zhijian Zhou and Zesheng Ye and Zhaorun Chen and Bo Li and Feng Liu},
+  booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+  year={2026},
+  url={https://arxiv.org/abs/2606.20820}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://openreview.net/attachment?id=Fg7IC3UM4g&amp;name=pdf"><img src="images/nitrobox/benchmark.png"
+         alt="NitroBox micro-benchmark snapshot from the official code repository, comparing sandbox lifecycle performance with Docker"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://openreview.net/attachment?id=Fg7IC3UM4g&amp;name=pdf" id="nitrobox_title">
+    <heading>NitroBox: Lightning-Fast Sandbox for Large-Scale RL Training</heading></a><br>
+    Yuzhou Nie, Ruilin Zhou, <b>Zhaorun Chen</b>, Jingyang Zhang, Yan Shao, Hongwei Li, Bo Li, Dawn Song, and Wenbo Guo<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="nitrobox">
+      <div class="pub-buttons">
+        <a href="https://openreview.net/attachment?id=Fg7IC3UM4g&amp;name=pdf" class="pub-button primary">pdf</a>
+        <a href="https://github.com/opensage-agent/nitrobox" class="pub-button secondary">code</a>
+        <a href="javascript:toggleblock(&#x27;nitrobox_abs&#x27;)" class="pub-button text">overview</a>
+      </div>
+
+      <p align="justify"><i id="nitrobox_abs">NitroBox provides lightweight execution sandboxes for agent reinforcement learning workloads that repeatedly create, run, reset, and remove environments. Its implementation combines Linux namespace isolation, a persistent shell, reusable image layers, and fast filesystem resets. The official repository includes Docker-compatible interfaces, process checkpointing, and benchmarks of sandbox lifecycle operations and concurrent execution. These capabilities support high-frequency environment interactions without repeatedly reconstructing a full container. This project overview and snapshot are based on the official code repository.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{nie2026nitrobox,
+  title={NitroBox: Lightning-Fast Sandbox for Large-Scale RL Training},
+  author={Yuzhou Nie and Ruilin Zhou and Zhaorun Chen and Jingyang Zhang and Yan Shao and Hongwei Li and Bo Li and Dawn Song and Wenbo Guo},
+  booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+  year={2026},
+  url={https://openreview.net/attachment?id=Fg7IC3UM4g&amp;name=pdf}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/autoprm/autoprm.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2402.11452" id="AUTOPRM">
+    <heading>AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Zhihong Zhu, Ruiqi Zhang, Xiang Li, Bhiksha Raj and Huaxiu Yao<br>
+    North American Chapter of the Association for Computational Linguistics (<b>NAACL</b>), 2024<br>
+    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
+    </p>
+
+    <div class="paper" id="autoprm">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2402.11452.pdf" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('autoprm_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2402.11452" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2402.11452" class="pub-button text">alphaxiv</a>
+        <a href="https://x.com/ZRChen_AISafety/status/1802600945567822117" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="autoprm_abs">Recent advancements in large language models (LLMs) have shown promise in multi-step reasoning tasks, yet their reliance on extensive manual labeling to provide procedural feedback remains a significant impediment. To address this challenge, in this paper, we propose a novel self-supervised framework AutoPRM that efficiently enhances the fine-tuning of LLMs for intricate reasoning challenges. Specifically, AutoPRM first decomposes complex problems into more manageable subquestions with a controllable granularity switch, then sequentially apply reinforcement learning to iteratively improve the subquestion solver. Additionally, we propose context-guided-decoding to avoid reward tampering and guide the subquestion solver towards the solution of the holistic problem. Extensive experiments show that AutoPRM significantly improves performance on mathematical and commonsense reasoning tasks over SOTA. More encouragingly, AutoPRM can be easily integrated with other orthogonal reasoning pipelines.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2024autoprm,
+  title={AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Zhu, Zhihong and Zhang, Ruiqi and Li, Xiang and Raj, Bhiksha and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2402.11452},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <video playsinline
+           autoplay
+           loop
+           muted
+           src="images/acs/ACS-Video.mp4"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2310.03379" id="ACS">
+    <heading>Safe Reinforcement Learning via Hierarchical Adaptive Chance-Constraint Safeguards</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Tairan He, Binhao Chen, Xuhao Zhao, Liang Gong, Chengliang Liu<br>
+    IEEE/RSJ International Conference on Intelligent Robots and Systems (<b>IROS</b>), 2024<br><span style="color:rgb(246, 54, 54)"><b>(Oral Pitch)</b></span>
+    </p>
+
+    <div class="paper" id="acs" style="margin-top: -17px;">
+      <!-- <a href="https://manipulation-locomotion.github.io">webpage</a> | -->
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2310.03379.pdf" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('acs_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2310.03379" class="pub-button text">arXiv</a>
+        <!-- <a href="https://www.alphaxiv.org/abs/2310.03379">alphaxiv</a> | -->
+      </div>
+
+      <p align="justify"> <i id="acs_abs">Ensuring safety in Reinforcement Learning (RL), typically framed as a Constrained Markov Decision Process (CMDP), is crucial for real-world exploration applications. Current approaches in handling CMDP struggle to balance optimality and feasibility, as direct optimization methods cannot ensure state-wise in-training safety, and projection-based methods correct actions inefficiently through lengthy iterations. To address these challenges, we propose Adaptive Chance-constrained Safeguards (ACS), an adaptive, model-free safe RL algorithm using the safety recovery rate as a surrogate chance constraint to iteratively ensure safety during exploration and after achieving convergence. Theoretical analysis indicates that the relaxed probabilistic constraint sufficiently guarantees forward invariance to the safe set. And extensive experiments conducted on both simulated and real-world safety-critical tasks demonstrate its effectiveness in enforcing safety (nearly zero-violation) while preserving optimality (+23.8%), robustness, and fast response in stochastic real-world settings.</i></p>
+
+<pre xml:space="preserve">
+@misc{chen2024safereinforcementlearninghierarchical,
+  title={Safe Reinforcement Learning via Hierarchical Adaptive Chance-Constraint Safeguards},
+  author={Zhaorun Chen and Zhuokai Zhao and Tairan He and Binhao Chen and Xuhao Zhao and Liang Gong and Chengliang Liu},
+  year={2024},
+  eprint={2310.03379},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2310.03379},
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+
+  <td width="30%" valign="top" align="center">
+    <img src="images/csafegen/overview.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+
+  <td width="60%" valign="top">
+    <p><a href="https://openreview.net/forum?id=nOsEyBGk1I" id="csafegen">
+    <heading>C-SafeGen: Certified Safe LLM Generation with Claim-Based Streaming Guardrails</heading></a><br>
+    Mintong Kang, <b>Zhaorun Chen</b>, Bo Li<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="csafegen">
+      <div class="pub-buttons">
+        <a href="https://openreview.net/pdf?id=nOsEyBGk1I" class="pub-button primary">pdf</a>
+        <a href="" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('csafegen_abs')" class="pub-button text">abstract</a>
+        <a href="https://openreview.net/forum?id=nOsEyBGk1I" class="pub-button text">arXiv</a>
+        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="csafegen_abs">Despite the remarkable capabilities of large language models (LLMs) across diverse applications, they remain vulnerable to generating content that violates safety regulations and policies. To mitigate these risks, LLMs undergo safety alignment; however, they can still be effectively jailbroken. Off-the-shelf guardrail models are commonly deployed to monitor generations, but these models primarily focus on detection rather than ensuring safe decoding of LLM outputs. Moreover, existing efforts lack rigorous safety guarantees, which are crucial for the universal deployment of LLMs and certifiable compliance with regulatory standards. In this paper, we propose a Claim-based Stream Decoding (CSD) algorithm coupled with a statistical risk guarantee framework using conformal analysis. Specifically, our CSD algorithm integrates a stream guardrail model to safeguard sequential claims generated by LLMs and incorporates a backtracking mechanism to revise claims flagged with high safety risks. We provide theoretical guarantees demonstrating that the CSD algorithm achieves the desired generation distribution subject to safety constraints. Furthermore, we introduce a generation risk certification framework and derive a high-probability upper bound on the safety risk of the proposed CSD algorithm. We extend our approach to online settings, where user queries arrive sequentially, and prove that our method can asymptotically control safety risk to any desired level. Empirical evaluations demonstrate the effectiveness and efficiency of the CSD algorithm compared to state-of-the-art safety decoding approaches. Additionally, we validate the soundness and tightness of the derived safety risk upper bound using realistic data in both offline and online scenarios.<i></p>
+
+<pre xml:space="preserve">
+  @inproceedings{kangc,
+    title={C-SafeGen: Certified Safe LLM Generation with Claim-Based Streaming Guardrails},
+    author={Kang, Mintong and Chen, Zhaorun and Li, Bo},
+    booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/guardsetx/overview.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="" id="guardsetx">
+    <heading>GuardSet-X: Massive Multi-Domain Safety Policy-Grounded Guardrail Dataset</heading></a><br>
+    Mintong Kang<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Chejian Xu<sup>*</sup>, Jiawei Zhang<sup>*</sup>, Chengquan Guo<sup>*</sup>, Minzhou Pan, Ivan Revilla, Yu Sun, Bo Li<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="guardsetx">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2506.19054" class="pub-button primary">pdf</a>
+        <a href="" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('guardsetxabs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2506.19054" class="pub-button text">arXiv</a>
+        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="guardsetxabs">As LLMs become widespread across diverse applications, concerns about the security and safety of LLM interactions have intensified. Numerous guardrail models and benchmarks have been developed to ensure LLM content safety. However, existing guardrail benchmarks are often built upon ad hoc risk taxonomies that lack a principled grounding in standardized safety policies, limiting their alignment with real-world operational requirements. Moreover, they tend to overlook domain-specific risks, while the same risk category can carry different implications across different domains. To bridge these gaps, we introduce GuardSet-X, the first massive multi-domain safety policy-grounded guardrail dataset. GuardSet-X offers: (1) broad domain coverage across eight safety-critical domains, such as finance, law, and codeGen; (2) policy-grounded risk construction based on authentic, domain-specific safety guidelines; (3) diverse interaction formats, encompassing declarative statements, questions, instructions, and multi-turn conversations; (4) advanced benign data curation via detoxification prompting to challenge over-refusal behaviors; and (5) \textbf{attack-enhanced instances} that simulate adversarial inputs designed to bypass guardrails. Based on GuardSet-X, we benchmark 19 advanced guardrail models and uncover a series of findings, such as: (1) All models achieve varied F1 scores, with many demonstrating high variance across risk categories, highlighting their limited domain coverage and insufficient handling of domain-specific safety concerns; (2) As models evolve, their coverage of safety risks broadens, but performance on common risk categories may decrease; (3) All models remain vulnerable to optimized adversarial attacks. We believe that \dataset and the unique insights derived from our evaluations will advance the development of policy-aligned and resilient guardrail systems.<i></p>
+
+<pre xml:space="preserve">
+  @article{kang2025polyguard,
+    title={GuardSet-X: Massive Multi-Domain Safety Policy-Grounded Guardrail Dataset},
+    author={Kang, Mintong and Chen, Zhaorun and Xu, Chejian and Zhang, Jiawei and Guo, Chengquan and Pan, Minzhou and Revilla, Ivan and Sun, Yu and Li, Bo},
+    journal={arXiv preprint arXiv:2506.19054},
+    year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mmdt/mmdt.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mmdecodingtrust.github.io/" id="MMDT">
+    <heading>MMDT: Decoding the Trustworthiness and Safety of Multimodal Foundation Models</heading></a><br>
+    Chejian Xu<sup>*</sup>, Jiawei Zhang<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Chulin Xie<sup>*</sup>, Mintong Kang<sup>*</sup>, Yujin Potter<sup>*</sup>, Zhun Wang<sup>*</sup>, Zhuowen Yuan<sup>*</sup>, Alexander Xiong, Zidi Xiong, Chenhui Zhang, Lingzhi Yuan, Yi Zeng, Peiyang Xu, Chengquan Guo, Andy Zhou, Jeffrey Ziwei Tan, Xuandong Zhao, Francesco Pinto, Zhen Xiang, Yu Gai, Zinan Lin, Dan Hendrycks, Bo Li, Dawn Song<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
+    </p>
+
+    <div class="paper" id="mmdt">
+      <div class="pub-buttons">
+        <a href="https://openreview.net/pdf?id=qIbbBSzH6n" class="pub-button primary">pdf</a>
+        <a href="https://mmdecodingtrust.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('mmdt_abs')" class="pub-button text">abstract</a>
+        <a href="" class="pub-button text">arXiv</a>
+      </div>
+
+      <p align="justify"> <i id="mmdt_abs">Multimodal foundation models (MMFMs) play a crucial role in various applications, including autonomous driving, healthcare, and virtual assistants. However, several studies have revealed vulnerabilities in these models, such as generating unsafe content by text-to-image models. Existing benchmarks on multimodal models either predominantly assess the helpfulness of these models, or only focus on limited perspectives such as fairness and privacy. In this paper, we present the first unified platform, MMDT (Multimodal DecodingTrust), designed to provide a comprehensive safety and trustworthiness evaluation for MMFMs. Our platform assesses models from multiple perspectives, including safety, hallucination, fairness/bias, privacy, adversarial robustness, and out-of-distribution (OOD) generalization. We have designed various evaluation scenarios and red teaming algorithms under different tasks for each perspective to generate challenging data, forming a high-quality benchmark. We evaluate a range of multimodal models using MMDT, and our findings reveal a series of vulnerabilities and areas for improvement across these perspectives. This work introduces the first comprehensive and unique safety and trustworthiness evaluation platform for MMFMs, paving the way for developing safer and more reliable MMFMs and systems.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{
+  xu2025mmdt,
+  title={{MMDT}: Decoding the Trustworthiness and Safety of Multimodal Foundation Models},
+  author={Chejian Xu and Jiawei Zhang and Zhaorun Chen and Chulin Xie and Mintong Kang and Yujin Potter and Zhun Wang and Zhuowen Yuan and Alexander Xiong and Zidi Xiong and Chenhui Zhang and Lingzhi Yuan and Yi Zeng and Peiyang Xu and Chengquan Guo and Andy Zhou and Jeffrey Ziwei Tan and Xuandong Zhao and Francesco Pinto and Zhen Xiang and Yu Gai and Zinan Lin and Dan Hendrycks and Bo Li and Dawn Song},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=qIbbBSzH6n}
+  }
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/redcodeagent/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.02609" id="redcodeagent">
+    <heading>RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents</heading></a><br>
+    Chengquan Guo, Chulin Xie, Yu Yang, <b>Zhaorun Chen</b>, Zinan Lin, Xander Davies, Yarin Gal, Dawn Song, Bo Li<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="redcodeagent">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.02609" class="pub-button primary">pdf</a>
+        <a href="https://www.microsoft.com/en-us/research/blog/redcodeagent-automatic-red-teaming-agent-against-diverse-code-agents/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('redcodeagent_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="redcodeagent_abs">Code agents have gained widespread adoption due to their strong code generation capabilities and integration with code interpreters, enabling dynamic execution, debugging, and interactive programming capabilities. While these advancements have streamlined complex workflows, they have also introduced critical safety and security risks. Current static safety benchmarks and red-teaming tools are inadequate for identifying emerging real-world risky scenarios, as they fail to cover certain boundary conditions, such as the combined effects of different jailbreak tools. In this work, we propose RedCodeAgent, the first automated red-teaming agent designed to systematically uncover vulnerabilities in diverse code agents. With an adaptive memory module, RedCodeAgent can leverage existing jailbreak knowledge, dynamically select the most effective red-teaming tools and tool combinations in a tailored toolbox for a given input query, thus identifying vulnerabilities that might otherwise be overlooked. For reliable evaluation, we develop simulated sandbox environments to additionally evaluate the execution results of code agents, mitigating potential biases of LLM-based judges that only rely on static code. Through extensive evaluations across multiple state-of-the-art code agents, diverse risky scenarios, and various programming languages, RedCodeAgent consistently outperforms existing red-teaming methods, achieving higher attack success rates and lower rejection rates with high efficiency. We further validate RedCodeAgent on real-world code assistants, e.g., Cursor and Codeium, exposing previously unidentified security risks. By automating and optimizing red-teaming processes, RedCodeAgent enables scalable, adaptive, and effective safety assessments of code agents.</i></p>
+
+<pre xml:space="preserve">
+@article{guo2025redcodeagent,
+  title={RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents},
+  author={Guo, Chengquan and Xie, Chulin and Yang, Yu and Chen, Zhaorun and Lin, Zinan and Davies, Xander and Gal, Yarin and Song, Dawn and Li, Bo},
+  journal={arXiv preprint arXiv:2510.02609},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/dija/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2507.11097" id="dija">
+    <heading>The Devil Behind the Mask: An Emergent Safety Vulnerability of Diffusion LLMs</heading></a><br>
+    Zichen Wen, Jiashu Qu, <b>Zhaorun Chen</b>, Xiaoya Lu, Dongrui Liu, Zhiyuan Liu, Ruixi Wu, Yicun Yang, Xiangqi Jin, Haoyun Xu, Xuyang Liu, Weijia Li, Chaochao Lu, Jing Shao, Conghui He, Linfeng Zhang <br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="dija">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2507.11097" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('dija_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="dija_abs">Diffusion-based large language models (dLLMs) have recently emerged as a powerful alternative to autoregressive LLMs, offering faster inference and greater interactivity via parallel decoding and bidirectional modeling. However, despite strong performance in code generation and text infilling, we identify a fundamental safety concern: existing alignment mechanisms fail to safeguard dLLMs against context-aware, masked-input adversarial prompts, exposing novel vulnerabilities. To this end, we present DIJA, the first systematic study and jailbreak attack framework that exploits unique safety weaknesses of dLLMs. Specifically, our proposed DIJA constructs adversarial interleaved mask-text prompts that exploit the text generation mechanisms of dLLMs, i.e., bidirectional modeling and parallel decoding. Bidirectional modeling drives the model to produce contextually consistent outputs for masked spans, even when harmful, while parallel decoding limits model dynamic filtering and rejection sampling of unsafe content. This causes standard alignment mechanisms to fail, enabling harmful completions in alignment-tuned dLLMs, even when harmful behaviors or unsafe instructions are directly exposed in the prompt. Through comprehensive experiments, we demonstrate that DIJA significantly outperforms existing jailbreak methods, exposing a previously overlooked threat surface in dLLM architectures. Notably, our method achieves up to 100% keyword-based ASR on Dream-Instruct, surpassing the strongest prior baseline, ReNeLLM, by up to 78.5% in evaluator-based ASR on JailbreakBench and by 37.7 points in StrongREJECT score, while requiring no rewriting or hiding of harmful content in the jailbreak prompt. Our findings underscore the urgent need for rethinking safety alignment in this emerging class of language models.</i></p>
+
+<pre xml:space="preserve">
+@article{wen2025devil,
+  title={The devil behind the mask: An emergent safety vulnerability of diffusion llms},
+  author={Wen, Zichen and Qu, Jiashu and Chen, Zhaorun and Liu, Dongrui and Liu, Zhiyuan and Wu, Ruixi and Yang, Yicun and Jin, Xiangqi and Xu, Haoyun and Liu, Xuyang and Li, Weijia and others},
+  journal={arXiv preprint arXiv:2507.11097},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/autoredteamer/method.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://autoredteamer.com/" id="autoredteamer">
+    <heading>AutoRedTeamer: Autonomous Red Teaming with Lifelong Attack Integration</heading></a><br>
+    Andy Zhou, Kevin Wu, Francesco Pinto, <b>Zhaorun Chen</b>, Yi Zeng, Yu Yang, Shuang Yang, Sanmi Koyejo, James Zou, Bo Li<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="autoredteamer">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2503.15754" class="pub-button primary">pdf</a>
+        <a href="" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('autoredteamerabs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2503.15754" class="pub-button text">arXiv</a>
+        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="autoredteamerabs">As large language models (LLMs) become increasingly capable, security and safety evaluation are crucial. While current red teaming approaches have made strides in assessing LLM vulnerabilities, they often rely heavily on human input and lack comprehensive coverage of emerging attack vectors. This paper introduces AutoRedTeamer, a novel framework for fully automated, end-to-end red teaming against LLMs. AutoRedTeamer combines a multi-agent architecture with a memory-guided attack selection mechanism to enable continuous discovery and integration of new attack vectors. The dual-agent framework consists of a red teaming agent that can operate from high-level risk categories alone to generate and execute test cases and a strategy proposer agent that autonomously discovers and implements new attacks by analyzing recent research. This modular design allows AutoRedTeamer to adapt to emerging threats while maintaining strong performance on existing attack vectors. We demonstrate AutoRedTeamer's effectiveness across diverse evaluation settings, achieving 20% higher attack success rates on HarmBench against Llama-3.1-70B while reducing computational costs by 46% compared to existing approaches. AutoRedTeamer also matches the diversity of human-curated benchmarks in generating test cases, providing a comprehensive, scalable, and continuously evolving framework for evaluating the security of AI systems.<i></p>
+
+<pre xml:space="preserve">
+  @article{zhou2025autoredteamer,
+    title={Autoredteamer: Autonomous red teaming with lifelong attack integration},
+    author={Zhou, Andy and Wu, Kevin and Pinto, Francesco and Chen, Zhaorun and Zeng, Yi and Yang, Yu and Yang, Shuang and Koyejo, Sanmi and Zou, James and Li, Bo},
+    journal={arXiv preprint arXiv:2503.15754},
+    year={2025}
+  }
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/fusionroute/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2601.05106" id="fusionroute">
+    <heading>Token-Level LLM Collaboration via FusionRoute</heading></a><br>
+    Nuoya Xiong, Yuhang Zhou, Hanqing Zeng, <b>Zhaorun Chen</b>, Furong Huang, Shuchao Bi, Lizhu Zhang, Zhuokai Zhao<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="fusionroute">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2601.05106" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('fusionroute_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/zhuokaiz/status/2009470079126151452" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="fusionroute_abs">Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.</i></p>
+
+<pre xml:space="preserve">
+@article{xiong2026token,
+  title={Token-Level LLM Collaboration via FusionRoute},
+  author={Xiong, Nuoya and Zhou, Yuhang and Zeng, Hanqing and Chen, Zhaorun and Huang, Furong and Bi, Shuchao and Zhang, Lizhu and Zhao, Zhuokai},
+  journal={arXiv preprint arXiv:2601.05106},
+  year={2026}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/earlyexperience/overview.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.08558" id="earlyexperience">
+    <heading>Agent Learning via Early Experience</heading></a><br>
+    Kai Zhang<sup>*</sup>, Xiangchao Chen<sup>*</sup>, Bo Liu<sup>*</sup>, Tianci Xue<sup>*</sup>, Zeyi Liao<sup>*</sup>, Zhihan Liu<sup>*</sup>, Xiyao Wang<sup>*</sup>, Yuting Ning<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Xiaohan Fu, Jian Xie, Yuxuan Sun, Boyu Gou, Qi Qi, Zihang Meng, Jianwei Yang, Ning Zhang, Xian Li, Ashish Shah, Dat Huynh, Hengduo Li, Zi Yang, Sara Cao, Lawrence Jang, Shuyan Zhou, Jiacheng Zhu, Huan Sun, Jason Weston, Yu Su, Yifan Wu<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="earlyexperience">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.08558" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('earlyexperience_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/jaseweston/status/1979179944258265358" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="earlyexperience_abs">A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use). As a result, most current agents rely on supervised fine-tuning on expert data, which is challenging to scale and generalizes poorly. This limitation stems from the nature of expert demonstrations: they capture only a narrow range of scenarios and expose the agent to limited environment diversity. We address this limitation with a middle-ground paradigm we call early experience: interaction data generated by the agent's own actions, where the resulting future states serve as supervision without reward signals. Within this paradigm we study two strategies of using such data: (1) Implicit world modeling, which uses collected states to ground the policy in environment dynamics; and (2) Self-reflection, where the agent learns from its suboptimal actions to improve reasoning and decision-making. We evaluate across eight diverse environments and multiple model families. Our approaches consistently improve effectiveness and out-of-domain generalization, highlighting the value of early experience. Moreover, in environments with verifiable rewards, our results provide promising signals that early experience offers a strong foundation for subsequent reinforcement learning, positioning it as a practical bridge between imitation learning and fully experience-driven agents.</i></p>
+
+<pre xml:space="preserve">
+@article{zhang2025agent,
+  title={Agent Learning via Early Experience},
+  author={Zhang, Kai and Chen, Xiangchao and Liu, Bo and Xue, Tianci and Liao, Zeyi and Liu, Zhihan and Wang, Xiyao and Ning, Yuting and Chen, Zhaorun and Fu, Xiaohan and others},
+  journal={arXiv preprint arXiv:2510.08558},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <video playsinline
+           autoplay
+           loop
+           muted
+           src="images/grape/grape.mp4"
+           width="90%"
+           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+    </video>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2411.19309" id="grape">
+    <heading>GRAPE: Generalizing Robot Policy via Preference Alignment</heading></a><br>
+    Zijian Zhang<sup>*</sup>, Kaiyuan Zheng<sup>*</sup>, <b>Zhaorun Chen<sup>*</sup></b>, Joel Jang, Yi Li, Chaoqi Wang, Mingyu Ding, Dieter Fox, and Huaxiu Yao<br>
+    International Conference on Robotics and Automation (<b>ICRA</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="grape">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2411.19309" class="pub-button primary">pdf</a>
+        <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('grape_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/pdf/2411.19309" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a>
+        <a href="https://x.com/HuaxiuYaoML/status/1863708749732680162" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="grape_abs">Despite the recent advancements of vision-language-action (VLA) models on a variety of robotics tasks, they suffer from critical issues such as poor generalizability to unseen tasks, due to their reliance on behavior cloning exclusively from successful rollouts. Furthermore, they are typically fine-tuned to replicate demonstrations collected by experts under different settings, thus introducing distribution bias and limiting their adaptability to diverse manipulation objectives, such as efficiency, safety, and task completion. To bridge this gap, we introduce GRAPE: Generalizing Robot Policy via Preference Alignment. Specifically, GRAPE aligns VLAs on a trajectory level and implicitly models reward from both successful and failure trials to boost generalizability to diverse tasks. Moreover, GRAPE breaks down complex manipulation tasks to independent stages and automatically guides preference modeling through customized spatiotemporal constraints with keypoints proposed by a large vision-language model. Notably, these constraints are flexible and can be customized to align the model with varying objectives, such as safety, efficiency, or task success. We evaluate GRAPE across a diverse array of tasks in both real-world and simulated environments. Experimental results demonstrate that GRAPE enhances the performance of state-of-the-art VLA models, increasing success rates on in-domain and unseen manipulation tasks by 51.79% and 60.36%, respectively. Additionally, GRAPE can be aligned with various objectives, such as safety and efficiency, reducing collision rates by 44.31% and rollout step-length by 11.15%, respectively. All code, models, and data are available at <a href="https://grape-vla.github.io/" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{zhang2024grape,
+  title={Grape: Generalizing robot policy via preference alignment},
+  author={Zhang, Zijian and Zheng, Kaiyuan and Chen, Zhaorun and Jang, Joel and Li, Yi and Wang, Chaoqi and Ding, Mingyu and Fox, Dieter and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2411.19309},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/paper2figure/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="" id="Paper2Figure">
+    <heading>Paper2Figure: A Multi-Agent Collaborative System for Figure Generation Towards Academic Research Paper</heading></a><br>
+    Siwei Han, Haonian Ji, Siyang Xin, Juanquan Shi, Shi Qiu, Xinyu Ye, Peng Xia, Jiaqi Liu, <b>Zhaorun Chen</b>, Yiyang Zhou, Linjie Li, Lijuan Wang, Huaxiu Yao<br>
+    The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="Paper2Figure">
+      <div class="pub-buttons">
+        <a href="" class="pub-button primary">pdf</a>
+        <a href="" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('Paper2Figure_abs')" class="pub-button text">abstract</a>
+        <a href="" class="pub-button text">arXiv</a>
+        <a href="" class="pub-button text">alphaxiv</a>
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="Paper2Figure_abs">Automatically generating clear and accurate figures for research papers remains challenging, as it requires semantic understanding, precise structure, and visual aesthetics. Existing approaches struggle to balance fidelity and quality: large language model (LLM) code-based methods (e.g., SVG, Mermaid) are structured but inflexible, while image-generation models (e.g., GPT-Image-1, Nano Banana) produce hard-to-edit and often inaccurate figures. We present Paper2Figure, a dual multi-agent system with an interactive web platform for paper-to-figure generation. Generation Agents convert text into our designed FigScript language, encoding figure semantics, styles and layout. The web system renders the FigScript into an initial image, which Refinement Agents iteratively analyze to locate issues and revise the FigScript for improved logic, alignment, aesthetics and text accuracy. Crucially, users can further refine results through an intuitive web interface, ensuring full control over the final output. To evaluate Paper2Figure, we introduce Paper2Figure Bench, a benchmark comprising 100 academic figures with paired descriptions. Experiments demonstrate that Paper2Figure markedly improves accuracy by 12%, beauty by 13.5%, and completeness by 17.0% over state-of-the-art baselines in fully automatic generation without human adjustment. By combining automated generation with interactive edit, Paper2Figure bridges the gap between AI assistance and researcher control, offering a practical solution for high-quality academic figure creation.</i></p>
+
+<pre xml:space="preserve">
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/infoutil/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://openreview.net/pdf?id=ThsYRbpv2F" id="infoutil">
+    <heading>Grounding and Enhancing Informativeness and Utility in Dataset Distillation</heading></a><br>
+    Shaobo Wang, Yantai Yang, Guo Chen, Peiru Li, Kaixin Li, Yufa Zhou, <b>Zhaorun Chen</b>, Linfeng Zhang<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="infoutil_paper">
+      <div class="pub-buttons">
+        <a href="https://openreview.net/pdf?id=ThsYRbpv2F" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('infoutil_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="infoutil_abs">Dataset Distillation (DD) seeks to create a compact dataset from a large, real-world dataset. While recent methods often rely on heuristic approaches to balance efficiency and quality, the fundamental relationship between original and synthetic data remains underexplored. This paper revisits knowledge distillation-based dataset distillation within a solid theoretical framework. We introduce the concepts of Informativeness and Utility, capturing crucial information within a sample and essential samples in the training set, respectively. Building on these principles, we define \textit{optimal dataset distillation} mathematically. We then present InfoUtil, a framework that balances informativeness and utility in synthesizing the distilled dataset. InfoUtil incorporates two key components: (1) game-theoretic informativeness maximization using Shapley Value attribution to extract key information from samples, and (2) principled utility maximization by selecting globally influential samples based on Gradient Norm. These components ensure that the distilled dataset is both informative and utility-optimized. Experiments demonstrate that our method achieves a 6.1% performance improvement over the previous state-of-the-art approach on ImageNet-1K dataset using ResNet-18.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{
+anonymous2026grounding,
+title={Grounding and Enhancing Informativeness and Utility in Dataset Distillation},
+author={Anonymous},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=ThsYRbpv2F}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/eduvis/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2505.16832" id="eduvis">
+    <heading>From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Reasoning-Driven Pedagogical Visualization</heading></a><br>
+    Haonian Ji, Shi Qiu, Siyang Xin, Siwei Han, <b>Zhaorun Chen</b>, Dake Zhang, Hongyi Wang, Huaxiu Yao<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="eduvis">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2505.16832" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('eduvis_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="eduvis_abs">While foundation models (FMs), such as diffusion models and large vision-language models (LVLMs), have been widely applied in educational contexts, their ability to generate pedagogically effective visual explanations remains limited. Most existing approaches focus primarily on textual reasoning, overlooking the critical role of structured and interpretable visualizations in supporting conceptual understanding. To better assess the visual reasoning capabilities of FMs in educational settings, we introduce EduVisBench, a multi-domain, multi-level benchmark. EduVisBench features diverse STEM problem sets requiring visually grounded solutions, along with a fine-grained evaluation rubric informed by pedagogical theory. Our empirical analysis reveals that existing models frequently struggle with the inherent challenge of decomposing complex reasoning and translating it into visual representations aligned with human cognitive processes. To address these limitations, we propose EduVisAgent, a multi-agent collaborative framework that coordinates specialized agents for instructional planning, reasoning decomposition, metacognitive prompting, and visualization design. Experimental results show that EduVisAgent substantially outperforms all baselines, achieving a 40.2% improvement and delivering more educationally aligned visualizations.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{
+anonymous2026from,
+title={From EduVisBench to EduVisAgent: A Benchmark and Multi-Agent Framework for Reasoning-Driven Pedagogical Visualization},
+author={Anonymous},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=FVCpV04ZRe}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mjvideo/overview.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" id="mjvideo">
+    <heading>MJ-Video: Benchmarking and Rewarding Video Generation with Fine-Grained Video Preference</heading></a><br>
+    Haibo Tong<sup>*</sup>, Zhaoyang Wang<sup>*</sup>, <b>Zhaorun Chen</b>, Haonian Ji, Shi Qiu, Siwei Han, Kexin Geng, Zhongkai Xue, Yiyang Zhou, Peng Xia, Mingyu Ding, Rafael Rafailov, Chelsea Finn, and Huaxiu Yao<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br><span style="color:red;"><b>(Spotlight Presentation)</b></span>
+    </p>
+
+    <div class="paper" id="mjvideo">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2502.01719" class="pub-button primary">pdf</a>
+        <a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('mjvideo_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2502.01719" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2502.01719" class="pub-button text">alphaxiv</a>
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="mjvideo_abs">Recent advancements in video generation have significantly improved the ability to synthesize videos from text instructions. However, existing models still struggle with key challenges such as instruction misalignment, content hallucination, safety concerns, and bias. Addressing these limitations, we introduce MJ-BENCH-VIDEO, a large-scale video preference benchmark designed to evaluate video generation across five critical aspects: Alignment, Safety, Fineness, Coherence & Consistency, and Bias & Fairness. This benchmark incorporates 28 fine-grained criteria to provide a comprehensive evaluation of video preference. Building upon this dataset, we propose MJ-VIDEO, a Mixture-of-Experts (MoE)-based video reward model designed to deliver fine-grained reward. MJ-VIDEO can dynamically select relevant experts to accurately judge the preference based on the input text-video pair. This architecture enables more precise and adaptable preference judgments. Through extensive benchmarking on MJ-BENCH-VIDEO, we analyze the limitations of existing video reward models and demonstrate the superior performance of MJ-VIDEO in video preference assessment, achieving 17.58% and 15.87% improvements in overall and fine-grained preference judgments, respectively. Additionally, introducing MJ-VIDEO for preference tuning in video generation enhances the alignment performance.<i></p>
+
+<pre xml:space="preserve">
+  @misc{tong2025mjvideofinegrainedbenchmarkingrewarding,
+    title={MJ-VIDEO: Fine-Grained Benchmarking and Rewarding Video Preferences in Video Generation},
+    author={Haibo Tong and Zhaoyang Wang and Zhaorun Chen and Haonian Ji and Shi Qiu and Siwei Han and Kexin Geng and Zhongkai Xue and Yiyang Zhou and Peng Xia and Mingyu Ding and Rafael Rafailov and Chelsea Finn and Huaxiu Yao},
+    year={2025},
+    eprint={2502.01719},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2502.01719},
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/dropout/method.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="" id="dropoutdecoding">
+    <heading>From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models with Uncertainty-Guided Dropout Decoding</heading></a><br>
+    Yixiong Fang<sup>*</sup>, Ziran Yang<sup>*</sup>, <b>Zhaorun Chen</b>, Zhuokai Zhao, Jiawei Zhou<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="dropoutdecoding">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2412.06474" class="pub-button primary">pdf</a>
+        <a href="" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('dropoutdecodingabs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2412.06474" class="pub-button text">arXiv</a>
+        <!-- <a href="https://www.alphaxiv.org/abs/2506.19054" class="pub-button text">alphaxiv</a> -->
+        <a href="" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="dropoutdecodingabs">Large vision-language models (LVLMs) demonstrate remarkable capabilities in multimodal tasks but are prone to misinterpreting visual inputs, often resulting in hallucinations and unreliable outputs. To address these challenges, we propose Dropout Decoding, a novel inference-time approach that quantifies the uncertainty of visual tokens and selectively masks uncertain tokens to improve decoding. Our method measures the uncertainty of each visual token by projecting it onto the text space and decomposing it into aleatoric and epistemic components. Specifically, we focus on epistemic uncertainty, which captures perception-related errors more effectively. Inspired by dropout regularization, we introduce uncertainty-guided token dropout, which applies the dropout principle to input visual tokens instead of model parameters, and during inference rather than training. By aggregating predictions from an ensemble of masked decoding contexts, Dropout Decoding robustly mitigates errors arising from visual token misinterpretations. Evaluations on benchmarks including CHAIR, THRONE, and MMBench demonstrate that Dropout Decoding significantly reduces object hallucinations (OH) and enhances both reliability and quality of LVLM outputs across diverse visual contexts.<i></p>
+
+<pre xml:space="preserve">
+  @article{fang2024uncertainty,
+    title={From uncertainty to trust: Enhancing reliability in vision-language models with uncertainty-guided dropout decoding},
+    author={Fang, Yixiong and Yang, Ziran and Chen, Zhaorun and Zhao, Zhuokai and Zhou, Jiawei},
+    journal={arXiv preprint arXiv:2412.06474},
+    year={2024}
+  }
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/epic/main.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2510.00515" id="epic">
+    <heading>Efficient Multi-modal Large Language Models via Progressive Consistency Distillation</heading></a><br>
+    Zichen Wen , Shaobo Wang, Yufa Zhou, Junyuan Zhang, Qintong Zhang, Yifeng Gao, <b>Zhaorun Chen</b>, Bin Wang, Weijia Li, Conghui He, Linfeng Zhang<br>
+    Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025 <br>
+    </p>
+
+    <div class="paper" id="epic">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2510.00515" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('epic_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <!-- <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>  -->
+      </div>
+
+      <p align="justify"> <i id="epic_abs">Visual tokens consume substantial computational resources in multi-modal large models (MLLMs), significantly compromising their efficiency. Recent works have attempted to improve efficiency by compressing visual tokens during training, either through modifications to model components or by introducing additional parameters. However, they often overlook the increased learning difficulty caused by such compression, as the model’s parameter space struggles to quickly adapt to the substantial perturbations in the feature space induced by token compression. In this work, we propose to develop Efficient MLLMs via Progressive Consistency Distillation (EPIC), a progressive learning framework. Specifically, by decomposing the feature space perturbations introduced by token compression along the token-wise and layer-wise dimensions, we introduce token consistency distillation and layer consistency distillation, respectively, aiming to reduce the training difficulty by leveraging guidance from a teacher model and following a progressive learning trajectory. Extensive experiments demonstrate the superior effectiveness, robustness, and generalization capabilities of our proposed framework.</i></p>
+
+<pre xml:space="preserve">
+@inproceedings{wenefficient,
+  title={Efficient Multi-modal Large Language Models via Progressive Consistency Distillation},
+  author={Wen, Zichen and Wang, Shaobo and Zhou, Yufa and Zhang, Junyuan and Zhang, Qintong and Gao, Yifeng and Chen, Zhaorun and Wang, Bin and Li, Weijia and He, Conghui and others},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/mmie/mmie.jpg"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://mmie-bench.github.io/" id="MMIE">
+    <heading>MMIE: Massive Multimodal Interleaved Comprehension Benchmark For Large Vision-Language Models</heading></a><br>
+    Peng Xia<sup>*</sup>, Siwei Han<sup>*</sup>, Shi Qiu<sup>*</sup>, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng, <b>Zhaorun Chen</b>, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao<br>
+    <!-- International Conference on Learning Representations (<b>ICLR</b>), 2025 <br>
+    <span class="presentation-badge">Oral Presentation</span> -->
+    International Conference on Learning Representations (<b>ICLR</b>), 2025 <br><span style="color:red;"><b>(Oral Presentation)</b></span>
+    </p>
+
+    <div class="paper" id="mmie" style="margin-top: -17px;">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2410.10139" class="pub-button primary">pdf</a>
+        <a href="https://mmie-bench.github.io/" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('mmie_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/pdf/2410.10139" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2410.10139" class="pub-button text">alphaxiv</a>
+        <a href="https://x.com/HuaxiuYaoML/status/1846014867129434259" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="mmie_abs">Interleaved multimodal comprehension and generation, enabling models to produce and interpret both images and text in arbitrary sequences, have become a pivotal area in multimodal learning. Despite significant advancements, the evaluation of this capability remains insufficient. Existing benchmarks suffer from limitations in data scale, scope, and evaluation depth, while current evaluation metrics are often costly or biased, lacking in reliability for practical applications. To address these challenges, we introduce MMIE, a large-scale knowledge-intensive benchmark for evaluating interleaved multimodal comprehension and generation in Large Vision-Language Models (LVLMs). MMIE comprises 20K meticulously curated multimodal queries, spanning 3 categories, 12 fields, and 102 subfields, including mathematics, coding, physics, literature, health, and arts. It supports both interleaved inputs and outputs, offering a mix of multiple-choice and open-ended question formats to evaluate diverse competencies. Moreover, we propose a reliable automated evaluation metric, leveraging a scoring model fine-tuned with human-annotated data and systematic evaluation criteria, aimed at reducing bias and improving evaluation accuracy. Extensive experiments demonstrate the effectiveness of our benchmark and metrics in providing a comprehensive evaluation of interleaved LVLMs. Specifically, we evaluate eight LVLMs, revealing that even the best models show significant room for improvement, with most achieving only moderate results. We believe MMIE will drive further advancements in the development of interleaved LVLMs.</i></p>
+
+<pre xml:space="preserve">
+@article{xia2024mmie,
+  title={MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models},
+  author={Xia, Peng and Han, Siwei and Qiu, Shi and Zhou, Yiyang and Wang, Zhaoyang and Zheng, Wenhao and Chen, Zhaorun and Cui, Chenhang and Ding, Mingyu and Li, Linjie and Wang, Lijuan and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2410.10139},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/fisao/fisao.jpg"
+         alt="sym"
          width="90%"
          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1224,7 +1450,7 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
     International Conference on Learning Representations (<b>ICLR</b>), 2025<br>
     </p>
 
-    <div class="paper" id="anyprefer">
+    <div class="paper" id="fisao_paper">
       <div class="pub-buttons">
         <a href="https://arxiv.org/pdf/2410.14148" class="pub-button primary">pdf</a>
         <a href="" class="pub-button secondary">webpage</a>
@@ -1248,11 +1474,10 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
   </td>
 </tr>
 
-
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/anyprefer/anyprefer.jpg" 
-         alt="sym" 
+    <img src="images/anyprefer/anyprefer.jpg"
+         alt="sym"
          width="90%"
          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1289,13 +1514,10 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
   </td>
 </tr>
 
-
-
-
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/paper/csr.png" 
-         alt="sym" 
+    <img src="images/paper/csr.png"
+         alt="sym"
          width="90%"
          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1330,13 +1552,10 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
   </td>
 </tr>
 
-
-
-
-<tr></tr>
+<tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/escirl/escirl.jpg" 
-         alt="sym" 
+    <img src="images/escirl/escirl.jpg"
+         alt="sym"
          width="90%"
          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1369,89 +1588,7 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
     </div>
   </td>
 </tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/autoprm/autoprm.png" 
-         alt="sym" 
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2402.11452" id="AUTOPRM">
-    <heading>AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition</heading></a><br>
-    <b>Zhaorun Chen</b>, Zhuokai Zhao, Zhihong Zhu, Ruiqi Zhang, Xiang Li, Bhiksha Raj and Huaxiu Yao<br>
-    North American Chapter of the Association for Computational Linguistics (<b>NAACL</b>), 2024<br>
-    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
-    </p>
-
-    <div class="paper" id="autoprm">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2402.11452.pdf" class="pub-button primary">pdf</a>
-        <a href="javascript:toggleblock('autoprm_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2402.11452" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2402.11452" class="pub-button text">alphaxiv</a>
-        <a href="https://x.com/ZRChen_AISafety/status/1802600945567822117" class="pub-button text">blog</a> 
-      </div>
-
-      <p align="justify"> <i id="autoprm_abs">Recent advancements in large language models (LLMs) have shown promise in multi-step reasoning tasks, yet their reliance on extensive manual labeling to provide procedural feedback remains a significant impediment. To address this challenge, in this paper, we propose a novel self-supervised framework AutoPRM that efficiently enhances the fine-tuning of LLMs for intricate reasoning challenges. Specifically, AutoPRM first decomposes complex problems into more manageable subquestions with a controllable granularity switch, then sequentially apply reinforcement learning to iteratively improve the subquestion solver. Additionally, we propose context-guided-decoding to avoid reward tampering and guide the subquestion solver towards the solution of the holistic problem. Extensive experiments show that AutoPRM significantly improves performance on mathematical and commonsense reasoning tasks over SOTA. More encouragingly, AutoPRM can be easily integrated with other orthogonal reasoning pipelines.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2024autoprm,
-  title={AutoPRM: Automating Procedural Supervision for Multi-Step Reasoning via Controllable Question Decomposition},
-  author={Chen, Zhaorun and Zhao, Zhuokai and Zhu, Zhihong and Zhang, Ruiqi and Li, Xiang and Raj, Bhiksha and Yao, Huaxiu},
-  journal={arXiv preprint arXiv:2402.11452},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <video playsinline 
-           autoplay 
-           loop 
-           muted 
-           src="images/acs/ACS-Video.mp4"
-           width="90%"
-           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-    </video>
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2310.03379" id="ACS">
-    <heading>Safe Reinforcement Learning via Hierarchical Adaptive Chance-Constraint Safeguards</heading></a><br>
-    <b>Zhaorun Chen</b>, Zhuokai Zhao, Tairan He, Binhao Chen, Xuhao Zhao, Liang Gong, Chengliang Liu<br>
-    IEEE/RSJ International Conference on Intelligent Robots and Systems (<b>IROS</b>), 2024<br><span style="color:rgb(246, 54, 54)"><b>(Oral Pitch)</b></span>
-    </p>
-
-    <div class="paper" id="acs" style="margin-top: -17px;">
-      <!-- <a href="https://manipulation-locomotion.github.io">webpage</a> | -->
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2310.03379.pdf" class="pub-button primary">pdf</a>
-        <a href="javascript:toggleblock('acs_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2310.03379" class="pub-button text">arXiv</a> 
-        <!-- <a href="https://www.alphaxiv.org/abs/2310.03379">alphaxiv</a> | -->
-      </div>
-
-      <p align="justify"> <i id="acs_abs">Ensuring safety in Reinforcement Learning (RL), typically framed as a Constrained Markov Decision Process (CMDP), is crucial for real-world exploration applications. Current approaches in handling CMDP struggle to balance optimality and feasibility, as direct optimization methods cannot ensure state-wise in-training safety, and projection-based methods correct actions inefficiently through lengthy iterations. To address these challenges, we propose Adaptive Chance-constrained Safeguards (ACS), an adaptive, model-free safe RL algorithm using the safety recovery rate as a surrogate chance constraint to iteratively ensure safety during exploration and after achieving convergence. Theoretical analysis indicates that the relaxed probabilistic constraint sufficiently guarantees forward invariance to the safe set. And extensive experiments conducted on both simulated and real-world safety-critical tasks demonstrate its effectiveness in enforcing safety (nearly zero-violation) while preserving optimality (+23.8%), robustness, and fast response in stochastic real-world settings.</i></p>
-
-<pre xml:space="preserve">
-@misc{chen2024safereinforcementlearninghierarchical,
-  title={Safe Reinforcement Learning via Hierarchical Adaptive Chance-Constraint Safeguards}, 
-  author={Zhaorun Chen and Zhuokai Zhao and Tairan He and Binhao Chen and Xuhao Zhao and Liang Gong and Chengliang Liu},
-  year={2024},
-  eprint={2310.03379},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2310.03379}, 
-}
-</pre>
-    </div>
-  </td>
-</tr>
+</table>
 
 
 
@@ -1465,8 +1602,8 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
 
 <tr>
   <td width="30%" valign="top" align="center">
-    <img src="images/agentxploit/main.png" 
-          alt="sym" 
+    <img src="images/agentxploit/main.png"
+          alt="sym"
           width="90%"
           style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
   </td>
@@ -1496,6 +1633,45 @@ title={AgentXploit: End-to-End Red-Teaming for {AI} Agents Powdered by Multi-Age
 author={Shi Qiu and Zhun Wang and Tianneng Shi and Zhaorun Chen and Wenbo Guo and Dawn Song},
 year={2025},
 url={https://openreview.net/forum?id=xKJ0lVQEv7}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://spade-rl.github.io/"><img src="images/spade/overview.png"
+         alt="SPADE framework with an environment designer and reasoning agent learning a shared policy through hint-based self-play"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://spade-rl.github.io/" id="spade_title">
+    <heading>SPADE: Self-Play in Adaptive Synthetic Executable Environments</heading></a><br>
+    Bo Liu<sup>*</sup>, Simon Yu<sup>*</sup>, Yiding Jiang, Ao Qu, Andrew Zhao, Zichen Liu, Junsu Kim, Zijian Zhou, Seungone Kim, Tongzheng Ren, Mickel Liu, Hanfei Yu, <b>Zhaorun Chen</b>, Weiyan Shi, Paul Pu Liang, Luke Zettlemoyer, Yejin Choi, and Natasha Jaques<br>
+    <b>arXiv</b>, 2026<br>
+    </p>
+
+    <div class="paper" id="spade">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2608.19197" class="pub-button primary">pdf</a>
+        <a href="https://spade-rl.github.io/" class="pub-button secondary">webpage</a>
+        <a href="https://github.com/spade-rl/spade" class="pub-button secondary">code</a>
+        <a href="javascript:toggleblock(&#x27;spade_abs&#x27;)" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2608.19197" class="pub-button text">arXiv</a>
+      </div>
+
+      <p align="justify"><i id="spade_abs">SPADE trains a language model to alternate between designing executable environments and learning to solve them. The environment designer builds stateful tasks with transitions, rewards, and verification code, while a hint-based regret signal encourages challenges that remain solvable but stretch the reasoning agent. Both roles improve the same policy. Grounding designs in a document corpus and retaining an environment memory help diversify training, and experiments evaluate transfer to held-out reasoning, coding, game, and tool-use tasks.</i></p>
+
+<pre xml:space="preserve">
+@misc{liu2026spade,
+  title={SPADE: Self-Play in Adaptive Synthetic Executable Environments},
+  author={Bo Liu and Simon Yu and Yiding Jiang and Ao Qu and Andrew Zhao and Zichen Liu and Junsu Kim and Zijian Zhou and Seungone Kim and Tongzheng Ren and Mickel Liu and Hanfei Yu and Zhaorun Chen and Weiyan Shi and Paul Pu Liang and Luke Zettlemoyer and Yejin Choi and Natasha Jaques},
+  year={2026},
+  eprint={2608.19197},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2608.19197}
 }
 </pre>
     </div>
@@ -1555,6 +1731,14 @@ url={https://openreview.net/forum?id=xKJ0lVQEv7}
 
 <script xml:space="preserve" language="JavaScript">
   hideallbibs();
+  </script>
+
+  <script type="text/javascript">
+    hideblock('dtap_abs');
+    hideblock('fedagent_abs');
+    hideblock('celeus_abs');
+    hideblock('nitrobox_abs');
+    hideblock('spade_abs');
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('Paper2Figure_abs');
