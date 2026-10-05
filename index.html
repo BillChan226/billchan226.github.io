@@ -218,10 +218,10 @@
     <p align="center" style="margin-top:-8px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 186px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.2f70fb173b9000da126c79afe2098f02.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=ZRChen_AISafety&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1706734206165" data-screen-name=""></iframe><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
     </td>
     <td width="65%" valign="top" align="justify">
-      <p>I am a second-year PhD student in the <a href="https://aisecure.github.io/">Secure Learning Lab</a> at the <a href="https://cs.uchicago.edu/">Department of Computer Science</a> at <a href="https://www.uchicago.edu/">University of Chicago</a> advised by Prof.<a href="https://aisecure.github.io/"> Bo Li</a>. I am also very fortunate to closely work with Prof. <a href="https://dawnsong.io/">Dawn Song</a> at UC Berkeley during my PhD.
+      <p>I am a third-year PhD student in the <a href="https://aisecure.github.io/">Secure Learning Lab</a> at the <a href="https://cs.uchicago.edu/">Department of Computer Science</a> at <a href="https://www.uchicago.edu/">University of Chicago</a> advised by Prof.<a href="https://aisecure.github.io/"> Bo Li</a>. I am also very fortunate to closely work with Prof. <a href="https://dawnsong.io/">Dawn Song</a> at UC Berkeley during my PhD.
       </p>
       <!-- <p>Previously, I received my Master degree in <a href="https://engineering.purdue.edu/ECE">Electrical and Computer Engineering</a> at<a href="https://www.purdue.edu/"> Purdue University</a>. Before that, I obtained my Bachelor degree in Automation at <a href="http://en.sjtu.edu.cn"> Shanghai Jiao Tong University</a>, advised by Prof.<a href="https://gaoyue.sjtu.edu.cn"> Yue Gao</a>. -->
-        <p> I did my internship at <a href="https://ai.meta.com/">Meta Superintelligence Labs</a> during summer 2025 working with <a href="https://ai.meta.com/people/1163645124801199/jason-weston/">Jason Weston</a>, and joined <a href="https://virtueai.com/">Virtue AI</a> since 2024 as a founding member of technical staff.
+        <p>We founded <a href="https://virtueai.com/">Virtue AI</a> in 2024, where I led red-teaming for AI agents. Following its acquisition by Meta, I continue to lead automated agent red-teaming at Meta MSL for Muse Spark 1.1&ndash;1.3, Muse Code, and Muse Agent.
         </p>
         <p>Previously, I received my Bachelor degree in Computer Science from <a href="http://en.sjtu.edu.cn"> Shanghai Jiao Tong University</a> in 2022.
            <!-- and Master degree at<a href="https://www.purdue.edu/"> Purdue University</a> both on computer engineering. -->
@@ -229,7 +229,7 @@
         <!-- During 2023 Summer, I interned at <a href="https://cs.unc.edu"> UNC-Chapel Hill</a> advised by Prof.<a href="https://www.huaxiuyao.io/"> Huaxiu Yao</a> and collaborated some wonderful projects with <a href="https://irislab.stanford.edu/people.html"> IRIS Lab</a> hosted by Prof. <a href="https://ai.stanford.edu/~cbfinn/"> Chelsea Finn</a>. -->
       </p>
       <!-- <p>My current research interests center on the trustworthy and alignment issue of foundation models (e.g. LLMs) and agents from both a theoretical and application perspective. Specifically, I'm interested in enhancing their trustworthiness via novel algorithms and certificates for various applications (e.g. <b>hallucination mitigation</b>, <b>training & testing-time attack</b>, <b>guardrail models</b>) through incorporating external knowledge sources and LLMs' reasoning capabilities. -->
-        <p>My research aims to build capable, safe, and trustworthy AI agents that learn from both observations and knowledge. I explore this through two pathways: (1) strengthening their internal intelligence and alignment by bootstrapping from experience and hindsight, and (2) applying external constraints grounded in human knowledge to achieve compliance and certifiability.
+        <!-- <p>My research aims to build capable, safe, and trustworthy AI agents that learn from both observations and knowledge. I explore this through two pathways: (1) strengthening their internal intelligence and alignment by bootstrapping from experience and hindsight, and (2) applying external constraints grounded in human knowledge to achieve compliance and certifiability. -->
       </p>
       <!-- <p>I'm currently a research scientist intern at Meta Superintelligence Labs during this summer.
       </p> -->
@@ -437,6 +437,83 @@
 
 <tr>
   <td width="30%" valign="top" align="center">
+    <img src="images/halc/halc.png"
+         alt="sym"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://billchan226.github.io/HALC.html" id="HALC">
+    <heading>HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</heading></a><br>
+    <b>Zhaorun Chen<sup>*</sup></b>, Zhuokai Zhao<sup>*</sup>, Hongyin Luo, Huaxiu Yao, Bo Li and Jiawei Zhou<br>
+    International Conference on Machine Learning (<b>ICML</b>), 2024<br>
+    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
+    </p>
+
+    <div class="paper" id="halc">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2403.00425" class="pub-button primary">pdf</a>
+        <a href="https://billchan226.github.io/HALC.html" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('halc_abs')" class="pub-button text">abstract</a>
+        <a href="https://arxiv.org/abs/2310.03379" class="pub-button text">arXiv</a>
+        <a href="https://www.alphaxiv.org/abs/2403.00425" class="pub-button text">alphaxiv</a>
+        <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="halc_abs">While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC's effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC" style="color:#36AE7C;">here</a>.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2024halc,
+  title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
+  journal={arXiv preprint arXiv:2403.00425},
+  year={2024}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <img src="images/dreamgym/method.png"
+          alt="sym"
+          width="90%"
+          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://arxiv.org/abs/2511.03773" id="dreamgym">
+    <heading>Scaling Agent Learning via Experience Synthesis</heading></a><br>
+    <b>Zhaorun Chen</b>, Zhuokai Zhao, Kai Zhang, Bo Liu, Qi Qi, Yifan Wu, Tarun Kalluri, Sara Cao, Yuanhao Xiong, Haibo Tong, Huaxiu Yao, Hengduo Li, Jiacheng Zhu, Xian Li, Dawn Song, Bo Li, Jason Weston, and Dat Huynh<br>
+    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
+    </p>
+
+    <div class="paper" id="dreamgym">
+      <div class="pub-buttons">
+        <a href="https://arxiv.org/pdf/2511.03773" class="pub-button primary">pdf</a>
+        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
+        <a href="javascript:toggleblock('dreamgym_abs')" class="pub-button text">abstract</a>
+        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
+        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
+        <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>
+      </div>
+
+      <p align="justify"> <i id="dreamgym_abs">While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.</i></p>
+
+<pre xml:space="preserve">
+@article{chen2025scaling,
+  title={Scaling Agent Learning via Experience Synthesis},
+  author={Chen, Zhaorun and Zhao, Zhuokai and Zhang, Kai and Liu, Bo and Qi, Qi and Wu, Yifan and Kalluri, Tarun and Cao, Sara and Xiong, Yuanhao and Tong, Haibo and others},
+  journal={arXiv preprint arXiv:2511.03773},
+  year={2025}
+}
+</pre>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
     <img src="images/arms/main.png"
           alt="sym"
           width="90%"
@@ -509,83 +586,6 @@
   author={Chen, Zhaorun and Pinto, Francesco and Pan, Minzhou and Li, Bo},
   journal={arXiv preprint arXiv:2412.06878},
   year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/halc/halc.png"
-         alt="sym"
-         width="90%"
-         style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://billchan226.github.io/HALC.html" id="HALC">
-    <heading>HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding</heading></a><br>
-    <b>Zhaorun Chen<sup>*</sup></b>, Zhuokai Zhao<sup>*</sup>, Hongyin Luo, Huaxiu Yao, Bo Li and Jiawei Zhou<br>
-    International Conference on Machine Learning (<b>ICML</b>), 2024<br>
-    <!-- short version presented at ICLR 2024 <a href="https://iclr-r2fm.github.io/">R2-FM</a> Workshop<br> -->
-    </p>
-
-    <div class="paper" id="halc">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2403.00425" class="pub-button primary">pdf</a>
-        <a href="https://billchan226.github.io/HALC.html" class="pub-button secondary">webpage</a>
-        <a href="javascript:toggleblock('halc_abs')" class="pub-button text">abstract</a>
-        <a href="https://arxiv.org/abs/2310.03379" class="pub-button text">arXiv</a>
-        <a href="https://www.alphaxiv.org/abs/2403.00425" class="pub-button text">alphaxiv</a>
-        <a href="https://www.virtueai.com/2024/07/29/halc-object-hallucination-reduction-via-adaptive-focal-contrast-decoding/" class="pub-button text">blog</a>
-      </div>
-
-      <p align="justify"> <i id="halc_abs">While large vision-language models (LVLMs) have demonstrated impressive capabilities in interpreting multi-modal contexts, they invariably suffer from object hallucinations (OH). We introduce HALC, a novel decoding algorithm designed to mitigate OH in LVLMs. HALC leverages distinct fine-grained optimal visual information in vision-language tasks and operates on both local and global contexts simultaneously. Specifically, HALC integrates a robust auto-focal grounding mechanism (locally) to correct hallucinated tokens on the fly, and a specialized beam search algorithm (globally) to significantly reduce OH while preserving text generation quality. Additionally, HALC can be integrated into any LVLMs as a plug-and-play module without extra training. Extensive experimental studies demonstrate HALC's effectiveness in reducing OH, outperforming state-of-the-arts across four benchmarks. Code is released <a href="https://github.com/BillChan226/HALC" style="color:#36AE7C;">here</a>.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2024halc,
-  title={HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding},
-  author={Chen, Zhaorun and Zhao, Zhuokai and Luo, Hongyin and Yao, Huaxiu and Li, Bo and Zhou, Jiawei},
-  journal={arXiv preprint arXiv:2403.00425},
-  year={2024}
-}
-</pre>
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td width="30%" valign="top" align="center">
-    <img src="images/dreamgym/method.png"
-          alt="sym"
-          width="90%"
-          style="padding-top:0px; padding-bottom:0px; border-radius:15px;">
-  </td>
-  <td width="60%" valign="top">
-    <p><a href="https://arxiv.org/abs/2511.03773" id="dreamgym">
-    <heading>Scaling Agent Learning via Experience Synthesis</heading></a><br>
-    <b>Zhaorun Chen</b>, Zhuokai Zhao, Kai Zhang, Bo Liu, Qi Qi, Yifan Wu, Tarun Kalluri, Sara Cao, Yuanhao Xiong, Haibo Tong, Huaxiu Yao, Hengduo Li, Jiacheng Zhu, Xian Li, Dawn Song, Bo Li, Jason Weston, and Dat Huynh<br>
-    International Conference on Learning Representations (<b>ICLR</b>), 2026<br>
-    </p>
-
-    <div class="paper" id="dreamgym">
-      <div class="pub-buttons">
-        <a href="https://arxiv.org/pdf/2511.03773" class="pub-button primary">pdf</a>
-        <!-- <a href="https://grape-vla.github.io/" class="pub-button secondary">webpage</a> -->
-        <a href="javascript:toggleblock('dreamgym_abs')" class="pub-button text">abstract</a>
-        <!-- <a href="https://arxiv.org/pdf/2511.03773" class="pub-button text">arXiv</a> -->
-        <!-- <a href="https://www.alphaxiv.org/abs/2411.19309" class="pub-button text">alphaxiv</a> -->
-        <a href="https://x.com/jaseweston/status/1986613046047846569" class="pub-button text">blog</a>
-      </div>
-
-      <p align="justify"> <i id="dreamgym_abs">While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.</i></p>
-
-<pre xml:space="preserve">
-@article{chen2025scaling,
-  title={Scaling Agent Learning via Experience Synthesis},
-  author={Chen, Zhaorun and Zhao, Zhuokai and Zhang, Kai and Liu, Bo and Qi, Qi and Wu, Yifan and Kalluri, Tarun and Cao, Sara and Xiong, Yuanhao and Tong, Haibo and others},
-  journal={arXiv preprint arXiv:2511.03773},
-  year={2025}
 }
 </pre>
     </div>
@@ -1203,7 +1203,7 @@
   </td>
 </tr>
 
-<tr>
+<tr hidden>
   <td width="30%" valign="top" align="center">
     <img src="images/infoutil/main.png"
           alt="sym"
@@ -1242,7 +1242,7 @@ url={https://openreview.net/forum?id=ThsYRbpv2F}
   </td>
 </tr>
 
-<tr>
+<tr hidden>
   <td width="30%" valign="top" align="center">
     <img src="images/eduvis/main.png"
           alt="sym"
@@ -1593,6 +1593,116 @@ url={https://openreview.net/forum?id=FVCpV04ZRe}
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10" style="margin-top: 25px;">
+  <tr><td><sectionheading id="reports">&nbsp;&nbsp;Reports and White Papers</sectionheading></td></tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://research.meta.ai/blog/introducing-muse-spark-1-3"><img src="images/reports/muse-spark-1-3.png"
+         alt="Muse Spark 1.3 benchmark results for agentic work, long-context retrieval, and coding"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://research.meta.ai/blog/introducing-muse-spark-1-3" id="muse13_title">
+    <heading>Muse Spark 1.3 &amp; Muse Agent Evaluation Report</heading></a><br>
+    <b>Zhaorun Chen</b> and the Meta MSL Preparedness, Red Teaming, and Alignment Team, AI Security Team<br>
+    <b>Meta Superintelligence Labs</b>, 2026<br>
+    </p>
+
+    <div class="paper" id="muse13">
+      <div class="pub-buttons">
+        <a href="https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology" class="pub-button primary">methodology pdf</a>
+        <a href="https://research.meta.ai/blog/introducing-muse-spark-1-3" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('muse13_abs')" class="pub-button text">overview</a>
+      </div>
+
+      <p align="justify"><i id="muse13_abs">The public evaluation methodology describes how Muse Spark 1.3 is assessed on professional tasks, computer use, web research, workflow automation, software engineering, long-context retrieval, and instruction following. It documents benchmark setups, scoring procedures, model configurations, and comparison results.</i></p>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"><img src="images/reports/muse-spark-1-2.png"
+         alt="Muse Spark 1.2 and Muse Code Terminal-Bench 2.1 results from Meta's official evaluation announcement"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" id="muse12_title">
+    <heading>Muse Spark 1.2 &amp; Muse Code Evaluation Report</heading></a><br>
+    <b>Zhaorun Chen</b> and the Meta MSL Preparedness, Red Teaming, and Alignment Team, AI Security Team<br>
+    <b>Meta Superintelligence Labs</b>, 2026<br>
+    </p>
+
+    <div class="paper" id="muse12">
+      <div class="pub-buttons">
+        <a href="https://research.meta.ai/static/muse-spark-1-2-methodology" class="pub-button primary">methodology pdf</a>
+        <a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('muse12_abs')" class="pub-button text">overview</a>
+      </div>
+
+      <p align="justify"><i id="muse12_abs">The public evaluation methodology covers Muse Spark 1.2 and Muse Code on terminal tasks, software engineering, professional work, tool use, and Meta's internal coding benchmark. It explains the agent harnesses, isolated execution environments, task verifiers, and scoring used to compare models.</i></p>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report"><img src="images/reports/muse-spark-1-1.png"
+         alt="Muse Spark 1.1 scorecard for adversarial robustness, agent prompt injection, and model behavior"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report" id="muse11_title">
+    <heading>Muse Spark 1.1 Evaluation Report</heading></a><br>
+    <b>Zhaorun Chen</b> and the Meta MSL Preparedness, Red Teaming, and Alignment Team, AI Security Team<br>
+    <b>Meta Superintelligence Labs</b>, 2026<br>
+    </p>
+
+    <div class="paper" id="muse11">
+      <div class="pub-buttons">
+        <a href="https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report" class="pub-button primary">pdf</a>
+        <a href="javascript:toggleblock('muse11_abs')" class="pub-button text">abstract</a>
+      </div>
+
+      <p align="justify"><i id="muse11_abs">This report evaluates Muse Spark 1.1's capabilities and safety for deployment in Meta AI and through its developer API. It assesses preparedness risks, adversarial robustness, direct agent misuse, indirect prompt injection, behavioral alignment, and general capabilities, alongside the mitigations applied under Meta's Advanced AI Scaling Framework.</i></p>
+    </div>
+  </td>
+</tr>
+
+<tr>
+  <td width="30%" valign="top" align="center">
+    <a href="https://decodingtrust-agent.com/papers/pokee-ai-dtap-security-whitepaper.pdf"><img src="images/reports/pokee-security.png"
+         alt="Pokee-Isaac agent security comparison on direct and indirect attack success and benign task completion"
+         width="90%"
+         style="padding-top:0px; padding-bottom:0px; border-radius:15px;"></a>
+  </td>
+  <td width="60%" valign="top">
+    <p><a href="https://decodingtrust-agent.com/papers/pokee-ai-dtap-security-whitepaper.pdf" id="pokee_security_title">
+    <heading>Enterprise Agent and Model Security</heading></a><br>
+    Christopher Wu, <b>Zhaorun Chen</b>, Michael Cai, Bo Li, and Zheqing Zhu<br>
+    <b>Pokee AI &times; DTap White Paper</b>, 2026<br>
+    </p>
+
+    <div class="paper" id="pokee_security">
+      <div class="pub-buttons">
+        <a href="https://decodingtrust-agent.com/papers/pokee-ai-dtap-security-whitepaper.pdf" class="pub-button primary">pdf</a>
+        <a href="https://decodingtrust-agent.com/community/industry/pokee-ai-enterprise-agent-security" class="pub-button secondary">webpage</a>
+        <a href="javascript:toggleblock('pokee_security_abs')" class="pub-button text">abstract</a>
+      </div>
+
+      <p align="justify"><i id="pokee_security_abs">This white paper examines enterprise agent security across models, planners, tools, memory, external data, and serving infrastructure. It proposes eight security modules and evaluates Pokee-Isaac 28B v0.1 on DecodingTrust-Agent, measuring attack resistance alongside benign task performance across fourteen domains.</i></p>
+    </div>
+  </td>
+</tr>
+
+</table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10" style="margin-top: 25px;">
   <tr><td><sectionheading>&nbsp;&nbsp;Preprints </sectionheading>(see full list on <a href="https://scholar.google.com/citations?user=UZg5N5UAAAAJ">Google Scholar</a>)</td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
@@ -1739,6 +1849,10 @@ url={https://openreview.net/forum?id=xKJ0lVQEv7}
     hideblock('celeus_abs');
     hideblock('nitrobox_abs');
     hideblock('spade_abs');
+    hideblock('muse13_abs');
+    hideblock('muse12_abs');
+    hideblock('muse11_abs');
+    hideblock('pokee_security_abs');
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('Paper2Figure_abs');
